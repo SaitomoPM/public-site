@@ -9510,6 +9510,11 @@ cursor: pointer;
 	}
 } */
 
+.apps-banner {
+background: #121212;
+color: #fafafa;
+}
+
 .apps-banner:hover {
 background: #FE0230;
 }
