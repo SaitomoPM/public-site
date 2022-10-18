@@ -547,7 +547,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 <h3><span style="background-color: #fafafa; color: #121212;"> What is the Arweave Name System?</span></a></h3>
-<p class="text-gray">Arweave Name System ("ArNS") is a decentralized and censorship-resistant naming system stored on Arweave, enabled by AR.IO gateways and used to connect friendly names to PermaWeb dapps, pages and data.</p>
+<p class="text-gray">Arweave Name System ("ArNS") is a decentralized and censorship-resistant naming system stored on Arweave, enabled by ar.io Gateways and used to connect friendly names to PermaWeb dapps, pages and data.</p>
 <p class="text-gray" style="font-weight:bold;">It is the Smartweave-powered phonebook of the PermaWeb.</p>
 <br>
 
@@ -562,9 +562,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 <h3><span style="background-color: #fafafa; color: #121212;"> Friendly names on the Permaweb</span></h3>
 <p class="text-gray">The Arweave Name System will replace the long, 43 character Arweave transaction IDs with familiar subdomain names that users can remember.</p>
-<p class="text-gray">This system works similarly to traditional DNS, where a user can lease a name in a registry and DNS Name Servers resolve these names to IP addresses. Unlike traditional DNS, ArNS inherits the transparency, durability, permissionlessness, decentralization, and censorship resistance afforded by the killer stack of Arweave, Smartweave, and  ar.io network.</p>
-<p class="text-gray">Each AR.IO gateway acts as both cache and name resolver. Users utilize a new token standard to create an Arweave Name Token (ANT) that identifies an Arweave transaction ID that they’d like to make eligible for name registration. They then register their ANT to map to the available name of their choice via the ArNS registration system, also powered by a separate Smartweave contract. ANTs are transferrable like any other Smartweave token, and the ANT owner may update the Arweave transaction ID to which it points at any time.</p>
-<p class="text-gray">AR.IO Gateways will resolve that name as one of their own subdomains, eg. https://my-name.arweave.net and proxy all requests to the associated Arweave Transaction ID.</p>
+<p class="text-gray">This system works similarly to traditional DNS, where a user can lease a name in a registry and DNS Name Servers resolve these names to IP addresses. Unlike traditional DNS, ArNS inherits the transparency, durability, permissionlessness, decentralization, and censorship resistance afforded by the killer stack of Arweave, Smartweave, and  ar.io Network.</p>
+<p class="text-gray">Each ar.io Gateway acts as both cache and name resolver. Users utilize a new token standard to create an Arweave Name Token (ANT) that identifies an Arweave transaction ID that they’d like to make eligible for name registration. They then register their ANT to map to the available name of their choice via the ArNS registration system, also powered by a separate Smartweave contract. ANTs are transferrable like any other Smartweave token, and the ANT owner may update the Arweave transaction ID to which it points at any time.</p>
+<p class="text-gray">ar.io Gateways will resolve that name as one of their own subdomains, eg. https://my-name.arweave.net and proxy all requests to the associated Arweave Transaction ID.</p>
 <p class="text-gray">Once a name is taken in the registry, it cannot be purchased again, however the owner of the ANT can trade it on supported market places or peer to peer.</p>
 <br>
 
@@ -573,14 +573,14 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 <p class="text-gray">Here is an example user story showing how a name could be purchased.</p>
 <p class="text-gray">
 	<ul>
-		<li>A user browses to the AR.IO ArNS Portal and searches for the name sam.</li>
-		<li>The web app gets the latest AR.IO ArNS Smartweave Contract state and checks if the name is taken.</li>
+		<li>A user browses to the ar.io ArNS Portal and searches for the name sam.</li>
+		<li>The web app gets the latest ar.io ArNS Smartweave Contract state and checks if the name is taken.</li>
 		<li>If the name is available, the app shows the user the purchase price for sam.</li>
 		<li>The user decides to purchase the name sam and provides an initial Arweave Transaction ID eg. tCce4miTTRuDybbuMdLD2voSdrwxOe6nVkzBJRkz-5Q to point the friendly name at. In the registration process, an ANT is created with a Record that holds the default subdomain with the desired Arweave Transaction ID that sam will point to.</li>
-		<li>The newly created ANT Smartweave Contract ID is added into the AR.IO ArNS Registry along with the friendly name.</li>
-		<li>AR.IO Network Gateways will continually refresh and locally cache the state of the ArNS Registry in order to proxy friendly name requests to their corresponding ANT Record.</li>
+		<li>The newly created ANT Smartweave Contract ID is added into the ar.io ArNS Registry along with the friendly name.</li>
+		<li>ar.io Network Gateways will continually refresh and locally cache the state of the ArNS Registry in order to proxy friendly name requests to their corresponding ANT Record.</li>
 		<li>Instead of browsing to https://arweave.net/tCce4miTTRuDybbuMdLD2voSdrwxOe6nVkzBJRkz-5Q the user can browse to https://sam.arweave.net</li>
-		<li>Any other gateway in the AR.IO network will also support this friendly name being added as a prefix to their own DNS A-Record. For example https://sam.ar.io` or https://sam.bobsgateway.com or https://sam.gatewaydao.io will all resolve the same Arweave Transaction ID referenced in the ANT Record used for sam.</li>
+		<li>Any other gateway in the ar.io Network will also support this friendly name being added as a prefix to their own DNS A-Record. For example https://sam.ar.io` or https://sam.bobsgateway.com or https://sam.gatewaydao.io will all resolve the same Arweave Transaction ID referenced in the ANT Record used for sam.</li>
 		<li>The owner of the ANT can update its Arweave Transaction ID so the friendly name sam points to updated data if they want. Gateways will read the latest state of the contract and resolve valid updates.</li>
 	</ul>
 </p>
@@ -603,7 +603,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 <h3><span style="background-color: #fafafa; color: #121212;"> Want to learn more about ArNS?</span></h3>
-<p class="text-gray">Here is the first draft of the Arweave Name System proposal for the ar.io network:</p>
+<p class="text-gray">Here is the first draft of the Arweave Name System proposal for the ar.io Network:</p>
 <p class="text-gray">
 	<ul>
 	<li><a href="https://ardrive.atlassian.net/wiki/spaces/help/pages/457801729/Arweave+Name+System+Proposal" target="_blank" style="font-weight: bold; text-decoration: underline;">Arweave Name System Proposal</a></li>
