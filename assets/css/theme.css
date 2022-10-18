@@ -9436,9 +9436,9 @@ body:not(.is-mobile) .tt-style-switch:hover {
 	border-style: solid;
 	/* border-style: outset; */
  	border-color: #333333;
- 	border-width: 3px;
- border-radius: 1px;
- background-color: #101010;
+ 	border-width: 2px;
+ border-radius: .25px;
+ /* background-color: #101010; */
 }
 
 @media (max-width: 540px) {
