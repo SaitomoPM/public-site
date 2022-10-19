@@ -246,7 +246,7 @@
 			var Scrollbar = window.Scrollbar;
 
 			// AnchorPlugin (URL with hash links load in the right position)
-		
+
 			// ==================================
 			class AnchorPlugin extends Scrollbar.ScrollbarPlugin {
 				static pluginName = 'anchor';
@@ -2447,7 +2447,7 @@
 			}
 		});
 
-		tl_SkewInUp.from(this, { duration: 2, skewY: 5, transformOrigin: "left top", autoAlpha: 0, y: 100, ease: Expo.easeOut, clearProps:"all" }, "+=0.3");
+		tl_SkewInUp.from(this, { duration: 1, skewY: 5, transformOrigin: "left top", autoAlpha: 0, y: 100, ease: Expo.easeOut, clearProps:"all" }, "+=5");
 	});
 
 
