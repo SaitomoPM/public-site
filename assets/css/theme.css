@@ -9524,9 +9524,22 @@ cursor: pointer;
 	}
 } */
 
+/* .notification-bar{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 99999;
+} */
+
 .apps-banner {
 background: #121212;
 color: #fafafa;
+background-position: center !important;
+align-items: center !important;
+z-index: 99999;
+/* display: block !important; */
+/* position: absolute !important; */
 }
 
 .apps-banner:hover {
