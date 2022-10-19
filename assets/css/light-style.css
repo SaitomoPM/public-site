@@ -60,6 +60,11 @@ body {
 	background-size: cover;
 }
 
+.swapparoo {
+	background-color: #fafafa;
+	color: #121212;
+}
+
 .text-gray {
 	color: #777 !important;
 }

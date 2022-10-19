@@ -122,6 +122,11 @@ p a:focus {
 	opacity: .6;
 }
 
+.swapparoo {
+	background-color: #000;
+	color: #fafafa;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -1561,6 +1566,15 @@ body:not(.is-mobile) .tt-ol-menu-list > li > .tt-ol-submenu-trigger:hover > a,
 .tt-ol-submenu-list > li > .tt-ol-submenu-trigger:hover > a,
 .tt-ol-submenu-list > li > .tt-ol-submenu-trigger:hover .tt-ol-submenu-caret {
 	color: #FFF;
+}
+
+.coming-soon {
+	display: inline-block;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 1rem;
+	font-weight: 800 !important;
+	opacity: 1 !important;
 }
 
 /* Submenu caret (requires FontAwesome: https://fontawesome.com/) */
