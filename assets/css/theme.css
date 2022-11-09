@@ -301,8 +301,8 @@ body.tt-transition .ptr-prel-content {
 }
 
 .ptr-prel-image {
-	max-height: 82px; /* You may need to change the img height to match your logo type! */
-	opacity: .5; /* You may need to change the opacity as well! */
+	max-height: 92px; /* You may need to change the img height to match your logo type! */
+	opacity: .65; /* You may need to change the opacity as well! */
 }
 
 
@@ -9201,6 +9201,141 @@ body:not(.tt-boxed) .tt-footer-inner,
 		height: 34px;
 	}
 }
+
+/* Community Diagram */
+
+#tt-diagram-community .tt-diagram-community-dark {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-community .tt-diagram-community-dark:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+#tt-diagram-community .tt-diagram-community-light {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-community .tt-diagram-community-light:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+/* Protocol Diagram */
+
+#tt-diagram-protocol .tt-diagram-protocol-dark {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-protocol .tt-diagram-protocol-dark:hover {
+	opacity: 1;
+	transform: rotate(30deg);
+}
+
+#tt-diagram-protocol .tt-diagram-protocol-light {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-protocol .tt-diagram-protocol-light:hover {
+	opacity: 1;
+	transform: rotate(30deg);
+}
+
+/* Products Diagram */
+
+#tt-diagram-products .tt-diagram-products-dark {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-products .tt-diagram-products-dark:hover {
+	opacity: 1;
+	transform: scaleY(1.1);
+}
+
+#tt-diagram-products .tt-diagram-products-light {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-products .tt-diagram-products-light:hover {
+	opacity: 1;
+	transform: scaleY(1.1);
+}
+
+/* Permaweb Diagram */
+
+#tt-diagram-permaweb .tt-diagram-permaweb-dark {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-permaweb .tt-diagram-permaweb-dark:hover {
+	opacity: 1;
+	transform: translateY(-5px);
+}
+
+#tt-diagram-permaweb .tt-diagram-permaweb-light {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-permaweb .tt-diagram-permaweb-light:hover {
+	opacity: 1;
+	transform: translateY(-5px);
+}
+
+/* Token Diagram */
+
+#tt-diagram-token .tt-diagram-token-dark {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-token .tt-diagram-token-dark:hover {
+	opacity: 1;
+	transform: skewY(10deg);
+}
+
+#tt-diagram-token .tt-diagram-token-light {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-token .tt-diagram-token-light:hover {
+	opacity: 1;
+	transform: skewY(10deg);
+}
+
+
+
+
+
 
 
 /* ------------------------------------------------------------- *

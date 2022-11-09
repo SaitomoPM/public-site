@@ -113,6 +113,14 @@ body:not(.tt-portfolio-slider-on) #ball {
  * Header
 /* ------------------------------------------------------------- */
 
+/* .tt-diagram .diagram-image-light img{
+	display: none;
+}
+
+.tt-diagram .diagram-image-dark img{
+	display: block;
+} */
+
 #tt-header .tt-logo-light {
 	display: none;
 }
@@ -805,6 +813,136 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 }
 .tt-logo-wall .lv-client-dark {
 	display: block;
+}
+
+/* Community Diagram */
+
+#tt-diagram-community .tt-diagram-community-dark {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-community .tt-diagram-community-dark:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+#tt-diagram-community .tt-diagram-community-light {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-community .tt-diagram-community-light:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+/* Protocol Diagram */
+
+#tt-diagram-protocol .tt-diagram-protocol-dark {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-protocol .tt-diagram-protocol-dark:hover {
+	opacity: 1;
+	transform: rotate(30deg);
+}
+
+#tt-diagram-protocol .tt-diagram-protocol-light {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-protocol .tt-diagram-protocol-light:hover {
+	opacity: 1;
+	transform: rotate(30deg);
+}
+
+/* Products Diagram */
+
+#tt-diagram-products .tt-diagram-products-dark {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-products .tt-diagram-products-dark:hover {
+	opacity: 1;
+	transform: scaleY(1.1);
+}
+
+#tt-diagram-products .tt-diagram-products-light {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-products .tt-diagram-products-light:hover {
+	opacity: 1;
+	transform: scaleY(1.1);
+}
+
+/* Permaweb Diagram */
+
+#tt-diagram-permaweb .tt-diagram-permaweb-dark {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-permaweb .tt-diagram-permaweb-dark:hover {
+	opacity: 1;
+	transform: translateY(-5px);
+}
+
+#tt-diagram-permaweb .tt-diagram-permaweb-light {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-permaweb .tt-diagram-permaweb-light:hover {
+	opacity: 1;
+	transform: translateY(-5px);
+}
+
+/* Token Diagram */
+
+#tt-diagram-token .tt-diagram-token-dark {
+	display: block;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-token .tt-diagram-token-dark:hover {
+	opacity: 1;
+	transform: skewY(10deg);
+}
+
+#tt-diagram-token .tt-diagram-token-light {
+	display: none;
+	opacity: 0.8;
+	transform: scale(1);
+	transition: transform .3s, opacity .3s;
+}
+
+#tt-diagram-token .tt-diagram-token-light:hover {
+	opacity: 1;
+	transform: skewY(10deg);
 }
 
 
