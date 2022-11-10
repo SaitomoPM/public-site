@@ -6503,14 +6503,17 @@ body:not(.is-mobile) .tt-btn:hover .tt-btn-line {
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 13px;
-	fill: #BBB;
+	fill: #fafafa;
 	transition: fill .2s;
 }
 .tt-scrolling-btn:hover .scr-btn-text {
-	fill: #FFBB38;
-	/* fill: linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%) !important; */
+	fill: url(#header-shape-gradient) #fff;
 }
 
+#header-shape-gradient {
+  --color-stop: RGBA(245, 189, 252, 1.00);
+  --color-bot: RGBA(248, 213, 194, 1.00);
+}
 
 /* ------------------------------------------------------------- *
  * Social buttons
@@ -6734,13 +6737,13 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 }
 
 .tt-accordion-item:not(.active) .tt-accordion-heading:hover .tt-accordion-caret {
-	color: #FFBB38;
+	color: #fafafa;
 }
 .tt-accordion-item.active .tt-accordion-caret {
 	transform: rotate(90deg);
 }
 .tt-accordion-item.active .tt-accordion-heading:hover .tt-accordion-caret {
-	color: #FFBB38;
+	color: #fafafa;
 }
 
 @media (max-width: 991px) {
@@ -9206,7 +9209,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 #tt-diagram-community .tt-diagram-community-dark {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -9218,7 +9221,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 #tt-diagram-community .tt-diagram-community-light {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -9232,7 +9235,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 #tt-diagram-protocol .tt-diagram-protocol-dark {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -9244,7 +9247,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 #tt-diagram-protocol .tt-diagram-protocol-light {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -9258,59 +9261,59 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 #tt-diagram-products .tt-diagram-products-dark {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-products .tt-diagram-products-dark:hover {
 	opacity: 1;
-	transform: scaleY(1.1);
+	transform: translateY(-5px);
 }
 
 #tt-diagram-products .tt-diagram-products-light {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-products .tt-diagram-products-light:hover {
 	opacity: 1;
-	transform: scaleY(1.1);
+	transform: translateY(-5px);
 }
 
 /* Permaweb Diagram */
 
 #tt-diagram-permaweb .tt-diagram-permaweb-dark {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-permaweb .tt-diagram-permaweb-dark:hover {
 	opacity: 1;
-	transform: translateY(-5px);
+	transform: rotate(-30deg);
 }
 
 #tt-diagram-permaweb .tt-diagram-permaweb-light {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-permaweb .tt-diagram-permaweb-light:hover {
 	opacity: 1;
-	transform: translateY(-5px);
+	transform: rotate(-30deg);
 }
 
 /* Token Diagram */
 
 #tt-diagram-token .tt-diagram-token-dark {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -9322,7 +9325,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 #tt-diagram-token .tt-diagram-token-light {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }

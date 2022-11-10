@@ -819,7 +819,7 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 
 #tt-diagram-community .tt-diagram-community-dark {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -831,7 +831,7 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 
 #tt-diagram-community .tt-diagram-community-light {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -845,7 +845,7 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 
 #tt-diagram-protocol .tt-diagram-protocol-dark {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -857,7 +857,7 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 
 #tt-diagram-protocol .tt-diagram-protocol-light {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -871,59 +871,59 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 
 #tt-diagram-products .tt-diagram-products-dark {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-products .tt-diagram-products-dark:hover {
 	opacity: 1;
-	transform: scaleY(1.1);
+	transform: translateY(-5px);
 }
 
 #tt-diagram-products .tt-diagram-products-light {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-products .tt-diagram-products-light:hover {
 	opacity: 1;
-	transform: scaleY(1.1);
+	transform: translateY(-5px);
 }
 
 /* Permaweb Diagram */
 
 #tt-diagram-permaweb .tt-diagram-permaweb-dark {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-permaweb .tt-diagram-permaweb-dark:hover {
 	opacity: 1;
-	transform: translateY(-5px);
+	transform: rotate(-30deg);
 }
 
 #tt-diagram-permaweb .tt-diagram-permaweb-light {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
 
 #tt-diagram-permaweb .tt-diagram-permaweb-light:hover {
 	opacity: 1;
-	transform: translateY(-5px);
+	transform: rotate(-30deg);
 }
 
 /* Token Diagram */
 
 #tt-diagram-token .tt-diagram-token-dark {
 	display: block;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
@@ -935,7 +935,7 @@ body:not(.tt-portfolio-slider-on):not(.tt-np-image-on):not(.is-404-page) .tt-btn
 
 #tt-diagram-token .tt-diagram-token-light {
 	display: none;
-	opacity: 0.8;
+	opacity: 0.9;
 	transform: scale(1);
 	transition: transform .3s, opacity .3s;
 }
