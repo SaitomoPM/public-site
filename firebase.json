@@ -3,9 +3,8 @@
     "public": ".",
     "ignore": [
       "firebase.json",
-      "CNAME",
-      "README.md",
       "**/.*",
-    ],
+      "**/node_modules/**"
+    ]
   }
 }
