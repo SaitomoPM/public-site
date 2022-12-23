@@ -5933,14 +5933,14 @@ body:not(.tt-np-image-on) .tt-np-ghost {
 }
 
 /* tt-image fixed height */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
 	.tt-image.tti-fixed-height img {
 		width: 100%;
 		height: 80vh;
 		object-fit: cover;
 		object-position: 50% 50%;
 	}
-}
+} */
 
 
 /* ------------------------------------------------------------- *
