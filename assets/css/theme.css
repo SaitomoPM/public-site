@@ -5929,18 +5929,18 @@ body:not(.tt-np-image-on) .tt-np-ghost {
 /* ------------------------------------------------------------- */
 
 .tt-image {
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 
 /* tt-image fixed height */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
 	.tt-image.tti-fixed-height img {
-		/* width: 100%; */
-		height: auto;
-		/* object-fit: cover;
-		object-position: 50% 50%; */
+		width: 100%;
+		height: 80vh;
+		object-fit: cover;
+		object-position: 50% 50%;
 	}
-}
+} */
 
 
 /* ------------------------------------------------------------- *
