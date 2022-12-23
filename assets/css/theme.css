@@ -5929,7 +5929,9 @@ body:not(.tt-np-image-on) .tt-np-ghost {
 /* ------------------------------------------------------------- */
 
 .tt-image {
-	overflow: hidden;
+	/* overflow: scroll; */
+	overflow: scroll;
+-webkit-overflow-scrolling: touch;
 }
 
 /* tt-image fixed height */
