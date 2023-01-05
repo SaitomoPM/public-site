@@ -8198,7 +8198,11 @@ body.is-mobile.tt-sliding-sidebar-open .tt-sliding-sidebar-trigger .tt-ss-icon-c
 	margin: 40px 0 0 0;
 }
 
-
+@media (min-width: 900px) {
+	.mobile-query img{
+ 		image-orientation: none;
+	}
+}
 
 /* Blog list compact
 ===================== */
