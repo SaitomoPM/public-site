@@ -8200,7 +8200,7 @@ body.is-mobile.tt-sliding-sidebar-open .tt-sliding-sidebar-trigger .tt-ss-icon-c
 
 @media (min-width: 900px) {
 	.mobile-query img{
- 		image-orientation: none;
+ 		image-orientation: from-image;
 	}
 }
 
