@@ -174,8 +174,8 @@ hr {
 }
 
 .anim-image-parallax {
-	transform: scale(1.2);
 	transform-origin: 50% 100%;
+	image-orientation: none;
 }
 
 /* Selection */
