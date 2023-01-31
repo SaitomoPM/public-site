@@ -465,7 +465,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 		* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
 	-->
 						<div class="tt-heading tt-heading-lg">
-							<h2 class="tt-heading-title"><strong>ar.io</strong>What is the permaweb?</h2>
+							<h2 class="tt-heading-title">What is the permaweb?</h2>
 							<!-- <h3 class="tt-heading-subtitle text-gray">Subtitle</h3> -->
 						</div>
 						<!-- End tt-Heading -->
@@ -615,17 +615,34 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 						<p class="text-gray">In sum, the permaweb is all the connected sites, applications, photos, videos, and all types of files that sit on top of the Arweave network, with each of those given a unique URL address.</p>
 						<p class="text-gray">To put this into focus and help understand, let's look at how a typical file would get onto the permaweb.</p>
 		
-						
-						<h3><span style="background-color: #fafafa; color: #121212;"> The Growth of ArDrive</span></h3>
-						<p class="text-gray">After the first version of the ArDrive app was released in November 2020, it quickly
-							grew to become the dominant file storage app in the Arweave ecosystem.</p>
-						<p class="text-gray">Arweave is a powerful protocol but it is inaccessible to everyone except specifically
-							trained developers. ArDrive made it simple for non-developers to use Arweave as well. It empowered
-							ordinary people to upload permanent data - storing blue-chip NFTs, personal photos, and business data from
-							all over the world. Nearly 10% of the weave consists of data from ArDrive.</p>
-						<p class="text-gray">However, as the team worked on getting permanent data into the hands of everyone it
-							became clear that the Arweave infrastructure needed to expand to fulfill the vision.</p>
-						<p class="text-gray">This is where the need for reliable gateways comes in.</p>
+						<h3><span style="background-color: #fafafa; color: #121212;">The journey of a file onto the permaweb</span></h3>
+						<p class="text-gray">The Arweave blockchain is file agnostic, meaning that it supports any type of file - doc, jpeg, pdf, etc.</p>
+						<p class="text-gray">When you upload any of these files onto the permaweb they are given a URL (or more technically, a URI) address.</p>
+						<p class="text-gray">For example, take this picture of the Stanley Cup. When upload to the permaweb through ArDrive we can now see the URL address that is given to it:</p>
+						<p class="text-gray"><a href="https://cqnfgyg2km32swatyuf2oi5qbk4aojwib2wvuc7loffvtgzrq6fq.arweave.net/FBpTYNpTN6lYE8ULpyOwCrgHJsgOrVoL63FLWZsxh4s" target="_blank">https://cqnfgyg2km32swatyuf2oi5qbk4aojwib2wvuc7loffvtgzrq6fq.arweave.net/FBpTYNpTN6lYE8ULpyOwCrgHJsgOrVoL63FLWZsxh4s</a></p>
+						<p class="text-gray">The first thing you notice is that the URL is really long and ugly. This is one of the reasons that ArNS (Arweave Name Service) was created: to give the permaweb the kind of nice, short URLs we are used to.</p>
+						<p class="text-gray">With ArNS we created a new address - <a href="https://stanleycup.arweave.dev" target="_blank">stanleycup.arweave.dev</a> - that points to this photo so it can be easily put into a browser or shared with friends.</p>
+						<p class="text-gray">Finally, with the <a href="https://viewblock.io/arweave" target="_blank">ViewBlock explorer</a> and the <a href="https://viewblock.io/arweave/tx/FBpTYNpTN6lYE8ULpyOwCrgHJsgOrVoL63FLWZsxh4s" target="_blank">data transaction</a> for this file, you can check out all of the stats about this particular file we uploaded to Arweave.</p>
+						<p class="text-gray">When I copy the data transaction from ArDrive and put it into ViewBlock I learn things such as:</p>
+						<ul>
+							<li>Time Stamp - when it was created</li> 
+							<li>Confirmations in the network that it exists: 88,000</li>
+							<li>Content type: jpeg</li>
+							<li>Size: 215 KiB</li> 
+							<li>URL</li>
+						</ul>
+							</p>
+						<p class="text-gray">Now, you can do this with more than just files - you can host an entire website on the permaweb, or even run applications off of it, or even, because the data is permanent, build applications that were not possible without it.</p>
+						<p class="text-gray">And, of course, you can always download the file in the manner you uploaded it to the network, because the actual file is on the blockchain in addition to the URL that has been created.</p>
+						<p class="text-gray">The permaweb has a tremendous amount of potential for:</p>
+						<ul>
+							<li>Academics hosting static sites and research - even if their funding dries up</li> 
+							<li>Public data</li>
+							<li>Legal data</li>
+							<li>Financial transactions</li> 
+							<li>Application hosting</li>
+						</ul>
+						<p class="text-gray">As well, in the example above we were dealing with public data that anyone can view. What if I want to put something private on the permaweb? Is it possible?</p>
 						<br>
 
 						<h3><span style="background-color: #fafafa; color: #121212;"> The Founding of ar.io</span></h3>
