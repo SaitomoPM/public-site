@@ -6477,6 +6477,21 @@ button {
 	color: #FFF;
 }
 
+/* Button primary */
+.tt-btn-primary-start {
+	background-color: #fff;
+	border-radius: 0px !important;
+	border: 1px solid #fafafa;
+}
+.tt-btn-primary-start > *,
+.tt-btn-primary-start > *::after {
+	color: #000;
+}
+.tt-btn-primary-start:hover > * {
+	color: #000;
+	
+}
+
 /* Button primary outline */
 .tt-btn-primary-outline {
 	box-shadow: inset 0 0 0 2px var(--tt-main-color);
