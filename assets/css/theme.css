@@ -82,7 +82,12 @@
 html, body {
 	padding: 0;
 	margin: 0;
+	/* overflow: scroll;
+-webkit-overflow-scrolling: touch; */
 }
+
+
+
 
 body {
 	position: relative;
@@ -99,7 +104,8 @@ body {
 	background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #2c2c2c);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	/* height: 100vh; */
+	height: 100%;
 }
 
 @keyframes gradient {
@@ -576,10 +582,6 @@ select::-webkit-scrollbar-thumb {
 }
 
 
-/* ------------------------------------------------------------- *
- * Smooth Scrollbar
- * Source: https://github.com/idiotWu/smooth-scrollbar/
-/* ------------------------------------------------------------- */
 
 /* Hide default scrollbar */
 body:not(.is-mobile).tt-smooth-scroll {
@@ -6489,7 +6491,7 @@ button {
 }
 .tt-btn-primary-start:hover > * {
 	color: #000;
-	
+
 }
 
 /* Button primary outline */
