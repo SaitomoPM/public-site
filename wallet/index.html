@@ -466,7 +466,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 	============================
 	* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 -->
-				<div class="tt-section">
+				<div class="tt-section padding-bottom-xlg-150">
 					<div class="tt-section-inner tt-wrap max-width-1000">
 
 						<!-- Begin tt-Heading
@@ -656,234 +656,151 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 
-			<!-- <footer class="relative py-12 overflow-hidden bg-black lg:py-20 xl:py-24 sm:py-16">
-			<div class="absolute bottom-0 left-0 transform -translate-x-12 translate-y-80 lg:translate-x-0">
-				<svg class="opacity-60 blur-3xl filter" style="filter: blur(64px)" width="612" height="396" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M225.569 296.184c-129.505-34.7-253.236 49.082-218.753-79.613C41.3 87.876 436.205-28.039 565.71 6.662c129.505 34.701-55.432 206.876-89.916 335.571-34.484 128.695-120.721-11.348-250.225-46.049Z" fill="url(#c)" />
-						<defs>
-								<linearGradient id="c" x1="623.268" y1="22.085" x2="453.193" y2="459.449" gradientUnits="userSpaceOnUse">
-										<stop offset="0%" style="stop-color: var(--color-cyan-500)" />
-										<stop offset="100%" style="stop-color: var(--color-purple-500)" />
-								</linearGradient>
-						</defs>
-				</svg>
-			</div>
+			<footer class="" aria-labelledby="footer-heading" style="background: #121212;">
+				<h2 id="footer-heading" class="sr-only">Footer</h2>
+				<div class="mx-auto  px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+					<div class="xl:grid xl:grid-cols-3 xl:gap-8 ">
+						<img class="h-14" src="../assets/img/elephant-light.png" class=" magnetic-item" alt="ar.io Logo">
 
-			<div class="absolute inset-0">
-				<img class="object-cover w-full h-full opacity-50" src="../assets/img/footer-bg.jpg" alt="" />
-			</div>
+						<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+							<div class="md:grid md:grid-cols-2 md:gap-8">
 
-			<div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-				<div class="grid grid-cols-1 gap-y-12 lg:grid-cols-2 xl:grid-cols-7 gap-x-8 xl:gap-x-16">
-						<div class="max-w-md mx-auto  xl:col-span-3 lg:max-w-sm lg:mx-0 lg:text-left">
-								<p class="text-2xl font-normal text-white sm:text-2xl lg:text-left lg:text-1xl">Want to receive updates from ar.io?</p>
-								<div class="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
-										<div class="absolute transition-all duration-200 square-md -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
-										<a href="#" title="" class="relative inline-flex items-left float:left px-8 py-3 text-base font-normal text-white bg-black border border-transparent square-md" role="button"> Subscribe </a>
+								<div>
+									<h3 class="text-sm font-bold leading-6 text-white">Use</h3>
+									<ul role="list" class="mt-6 space-y-4">
+										<li>
+											<a href="../ardrive" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive  <i class="fa-solid fa-location-arrow"></i></a>
+										</li>
+
+										<li>
+											<a href="../arns" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArNS (Beta)  <i class="fa-solid fa-location-arrow"></i></a>
+										</li>
+
+										<li>
+											<a href="https://prices.ardrive.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Pricing Calculator  <i class="fa-solid fa-location-arrow"></i></a>
+										</li>
+
+										<li>
+											<a href="https://viewblock.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Viewblock  <i class="fa-solid fa-location-arrow"></i></a>
+										</li>
+
+										<li>
+											<a href="../wallet" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Wallet</a>
+										</li>
+									</ul>
 								</div>
+								<div class="mt-10 md:mt-0">
+									<h3 class="text-sm font-bold leading-6 text-white">Develop</h3>
+									<ul role="list" class="mt-6 space-y-4">
+										<li>
+											<a href="https://github.com/ardriveapp/ardrive-cli" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive CLI  <i class="fa-solid fa-location-arrow"></i></a>
+										</li>
+
+										<li>
+											<a href="https://github.com/ardriveapp/ardrive-core-js" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive Core-JS  <i class="fa-solid fa-location-arrow"></i></a>
+										</li>
+
+										<!-- <li>
+										<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs</a>
+									</li> -->
+
+								</ul>
+							</div>
 						</div>
-
-						<div class="overflow-hidden lg:-ml-12 lg:-my-8 bg-base-900 rounded-xl xl:col-span-4">
-								<div class="p-8 sm:p-12">
-										<div class="grid grid-cols-2 gap-y-12 sm:grid-cols-3 gap-x-12 xl:gap-x-16">
-												<div>
-														<h6 class="text-base font-semibold text-white">Use</h6>
-
-														<ul class="mt-6 space-y-4">
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> ArDrive products </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> ArNS Portal </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Governance Portal </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Gateway Explorer </a>
-																</li>
-														</ul>
-												</div>
-
-												<div>
-														<h6 class="text-base font-semibold text-white">Develop</h6>
-
-														<ul class="mt-6 space-y-4">
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Documentation </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Ardrive-core </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> CLI </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> ar.io Dev Tools </a>
-																</li>
-														</ul>
-												</div>
-
-												<div>
-														<h6 class="text-base font-semibold text-white">Engage</h6>
-
-														<ul class="mt-6 space-y-4">
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Arcast </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Merch </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Blog </a>
-																</li>
-
-																<li>
-																		<a href="#" title="" class="flex text-base font-normal text-gray-400 transition-all transform hover:text-white duration hover:translate-x-1"> Grants & Funding </a>
-																</li>
-														</ul>
-												</div>
-										</div>
-
-										<hr class="mt-12 border-gray-800 sm:mt-16" />
-
-										<div class="flex items-center justify-between mt-6">
-												<span class="text-sm  text-gray-400"> Socials: </span>
+						<div class="md:grid md:grid-cols-2 md:gap-8">
 
 
-												<div class="flex items-center justify-end space-x-4">
-													<ul style="display:flex; float: right;">
-														<li><a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-github"></i></a></li>
-														<li><a href="https://discord.gg/HGG52EtTc2"
-																class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord" style=" margin-left:  25px ;"></i></a></li>
-														<li><a href="https://www.instagram.com/ardriveapp/" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-instagram" style=" margin-left:  25px ;"></i></a></li>
-														<li><a href="https://www.reddit.com/r/ar_io/" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-reddit" style=" margin-left:  25px ;"></i></a></li>
-														<li><a href="https://www.tiktok.com/@ardrive.io" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-tiktok" style=" margin-left:  25px ;"></i></a></li>
-														<li><a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g" class="magnetic-item"
-																target="_blank" rel="noopener"><i class="fab fa-youtube" style=" margin-left:  25px ;"></i></a></li>
-														<li><a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-linkedin" style=" margin-left:  25px ;"></i></a></li>
-														<li><a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-twitter" style=" margin-left:  25px ;"></i></a></li>
+							<div>
+								<h3 class="text-sm font-bold leading-6 text-white">Engage</h3>
+								<ul role="list" class="mt-6 space-y-4">
+									<li>
+										<a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArCast  <i class="fa-solid fa-location-arrow"></i></a>
+									</li>
 
-													</ul>
-												</div>
-										</div>
-								</div>
+									<li>
+										<a href="../articles" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Blog</a>
+									</li>
+
+									<li>
+										<a href="../brand-kit" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Brand Kit</a>
+									</li>
+
+									<!-- <li>
+									<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Contribute</a>
+								</li> -->
+
+
+
+								<li>
+									<a href="https://ar-io-store.myshopify.com/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Merch  <i class="fa-solid fa-location-arrow"></i></a>
+								</li>
+							</ul>
 						</div>
+						<div class="mt-10 md:mt-0">
+							<h3 class="text-sm font-bold leading-6 text-white">Learn</h3>
+							<ul role="list" class="mt-6 space-y-4">
+								<li>
+									<a href="../why-ario" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Why ar.io?</a>
+								</li>
+
+								<li>
+									<a href="../what-is-ario" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">What is ar.io?</a>
+								</li>
+
+								<li>
+									<a href="../what-is-the-permaweb" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">What is the permaweb?</a>
+								</li>
+
+								<li>
+									<a href="../what-is-a-gateway" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">What is a gateway?</a>
+								</li>
+
+								<li>
+									<a href="../benefits-of-long-term-storage" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Benefits of long-term storage</a>
+								</li>
+
+								<li>
+									<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Story</a>
+								</li>
+
+								<!-- <li>
+								<a href="../foundation" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Foundation</a>
+							</li> -->
+						</ul>
+					</div>
 				</div>
 			</div>
-			</footer> -->
+			</div>
+			<div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
+				<div>
+					<h3 class="text-sm font-bold leading-6 text-white">Subscribe to our newsletter</h3>
+					<p class="mt-4 mb-4 text-sm leading-6 text-gray-300">The latest news, articles, and resources, sent to your inbox weekly.</p>
+				</div>
+				<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FAFAFA;color:#000;font-size:20px;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe</button><script src="//embed.typeform.com/next/embed.js"></script>
+			</div>
+			<div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+				<div class="flex space-x-6 md:order-2">
 
+					<a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
+					rel="noopener"><i class="fab fa-github" style="color: #fafafa;"></i></a>
 
-							<!-- ======================
-			///// Begin tt-footer 1/////
-			=========================== -->
-							<footer id="tt-footer">
-								<div class="tt-footer-inner">
+					<a href="https://discord.gg/HGG52EtTc2"
+					class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord" style="color: #fafafa;"></i></a>
 
-									<div class="footer-col tt-align-center-left">
-										<div class="footer-col-inner">
+					<a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
+					rel="noopener"><i class="fab fa-twitter" style="color: #fafafa;"></i></a>
 
+					<a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
+					rel="noopener"><i class="fab fa-linkedin" style="color: #fafafa;"></i></a>
 
-											<div class="magnetic-item subscribe-hide">
-
-
-												<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left"
-													data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet"
-													style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
-													Subscribe <i class="fas fa-paper-plane" style="padding-left: 10px;"></i>
-												</button>
-												<script src="//embed.typeform.com/next/embed.js"></script>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="footer-col tt-align-center order-m-last">
-										<div class="footer-col-inner">
-
-											<div class="magnetic-item">
-												<a href="./terms-and-conditions" target="_blank" rel="noopener" class="tt-btn tt-btn-link">Terms
-													and Conditions</a>
-											</div>
-
-										</div>
-									</div>
-
-
-									<div class="footer-col tt-align-center-right">
-										<div class="footer-col-inner">
-
-											<div class="footer-social">
-												<div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-												<div class="social-buttons">
-													<ul>
-														<li><a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-github"></i></a></li>
-														<li><a href="https://discord.gg/HGG52EtTc2"
-																class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a></li>
-														<li><a href="https://www.instagram.com/ardriveapp/" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="https://www.reddit.com/r/ar_io/" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-reddit"></i></a></li>
-														<li><a href="https://www.tiktok.com/@ardrive.io" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-tiktok"></i></a></li>
-														<li><a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g" class="magnetic-item"
-																target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-														<li><a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-														<li><a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
-																rel="noopener"><i class="fab fa-twitter"></i></a></li>
-
-													</ul>
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-
-								</div>
-							</footer>
-							<!-- End tt-footer 1
-
-							<!-- ======================
-			///// Begin tt-footer 2/////
-			=========================== -->
-							<footer id="tt-footer">
-								<div class="tt-footer-inner">
-
-
-									<div class="footer-col tt-align-center order-m-last">
-										<div class="footer-col-inner">
-
-
-											<div class="tt-copyright">
-												<div class="tt-btn  tt-btn-link" style="cursor: default !important;"> v. 0.1984</div>
-											</div>
-
-										</div>
-									</div>
+				</div>
+				<p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; 2023 ar.io</p>
+			</div>
+			</div>
+			</footer>
 
 
 
-
-								</div>
-							</footer>
-							<!-- End tt-footer 2
 
 
 
@@ -930,9 +847,11 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 	<!-- Template master JS -->
 	<script src="../assets/js/theme.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://kit.fontawesome.com/0625966738.js" crossorigin="anonymous"></script>
+	<script src="//embed.typeform.com/next/embed.js"></script>
 
-	<!-- Tailwind -->
-	<!-- <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script> -->
+
 
 </body>
 
