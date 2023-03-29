@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 
-
-
 <html lang="en">
-
 <head>
 
 	<!-- Title -->
-	<title>ar.io Live - Your Gateway to the Permaweb</title>
+	<title>Brand Kit | ar.io</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
-	<meta name="ar.io" content="A global network, protocol, and currency that enables the permaweb.">
+	<meta name="ar.io Brand Kit" content="A global network, protocol, and currency that enables the permaweb.">
 	<meta property="og:image" content="https://res.cloudinary.com/donw16xff/image/upload/v1666927508/k.jpg">
 	<meta property="og:url" content="https://res.cloudinary.com/donw16xff/image/upload/v1666927508/k.jpg">
 
@@ -36,8 +33,8 @@
 
 
 	<!-- Google fonts (https://www.google.com/fonts) -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -65,6 +62,7 @@
 });
 </script> -->
 
+<link rel="stylesheet" href="https://kit.fontawesome.com/0625966738.css" crossorigin="anonymous">
 <script defer data-domain="ar.io" src="https://plausible.io/js/plausible.js"></script>
 
 </head>
@@ -81,199 +79,219 @@
 
 </style>
 
+<!-- ===========
+///// Body /////
+================
+* Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
+* Use class "tt-smooth-scroll" to enable page smooth scrolling.
+* Use class "tt-transition" to enable page transitions.
+* Use class "tt-magic-cursor" to enable magic cursor.
+* Note: there may be classes that are specific to this page only!
+-->
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
+	<!-- <section class="" style="position:fixed; z-index: 100000;  bottom:10px; right: 10px; ">
+	<div class="text-center anim-skewinup">
+	<div class="tt-header-col max-width-600">
+	<div class="apps-banner apps-banner-success alert alert-dismissible fade show " role="alert"
+	style="margin:25px; padding: 15px; border: 2px solid #fafafa;">
+	<a href="https://ardrive.io/mobile" target="_blank"> <strong>ArDrive Mobile has landed. </strong></a>
+	<span onclick="this.parentElement.style.display='none';"
+	style="cursor: pointer; padding-left: 10px; font-weight: bold;">X
 
-	<!-- *************************************
-	*********** Begin body inner *************
-	************************************** -->
-	<main id="body-inner">
+</span>
+</div>
+</div>
+</div>
+</section> -->
+<!-- *************************************
+*********** Begin body inner *************
+************************************** -->
+<main id="body-inner">
 
-		<!-- Begin page transition (do not remove!!!)
-		=========================== -->
-		<div id="page-transition">
-			<div class="ptr-overlay"></div>
-			<div class="ptr-preloader">
-				<div class="ptr-prel-content">
+	<!-- Begin page transition (do not remove!!!)
+	=========================== -->
+	<div id="page-transition">
+		<div class="ptr-overlay"></div>
+		<div class="ptr-preloader">
+			<div class="ptr-prel-content">
 
-					<img src="../assets/img/logo-party.gif" class="ptr-prel-image tt-logo-light" alt="Logo">
-				</div> <!-- /.ptr-prel-content -->
-			</div> <!-- /.ptr-preloader -->
-		</div>
-		<!-- End page transition -->
+				<img src="../assets/img/logo-party.gif" class="ptr-prel-image tt-logo-light" alt="Logo">
+			</div> <!-- /.ptr-prel-content -->
+		</div> <!-- /.ptr-preloader -->
+	</div>
+	<!-- End page transition -->
 
-		<!-- Begin magic cursor
-		======================== -->
-		<div id="magic-cursor">
-			<div id="ball"></div>
-		</div>
-		<!-- End magic cursor -->
+	<!-- Begin magic cursor
+	======================== -->
+	<!-- <div id="magic-cursor">
+	<div id="ball"></div>
+</div> -->
+<!-- End magic cursor -->
 
 
-		<!-- *****************************************
-		*********** Begin scroll container ***********
-		****************************************** -->
-		<div id="scroll-container">
+<!-- *****************************************
+*********** Begin scroll container ***********
+****************************************** -->
+<div id="scroll-container">
 
-			<!-- ===================
-			///// Begin header /////
+	<!-- ===================
+	///// Begin header /////
+	========================
+	* Use class "tt-header-fixed" to set header to fixed position.
+-->
+<header id="tt-header" class="">
+	<div class="tt-header-inner">
+		<!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). There is a helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More about helper classes can be found in the file "helper.css". -->
+
+		<div class="tt-header-col">
+
+			<!-- Begin logo
+			================ -->
+			<div class="tt-logo">
+				<a href="../">
+
+					<!-- logo light: -->
+					<!-- <img src="../assets/img/logo-party.gif" class="tt-logo-light magnetic-item"  alt="Logo">  -->
+					<!-- logo dark: -->
+					<!-- <img src="../assets/img/logo-party.gif" class="tt-logo-dark magnetic-item"  alt="Logo">  -->
+					<!-- <img src="../assets/img/logo-lights.gif" class="tt-logo-light magnetic-item"  alt="Logo">
+					<img src="../assets/img/logo-lights.gif" class="tt-logo-dark magnetic-item"  alt="Logo"> -->
+					<img src="../assets/img/elephant-light.png" class="tt-logo-light magnetic-item" alt="Logo">
+					<img src="../assets/img/elephant-dark.png" class="tt-logo-dark magnetic-item" alt="Logo">
+				</a>
+			</div>
+			<!-- End logo -->
+
+		</div> <!-- /.tt-header-col -->
+
+		<div class="tt-header-col">
+
+			<!-- Begin overlay menu toggle button -->
+			<div id="tt-ol-menu-toggle-btn-wrap">
+				<div class="tt-ol-menu-toggle-btn-text-wrap hide-cursor">
+					<div class="tt-ol-menu-toggle-btn-text">
+						<span class="text-menu" data-hover="Explore">Explore</span>
+						<span class="text-close">Close</span>
+					</div> <!-- /.tt-ol-menu-toggle-btn-text -->
+				</div> <!-- /.tt-ol-menu-toggle-btn-text-wrap -->
+				<div class="tt-ol-menu-toggle-btn-holder">
+					<a href="#" class="tt-ol-menu-toggle-btn magnetic-item"><span></span></a>
+				</div> <!-- /.tt-ol-menu-toggle-btn-holder -->
+			</div>
+			<!-- End overlay menu toggle button -->
+
+			<!-- Begin overlay menu
 			========================
-			* Use class "tt-header-fixed" to set header to fixed position.
+			* Use class "tt-ol-menu-count" to enable menu counter.
 		-->
-		<header id="tt-header" class="">
-			<div class="tt-header-inner">
-				<!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). There is a helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More about helper classes can be found in the file "helper.css". -->
+		<nav class="tt-overlay-menu tt-ol-menu-count">
+			<div class="tt-ol-menu-ghost"></div>
+			<div class="tt-ol-menu-holder">
+				<div class="tt-ol-menu-inner tt-wrap">
+					<div class="tt-ol-menu-content">
 
-				<div class="tt-header-col">
+						<!-- Begin menu list -->
+						<ul class="tt-ol-menu-list">
 
-					<!-- Begin logo
-					================ -->
-					<div class="tt-logo">
-						<a href="../">
+							<li><a href="../">Home</a></li>
 
-							<!-- logo light: -->
-							<!-- <img src="../assets/img/logo-party.gif" class="tt-logo-light magnetic-item"  alt="Logo">  -->
-							<!-- logo dark: -->
-							<!-- <img src="../assets/img/logo-party.gif" class="tt-logo-dark magnetic-item"  alt="Logo">  -->
-							<!-- <img src="../assets/img/logo-lights.gif" class="tt-logo-light magnetic-item"  alt="Logo">
-							<img src="../assets/img/logo-lights.gif" class="tt-logo-dark magnetic-item"  alt="Logo"> -->
-							<img src="../assets/img/elephant-light.png" class="tt-logo-light magnetic-item" alt="Logo">
-							<img src="../assets/img/elephant-dark.png" class="tt-logo-dark magnetic-item" alt="Logo">
-						</a>
-					</div>
-					<!-- End logo -->
-
-				</div> <!-- /.tt-header-col -->
-
-				<div class="tt-header-col">
-
-					<!-- Begin overlay menu toggle button -->
-					<div id="tt-ol-menu-toggle-btn-wrap">
-						<div class="tt-ol-menu-toggle-btn-text-wrap hide-cursor">
-							<div class="tt-ol-menu-toggle-btn-text">
-								<span class="text-menu" data-hover="Explore">Explore</span>
-								<span class="text-close">Close</span>
-							</div> <!-- /.tt-ol-menu-toggle-btn-text -->
-						</div> <!-- /.tt-ol-menu-toggle-btn-text-wrap -->
-						<div class="tt-ol-menu-toggle-btn-holder">
-							<a href="#" class="tt-ol-menu-toggle-btn magnetic-item"><span></span></a>
-						</div> <!-- /.tt-ol-menu-toggle-btn-holder -->
-					</div>
-					<!-- End overlay menu toggle button -->
-
-					<!-- Begin overlay menu
-					========================
-					* Use class "tt-ol-menu-count" to enable menu counter.
-				-->
-				<nav class="tt-overlay-menu tt-ol-menu-count">
-					<div class="tt-ol-menu-ghost"></div>
-					<div class="tt-ol-menu-holder">
-						<div class="tt-ol-menu-inner tt-wrap">
-							<div class="tt-ol-menu-content">
-
-								<!-- Begin menu list -->
-								<ul class="tt-ol-menu-list">
-
-									<li><a href="../">Home</a></li>
-
-									<!-- Begin submenu (submenu master)
-									==================================== -->
-									<li class="tt-ol-submenu-wrap">
-										<div class="tt-ol-submenu-trigger">
-											<a href="#">About</a>
-											<div class="tt-ol-submenu-caret-wrap">
-												<div class="tt-ol-submenu-caret magnetic-item"></div>
-											</div> <!-- /.tt-ol-submenu-caret-wrap -->
-										</div> <!-- /.tt-ol-submenu-trigger -->
-										<div class="tt-ol-submenu">
-											<ul class="tt-ol-submenu-list">
-
-												<!-- Begin submenu
-												=================== -->
-												<!-- <li class="tt-ol-submenu-wrap">
-												<div class="tt-ol-submenu-trigger">
-												<a href="#" class="tt-ol-submenu-link">Contact</a>
-
-											</div>
-
-										</li> -->
-										<!-- End submenu -->
+							<!-- Begin submenu (submenu master)
+							==================================== -->
+							<li class="tt-ol-submenu-wrap">
+								<div class="tt-ol-submenu-trigger">
+									<a href="#">About</a>
+									<div class="tt-ol-submenu-caret-wrap">
+										<div class="tt-ol-submenu-caret magnetic-item"></div>
+									</div> <!-- /.tt-ol-submenu-caret-wrap -->
+								</div> <!-- /.tt-ol-submenu-trigger -->
+								<div class="tt-ol-submenu">
+									<ul class="tt-ol-submenu-list">
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-ol-submenu-wrap">
-											<div class="tt-ol-submenu-trigger">
-												<a href="../articles" class="tt-ol-submenu-link">Articles</a>
+										<!-- <li class="tt-ol-submenu-wrap">
+										<div class="tt-ol-submenu-trigger">
+										<a href="#" class="tt-ol-submenu-link">Contact</a>
 
-											</div> <!-- /.tt-ol-submenu-trigger -->
+									</div>
 
-										</li>
-										<li class="tt-ol-submenu-wrap">
-											<div class="tt-ol-submenu-trigger">
-												<a href="../wallet" class="tt-ol-submenu-link">Get a Wallet</a>
+								</li> -->
+								<!-- End submenu -->
 
-											</div> <!-- /.tt-ol-submenu-trigger -->
+								<!-- Begin submenu
+								=================== -->
+								<li class="tt-ol-submenu-wrap">
+									<div class="tt-ol-submenu-trigger">
+										<a href="../articles" class="tt-ol-submenu-link">Articles</a>
 
-										</li>
-										<li class="tt-ol-submenu-wrap">
-											<div class="tt-ol-submenu-trigger">
-												<a href="../start" class="tt-ol-submenu-link">Learn</a>
+									</div> <!-- /.tt-ol-submenu-trigger -->
 
-											</div> <!-- /.tt-ol-submenu-trigger -->
+								</li>
+								<li class="tt-ol-submenu-wrap">
+									<div class="tt-ol-submenu-trigger">
+										<a href="../wallet" class="tt-ol-submenu-link">Get a Wallet</a>
 
-										</li>
-										<li class="tt-ol-submenu-wrap">
-											<div class="tt-ol-submenu-trigger">
-												<a href="../story" class="tt-ol-submenu-link">Story</a>
-												<!-- <div class="tt-ol-submenu-caret-wrap">
-												<div class="tt-ol-submenu-caret magnetic-item"></div>
-											</div>  -->
-										</div>
-										<!-- <div class="tt-ol-submenu">
-										<ul class="tt-ol-submenu-list">
+									</div> <!-- /.tt-ol-submenu-trigger -->
 
-										<li><a href="">ArDrive Questions</a></li>
-										<li><a href="">ArFS Questions</a></li>
-										<li><a href="">ArNS Questions</a></li>
-										<li><a href="">GNAT Questions</a></li>
+								</li>
+								<li class="tt-ol-submenu-wrap">
+									<div class="tt-ol-submenu-trigger">
+										<a href="../start" class="tt-ol-submenu-link">Learn</a>
+
+									</div> <!-- /.tt-ol-submenu-trigger -->
+
+								</li>
+								<li class="tt-ol-submenu-wrap">
+									<div class="tt-ol-submenu-trigger">
+										<a href="../story" class="tt-ol-submenu-link">Story</a>
+										<!-- <div class="tt-ol-submenu-caret-wrap">
+										<div class="tt-ol-submenu-caret magnetic-item"></div>
+									</div>  -->
+								</div>
+								<!-- <div class="tt-ol-submenu">
+								<ul class="tt-ol-submenu-list">
+
+								<li><a href="">ArDrive Questions</a></li>
+								<li><a href="">ArFS Questions</a></li>
+								<li><a href="">ArNS Questions</a></li>
+								<li><a href="">GNAT Questions</a></li>
 
 
-									</ul>
-								</div>  -->
-							</li>
-							<!-- End submenu -->
-
-							<!-- Begin submenu
-							=================== -->
-							<!-- <li class="tt-ol-submenu-wrap">
-							<div class="tt-ol-submenu-trigger">
-							<a href="#" class="tt-ol-submenu-link">Jobs</a>
-
-						</div> -->
-
+							</ul>
+						</div>  -->
 					</li>
-
 					<!-- End submenu -->
 
+					<!-- Begin submenu
+					=================== -->
+					<!-- <li class="tt-ol-submenu-wrap">
+					<div class="tt-ol-submenu-trigger">
+					<a href="#" class="tt-ol-submenu-link">Jobs</a>
+
+				</div> -->
+
+			</li>
+
+			<!-- End submenu -->
 
 
 
 
 
 
-				</ul> <!-- /.tt-ol-submenu-list -->
-			</div> <!-- /.tt-ol-submenu -->
-		</li>
-		<!-- End submenu (sub-master) -->
 
-		<!-- Begin submenu (submenu master)
-		==================================== -->
-		<!-- <li class="tt-ol-submenu-wrap">
-		<div class="tt-ol-submenu-trigger">
-		<a href="#">Community</a>
-		<div class="tt-ol-submenu-caret-wrap">
-		<div class="tt-ol-submenu-caret magnetic-item"></div>
-	</div>
+		</ul> <!-- /.tt-ol-submenu-list -->
+	</div> <!-- /.tt-ol-submenu -->
+</li>
+<!-- End submenu (sub-master) -->
+
+<!-- <li class="tt-ol-submenu-wrap">
+<div class="tt-ol-submenu-trigger">
+<a href="#">Community</a>
+<div class="tt-ol-submenu-caret-wrap">
+<div class="tt-ol-submenu-caret magnetic-item"></div>
+</div>
 </div>
 <div class="tt-ol-submenu">
 <ul class="tt-ol-submenu-list">
@@ -303,7 +321,6 @@ Newsletter
 </ul>
 </div>
 </li> -->
-<!-- End submenu (sub-master) -->
 
 <!-- Begin submenu (submenu master)
 ==================================== -->
@@ -322,7 +339,7 @@ Newsletter
 				<li class="tt-logo-dark"><a href="../ardrive" target="_blank"><img
 					src="../assets/img/ardrive-logo-dark.png" width="80" alt="ardrive-logo"></a></li>
 
-					<!-- <li class="active"><a href="../arns" style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;" >ArNS</a></li> -->
+
 					<li class="active"><a href="../arns"
 						style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;">ArNS</a></li>
 						<li class="active coming-soon">Gateways <strong style="opacity: 0;">-</strong> <span
@@ -382,112 +399,105 @@ Newsletter
 <div id="content-wrap">
 
 
-	<!-- ========================
-	///// Begin page header /////
-	=============================
-	* Use class "ph-full" to enable fullscreen size (no effect on smaller screens!).
-	* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
-	* Use class "ph-center" to enable content center position.
-	* Use class "ph-image-cropped" to crop image (if image is used). It uses fixed image dimensions (no effect with class "ph-bg-image"!).
-	* Use class "ph-bg-image" to enable page header background image. Note: "ph-caption-title-ghost" will be disabled if you enable this option!
-	* Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light background image (effect only with class "ph-bg-image").
-	* Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
-	* Use class "ph-content-parallax" to enable content parallax.
-	* Use class "ph-stroke" to enable caption title stroke style.
-	* Use class "ph-ghost-scroll" to enable the scroll effect to caption title ghost (no effect with class "ph-center"!).
--->
-<br>
-<br>
-<div id="page-header"
-class="ph-cap-lg ph-ghost-scroll ph-image-cropped ph-image-cover-2 ph-content-parallax padding-top-xlg-150">
-<!-- <div class="page-header-inner tt-wrap"> -->
 
-<!-- Begin page header image
-============================= -->
-<!-- <div class="ph-image">
-<div class="ph-image-inner">
-<img src="../assets/img/page-header/ph-3.jpg" alt="Image">
-</div>
-</div> -->
-<!-- End page header image -->
 
-<!-- Begin page header caption
-===============================
-Use class "max-width-*" to set caption max width if needed. For example "max-width-1000". More info about helper classes can be found in the file "helper.css".
--->
-<!-- <div class="ph-caption">
-<div class="ph-caption-subtitle">
-<div class="ph-appear">Dummy Page</div>
-</div>
-<h1 class="ph-caption-title">
-<div class="ph-appear">Page</div>
-</h1>
-<div class="ph-caption-title-ghost">
-<div class="ph-appear text-stroke-light">Get Started</div>
-</div>
-</div> -->
-<!-- End page header caption -->
 
-<!-- </div> -->
-<!-- /.page-header-inner -->
 
-<!-- Begin scroll down (you can change "data-offset" to set scroll top offset)
-======================= -->
-<div class="tt-scroll-down">
-	<a href="#page-content" class="tt-sd-inner ph-appear" data-offset="0">
-		<div class="tt-sd-arrow">
-			<div class="tt-sd-arrow-inner"></div>
+	<div id="page-content" style="background: linear-gradient(45deg, #1f1f1f, #171717, #121212, #2c2c2c); background-size: 400% 400%; animation: gradient 15s ease infinite;">
+
+		<div class="tt-section padding-top-xlg-100 padding-bottom-xlg-150">
+			<div class="tt-section-inner  max-width-1700" style="padding-top:50px;">
+
+				<div class="tt-row margin-left-lg-3-p margin-right-lg-3-p">
+					<div class="tt-col-xl-12">
+
+
+						<div class="tt-heading tt-heading-xlg anim-fadeinup">
+							<h3 class="tt-heading-subtitle">ar.io | <span style="color: #fafafa;">News Room and Press Kit</span></h3>
+
+						</div>
+						<!-- End tt-Heading -->
+
+						<!-- <div class="max-width-1700 margin-bottom-60 anim-fadeinup">
+							<h5>News Room and Press Kit</h5>
+						</div> -->
+
+					</div> <!-- /.tt-col -->
+
+					<div class="tt-col-xl-1">
+					</div> <!-- /.tt-col -->
+
+					<div class="tt-col-xl-7">
+
+						<!-- <img class="anim-image-parallax tt-lazy" src="" data-src="../assets/img/loader.gif" alt="image"> -->
+
+
+					</div> <!-- /.tt-col -->
+				</div> <!-- /.tt-row -->
+
+			</div> <!-- /.tt-section-inner -->
+
+
+
+
+
+			<!-- =======================
+			///// Begin tt-section /////
+			============================
+			* Mobile App GIF.
+		-->
+		<div class="tt-section padding-bottom-xlg-150">
+			<div class="tt-section-inner max-width-1600">
+
+
+				<div class="tt-image tti-fixed-height">
+					<figure>
+
+						<img class="anim-image-parallax tt-lazy" src="" data-src="../assets/img/brand.png" alt="image" >
+
+					</figure>
+				</div>
+
+
+			</div>
 		</div>
-		<div class="tt-sd-text">Scroll</div>
-	</a>
-</div>
-<!-- End scroll down -->
-
-</div>
-<!-- End page header -->
 
 
-<!-- *************************************
-*********** Begin page content ***********
-************************************** -->
-<div id="page-content">
+		<div class="tt-section padding-bottom-xlg-150">
+			<div class="tt-section-inner max-width-1600">
 
 
-	<!-- =======================
-	///// Begin tt-section /////
-	============================
-	* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
--->
-<div class="tt-section padding-bottom-xlg-150">
-	<div class="tt-section-inner center tt-wrap max-width-1000">
+				<div class="tt-image tti-fixed-height">
+					<figure>
+
+						<img class="anim-image-parallax tt-lazy" src="" data-src="../assets/img/colors.png" alt="image" >
+
+					</figure>
+				</div>
 
 
-		<div class="video-container">
-
-
-			<p><center><iframe width="853" height="505" src="https://www.youtube.com/embed/videoseries?list=PLfiPgZPFFhbTSjT1ZKsFw36IDS5aGX8tx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center></p>
-
+			</div>
 		</div>
-			<p class="align-items: center; text-align: center;" style="font-family: 'Roboto Mono', monospace; padding: 25px;"><center>Sponsored by ar.io, forward research, and lattice. Stream sponsored by Community Labs.</center></p>
-
+		<div class="tt-section-inner tt-wrap max-width-900 text-center padding-top-xlg-100 ">
+			<a href="../assets/ar.io-media-kit.zip" class="bli-read-more tt-btn tt-btn-primary" style="background: #121212 !important;">
+				<div data-hover="Download" style="font-size: 1.2rem; padding: 25px;">Brand Kit</div>
+				<span class="tt-btn-icon"><i class="fas fa-arrow-down"></i></span>
+			</a>
 		</div>
-	</div>
-	<!-- End tt-section -->
+		<br>
+		<br>
+		<br>
 
+		<style media="screen">
+		.bli-read-more.tt-btn {
+			height: 64px;
+			margin: 52px 0 0 0;
+		}
+	</style>
 
-<br>
-<br>
-<br>
 
 </div>
-<!-- End page content -->
-
-<style media="screen">
-.video-container { position: relative; padding-bottom: 56.25%; padding-top: 10px; height: 0; overflow: hidden; }
-
-.video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-</style>
-
+<!-- End content wrap -->
 <footer class="" aria-labelledby="footer-heading" style="background: linear-gradient(45deg, #1f1f1f, #171717, #121212, #2c2c2c); background-size: 400% 400%; animation: gradient 15s ease infinite;">
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
 	<div class="mx-auto  px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
@@ -634,54 +644,49 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 	</div>
 </footer>
 
+</div>
+<!-- End scroll container -->
 
 
-			</div>
-			<!-- End content wrap -->
-
-		</div>
-		<!-- End scroll container -->
-
-
-	</main>
-	<!-- End body inner -->
+</main>
+<!-- End body inner -->
 
 
 
 
-	<!-- ====================
-	///// Scripts below /////
-	===================== -->
+<!-- ====================
+///// Scripts below /////
+===================== -->
 
-	<!-- Core JS -->
-	<script src="../assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
+<!-- Core JS -->
+<script src="../assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
 
-	<!-- Libs and Plugins JS -->
-	<script src="../assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
-	<script src="../assets/vendor/gsap/ScrollToPlugin.min.js"></script>
-	<!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
-	<script src="../assets/vendor/gsap/ScrollTrigger.min.js"></script>
-	<!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
+<!-- Libs and Plugins JS -->
+<script src="../assets/vendor/gsap/gsap.min.js"></script>
+<script src="../assets/vendor/gsap/ScrollToPlugin.min.js"></script>
+<!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
+<script src="../assets/vendor/gsap/ScrollTrigger.min.js"></script>
+<!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
 
-	<script src="../assets/vendor/smooth-scrollbar.js"></script>
-	<!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
-	<script src="../assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
-	<script src="../assets/vendor/isotope/imagesloaded.pkgd.min.js"></script>
-	<!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
-	<script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
-	<script src="../assets/vendor/isotope/packery-mode.pkgd.min.js"></script>
-	<!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
-	<script src="../assets/vendor/lightgallery/js/lightgallery-all.min.js"></script>
-	<!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
-	<script src="../assets/vendor/jquery.mousewheel.min.js"></script>
-	<!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
+<script src="../assets/vendor/smooth-scrollbar.js"></script>
+<!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
+<script src="../assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
+<script src="../assets/vendor/isotope/imagesloaded.pkgd.min.js"></script>
+<!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
+<script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
+<script src="../assets/vendor/isotope/packery-mode.pkgd.min.js"></script>
+<!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
+<script src="../assets/vendor/lightgallery/js/lightgallery-all.min.js"></script>
+<!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
+<script src="../assets/vendor/jquery.mousewheel.min.js"></script>
+<!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
 
-	<!-- Template master JS -->
-	<script src="../assets/js/theme.js"></script>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="https://kit.fontawesome.com/0625966738.js" crossorigin="anonymous"></script>
-	<script src="//embed.typeform.com/next/embed.js"></script>
+<!-- Template master JS -->
+<script src="../assets/js/theme.js"></script>
 
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/0625966738.js" crossorigin="anonymous"></script>
+<script src="//embed.typeform.com/next/embed.js"></script>
 
 </body>
 

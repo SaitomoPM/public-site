@@ -70,20 +70,51 @@
 </head>
 
 <style media="screen">
-body {
 
-	height: 100%;
+	body {
+		height: 100%;
+	}
+
+	.tt-style-switch {
+		display: none;
+	}
+
+	.paragraph-text {
+			display: block;
+
+			margin: 0 0 30px;
+	}
+
+	h3 {
+		display: block;
+		font-size: 1.17em;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		font-weight: bold;
 }
+
+.paragraph ul {
+		display: block;
+		list-style-type: disc;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		padding-inline-start: 40px;
+}
+
 </style>
 
 
 
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
-	<section class="" style="position:fixed; z-index: 100000;  bottom:10px; right: 10px; ">
+	<!-- <section class="" style="position:fixed; z-index: 100000;  bottom:10px; right: 10px; ">
 		<div class="text-center anim-skewinup">
 			<div class="tt-header-col max-width-600">
 				<div class="apps-banner apps-banner-success alert alert-dismissible fade show " role="alert"
-				style="margin:25px; padding: 15px; border: 2px solid #fafafa;">
+				style="margin:25px; padding: 15px; border: 2px solid #fafafa !important;">
 				<a href="https://ardrive.io/mobile" target="_blank"> <strong>ArDrive Mobile has landed. </strong></a>
 				<span onclick="this.parentElement.style.display='none';"
 				style="cursor: pointer; padding-left: 10px; font-weight: bold;">X
@@ -92,7 +123,39 @@ body {
 		</div>
 	</div>
 </div>
-</section>
+</section> -->
+
+
+<aside
+  class="fixed bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white"
+>
+  <a
+    href="https://ardrive.io/mobile"
+    target="_blank"
+    rel="noreferrer"
+    class="text-sm font-medium hover:opacity-75"
+  >
+    ArDrive mobile has landed.  🚀
+  </a>
+	<span onclick="this.parentElement.style.display='none';"
+	style="cursor: pointer; padding-left: 10px; font-weight: bold;">
+  <button class="rounded bg-white/20 p-1 hover:bg-white/10">
+    <span class="sr-only">Close</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </button>
+	</span>
+</aside>
 
 <!-- *************************************
 *********** Begin body inner *************
@@ -130,7 +193,7 @@ body {
 		========================
 		* Use class "tt-header-fixed" to set header to fixed position.
 	-->
-	<header id="tt-header" class="tt-header-fixed">
+	<header id="tt-header" class="">
 		<div class="tt-header-inner">
 			<!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). There is a helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More about helper classes can be found in the file "helper.css". -->
 
@@ -334,14 +397,12 @@ Newsletter
 
 					<!-- <li class="active"><a href="../arns" style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;" >ArNS</a></li> -->
 					<li class="active"><a href="../arns"
-						style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;"><img
-						src="../assets/img/arns.png" width="15" alt="ardrive-logo"><strong
-						style="opacity: 0;">-</strong>ArNS</a></li>
+						style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;">ArNS</a></li>
 						<li class="active coming-soon">Gateways <strong style="opacity: 0;">-</strong> <span
 							style="font-weight: 600;">coming soon</span></li>
 							<br>
-							<li class="active coming-soon">Merch <strong style="opacity: 0;">-</strong> <span
-								style="font-weight: 600;">coming soon</span></li>
+							<!-- <li class="active coming-soon">Merch <strong style="opacity: 0;">-</strong> <span
+								style="font-weight: 600;">coming soon</span></li> -->
 
 
 							</ul> <!-- /.tt-ol-submenu-list -->
@@ -410,8 +471,7 @@ Newsletter
 -->
 <br>
 <br>
-<div id="page-header"
-class="ph-cap-lg ph-ghost-scroll ph-image-cropped ph-image-cover-2 ph-content-parallax padding-top-xlg-150">
+<div id="page-header" class="ph-cap-lg ph-ghost-scroll ph-image-cropped ph-image-cover-2 ph-content-parallax padding-top-xlg-150">
 <!-- <div class="page-header-inner tt-wrap"> -->
 
 <!-- Begin page header image
@@ -506,7 +566,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 					<div role="listitem" class="collection-item-2 w-dyn-item w-col  ">
 						<a href="#explore" class="card-with-button w-inline-block">
-							<img src="../assets/img/strips.png"  width="25" class="mr-2" alt="">
+							<img src="../assets/img/strips.png"  width="35" class="mr-2" alt="">
 							<br>
 							<br>
 							<div class="text-block-50"><span style="font-weight: 900;">Explore</span> Apps and Ecosystem</span></div>
@@ -521,7 +581,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 				</a>
 				<div role="listitem" class="collection-item-2 w-dyn-item w-col  ">
 					<a href="#operate" target="_blank" class="card-with-button w-inline-block">
-						<img src="../assets/img/swipe.png"  width="25" class="mr-2" alt="">
+						<img src="../assets/img/swipe.png"  width="35" class="mr-2" alt="">
 						<br>
 						<br>
 						<div class="text-block-50"><span style="font-weight: 900;">Operate</span> a Gateway</span></div>
@@ -534,7 +594,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 				</div>
 				<div role="listitem" class="collection-item-2 w-dyn-item w-col  ">
 					<a href="#build" target="_blank" class="card-with-button w-inline-block">
-						<img src="../assets/img/triangle.png"  width="25" class="mr-2" alt="">
+						<img src="../assets/img/triangle.png"  width="35" class="mr-2" alt="">
 						<br>
 						<br>
 						<div class="text-block-50"><span style="font-weight: 900;">Build</span> Tools & Infrastructure</span></div>
@@ -547,7 +607,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 				</div>
 				<div role="listitem" class="collection-item-2 w-dyn-item w-col  ">
 					<a href="#create" target="_blank" class="card-with-button w-inline-block">
-						<img src="../assets/img/circle.png"  width="25" class="mr-2" alt="">
+						<img src="../assets/img/circle.png"  width="35" class="mr-2" alt="">
 						<br>
 						<br>
 						<div class="text-block-50"><span style="font-weight: 900;">Create</span> Assets & Communities</span></div>
@@ -561,7 +621,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 				</div>
 				<div role="listitem" class="collection-item-2 w-dyn-item w-col  ">
 					<a href="#use"  class="card-with-button w-inline-block">
-						<img src="../assets/img/tokens.png"  width="30" class="mr-2" alt="">
+						<img src="../assets/img/tokens.png"  width="40" class="mr-2" alt="">
 						<br>
 						<br>
 						<div class="text-block-50"><span style="font-weight: 900;">Use</span> IO Tokens</span></div>
@@ -607,9 +667,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 }
 
 .card-with-button:hover {
-	border-color: #fafafa;
+	border-color: #fafafa !important;
 	/* color: #000; */
-	/* background-color: #fafafa; */
+	/* background-color: #fafafa !important; */
 }
 
 .text-block-49 {
@@ -808,60 +868,280 @@ padding-left: 32px
 }
 </style>
 
-<h3><span style="background-color: #fafafa; color: #121212;"> What is <strong>ar.io</strong>?</span></a>
+<h3 class="tt-ac-head-title"><span style="background-color: #fafafa !important; color: #121212; font-size: 1.25em; font-weight: 600; margin-bottom: 25px !important;"> What is <strong>ar.io</strong>?</span></a>
+	<br>
+	<br>
 </h3>
 <p class="text-gray">
 
-	<ul> 🐘 <strong>a community</strong></ul>
-	<ul> 🐘 <strong>a decentralized network</strong> of gateway nodes</ul>
-	<ul> 🐘 <strong>a protocol</strong> to facilitate indexing, sharing, and serving of permaweb data</ul>
-	<ul> 🐘 <strong>a currency</strong> to align network incentives and promote ecosystem health, the IO Token.
+	<ul style="line-height: 2; font-size: 1.15em;"> 🐘 <strong>a community</strong></ul>
+	<ul style="line-height: 2; font-size: 1.15em;"> 🐘 <strong>a decentralized network</strong> of gateway nodes</ul>
+	<ul style="line-height: 2; font-size: 1.15em;"> 🐘 <strong>a protocol</strong> to facilitate indexing, sharing, and serving of permaweb data</ul>
+	<ul style="line-height: 2; font-size: 1.15em;"> 🐘 <strong>a currency</strong> to align network incentives and promote ecosystem health, the IO Token.
 	</ul>
 
 </p>
 <br>
 
 <br>
+	<br>
+		<br>
 
-<!-- End-Users -->
-<h3 id="explore"><span style="background-color: #fafafa; color: #121212;"> Are you an End-User?</span></a></h3>
-<p class="text-gray">Permanent data is a zero to one invention, something never seen before. It opens a
-	world of possibilities: websites that no longer need maintenance fees, family history archived for
-	generations, photos that survive the next time your phone or computer dies.</p>
-	<p class="text-gray">Want to explore permanent data for the first time? <a href="https://ardrive.io/"
-		target="_blank">Try ArDrive.</a></p>
-		<p class="text-gray">ArDrive is our flagship file storage application that allows you to permanently save,
-			organize and manage your most important files. You’ll never pay a subscription fee, reach a storage cap,
-			or have your account canceled. With ArDrive, simply pay once and store forever.</p>
-			<p class="text-gray">ArDrive isn’t just limited to family photos. You can use it to host a static website or
-				a React app. Or try the ArDrive mobile app on your iPhone or Android device. For the rest of 2022, early
-				adopters will be rewarded with ArDrive tokens for being one of the top 50 uploaders every week.</p>
-				<p class="text-gray">ArDrive is one of many great products in the Arweave ecosystem that leverages permanent
-					data. <a href="https://twitter.com/ar_io_team" target="_blank">Follow the ar.io Team</a> to hear about all
-					the developments in the ecosystem and how you can interact with it.</p>
-					<p class="text-gray" style="font-weight:bold;">Feel the difference permanence makes.</p>
-					<br>
+<div class="tt-accordion tt-ac-borders">
+	<div class="tt-accordion-item anim-fadeinup">
+		<div class="tt-accordion-heading">
 
-					<!-- Gateway Operators -->
-					<h3 id="operate"><span style="background-color: #fafafa; color: #121212;"> Are you a Gateway Operator?</span></h3>
-					<p class="text-gray">The Arweave protocol doesn’t exist on its own.</p>
-					<p class="text-gray">The various nodes on the ar.io Network, known as Gateways, are the interface between
+			<div class="tt-ac-head " id="tt-diagram-community">
+
+				<h3 class="tt-ac-head-title" id="explore">Are you an End-User?</h3>
+				<!-- <div class="tt-accordion-subtext"><strong>Come one, come all.</strong></div> -->
+			</div>
+
+			<div class="tt-accordion-caret-wrap">
+				<div class="tt-accordion-caret-inner magnetic-item">
+					<div class="tt-accordion-caret"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Add is-open as a class to the line below to have unfolded. -->
+		<div class="tt-accordion-content max-width-1400">
+			<!-- <p><strong>	ar.io will become what we make of it together.</strong></p> -->
+			<p class="text-gray paragraph-text">Permanent data is a zero to one invention, something never seen before. It opens a
+				world of possibilities: websites that no longer need maintenance fees, family history archived for
+				generations, photos that survive the next time your phone or computer dies.</p>
+				<p class="text-gray paragraph-text">Want to explore permanent data for the first time? <a href="https://ardrive.io/"
+					target="_blank">Try ArDrive.</a></p>
+					<p class="text-gray paragraph-text">ArDrive is our flagship file storage application that allows you to permanently save,
+						organize and manage your most important files. You’ll never pay a subscription fee, reach a storage cap,
+						or have your account canceled. With ArDrive, simply pay once and store forever.</p>
+						<p class="text-gray paragraph-text">ArDrive isn’t just limited to family photos. You can use it to host a static website or
+							a React app. Or try the ArDrive mobile app on your iPhone or Android device. For the rest of 2022, early
+							adopters will be rewarded with ArDrive tokens for being one of the top 50 uploaders every week.</p>
+							<p class="text-gray paragraph-text">ArDrive is one of many great products in the Arweave ecosystem that leverages permanent
+								data. <a href="https://twitter.com/ar_io_team" target="_blank">Follow the ar.io Team</a> to hear about all
+								the developments in the ecosystem and how you can interact with it.</p>
+								<p class="text-gray paragraph-text" style="font-weight:bold;">Feel the difference permanence makes.</p>
+								<br>
+				</div>
+			</div>
+
+			<div class="tt-accordion-item anim-fadeinup">
+				<div class="tt-accordion-heading">
+					<div class="tt-ac-head " id="tt-diagram-protocol">
+
+						<h3 class="tt-ac-head-title" id="operate">Are you a Gateway Operator?</h3>
+						<!-- <div class="tt-accordion-subtext"><strong>We develop the protocols that help you build.</strong>
+						</div> -->
+					</div>
+
+					<div class="tt-accordion-caret-wrap">
+						<div class="tt-accordion-caret-inner magnetic-item">
+							<div class="tt-accordion-caret"></div>
+						</div>
+					</div>
+				</div>
+				<div class="tt-accordion-content max-width-1400">
+					<p class="text-gray paragraph-text">The Arweave protocol doesn’t exist on its own.</p>
+					<p class="text-gray paragraph-text">The various nodes on the ar.io Network, known as Gateways, are the interface between
 						users and the Arweave network. Each Gateway acts like a “Permaweb Service Provider” and supports multiple,
 						value-added, low-trust services for users and applications that need to read and write data on Arweave.
 						Gateway services are modular, extendable, and configurable to include:</p>
-						<p class="text-gray">
-							<ul>
-								<li>seeding layer one transactions to the greater Arweave network</li>
-								<li>caching and serving chain and transaction data</li>
-								<li>resolving friendly names to transaction data with the Arweave Name System</li>
-								<li>indexing and querying layer one and two transactions</li>
-								<li>proxy for Arweave nodes serving the Arweave HTTP API</li>
+						<p class="text-gray paragraph-text">
+							<ul class="paragraph">
+								<li>· seeding layer one transactions to the greater Arweave network</li>
+								<li>· caching and serving chain and transaction data</li>
+								<li>· resolving friendly names to transaction data with the Arweave Name System</li>
+								<li>· indexing and querying layer one and two transactions</li>
+								<li>· proxy for Arweave nodes serving the Arweave HTTP API</li>
 							</ul>
+							<br>
+							<br>
 						</p>
 						<script src="//embed.typeform.com/next/embed.js"></script>
-						<p class="text-gray">Gateway operators keep the front doors to the permaweb open by running reliable and
+						<p class="text-gray paragraph-text">Gateway operators keep the front doors to the permaweb open by running reliable and
 							performant systems for their own use cases, their community or even the whole Permaweb.</p>
-							<p class="text-gray"><strong>Get in on the action.</strong> Becoming a gateway operator is currently one of
+							<p class="text-gray paragraph-text"><strong>Get in on the action.</strong> Becoming a gateway operator is currently one of
+								the biggest opportunities in the Arweave ecosystem. A good gateway operator will be able to generate
+								revenue as they increase network traffic, optimize their servers, and take part in network governance.
+								<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left"
+								data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet"
+								style="max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; cursor:pointer;text-align:center;margin:0;text-decoration:none;opacity: .8;font-style: italic;border-bottom: 1px solid;color: currentColor;">Join
+								our newsletter
+							</button> and <a href="https://twitter.com/ar_io_team" target="_blank">follow us on Twitter</a> to track
+							the release of the ar.io Gateway Protocol.
+						</p>
+						<br>
+				</div>
+			</div>
+
+			<div class="tt-accordion-item anim-fadeinup">
+				<div class="tt-accordion-heading">
+					<div class="tt-ac-head " id="tt-diagram-products">
+
+						<h3 class="tt-ac-head-title" id="build">Are you a Developer?</h3>
+						<!-- <div class="tt-accordion-subtext"><strong>Decentralized, open-source, perma-products.</strong>
+						</div> -->
+					</div>
+
+					<div class="tt-accordion-caret-wrap">
+						<div class="tt-accordion-caret-inner magnetic-item">
+							<div class="tt-accordion-caret"></div>
+						</div>
+					</div>
+				</div>
+				<div class="tt-accordion-content max-width-1400">
+					<!-- <p><strong>What do you want to build?</strong></p> -->
+					<p class="text-gray paragraph-text">Arweave is easier, cheaper and more fun to build on than most developers ever imagined.
+					</p>
+					<p class="text-gray paragraph-text">Within the Arweave community there are many great development tools to help build your
+						app such as <a href="https://github.com/ArweaveTeam/arweave-js" target="_blank">arweave.js</a>, <a
+						href="https://academy.warp.cc/" target="_blank">warp contracts</a>, and <a
+						href="https://arcademy.arweave.dev/" target="_blank">many other community tools and protocols</a>.</p>
+
+						<p class="text-gray paragraph-text">One of the premier tool for building on Arweave is the Arweave File System (ArFS). ArFS
+							enhances the Arweave protocol by adding the ability to create data hierarchy (folders), private
+							encryption, file versioning, controlled sharing and more. It lets you harness the power of the permaweb
+							for the projects you have in mind.</p>
+							<p class="text-gray paragraph-text" style="font-weight: bold;">As Arweave’s founder Sam Williams says:</p>
+							<blockquote class="open-quote">
+								ArFS really is awesome! Arweave is a hard drive at heart -- focused purely on permanent data replication.
+								ArFS turns that hard drive into a filesystem, complete with directories, file names, updates etc. Pretty
+								sure ArFS will end up in the stack of most Arweave apps.
+								<footer>Sam Williams, Founder of Arweave</footer>
+							</blockquote>
+							<br>
+							<br>
+
+							<p class="text-gray paragraph-text"><strong>Get started.</strong> We’re developers building for developers. And we’re
+								available to help you get launched. To see how ArFS can help you get started on your first Arweave dapp,
+								<a href="https://github.com/ar-io" target="_blank">head over to our GitHub</a> to browse through docs, <a
+								href="https://discord.gg/KkTqDe4GAF" target="_blank">connect with us on Discord</a> to ask the team and
+								community questions, or <a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g"
+								target="_blank">visit our YouTube channel</a> for coding demos.
+							</p>
+							<br>
+				</div>
+			</div>
+
+			<div class="tt-accordion-item anim-fadeinup">
+				<div class="tt-accordion-heading">
+					<div class="tt-ac-head " id="tt-diagram-permaweb">
+
+						<h3 class="tt-ac-head-title" id="create">Are you a Creator?</h3>
+						<!-- <div class="tt-accordion-subtext"><strong>ar.io is the front door to the permaweb.</strong>
+						</div> -->
+					</div>
+
+					<div class="tt-accordion-caret-wrap">
+						<div class="tt-accordion-caret-inner magnetic-item">
+							<div class="tt-accordion-caret"></div>
+						</div>
+					</div>
+				</div>
+				<div class="tt-accordion-content max-width-1400">
+					<!-- <p><strong>ar.io is the front door to the permaweb.</strong></p> -->
+					<p class="text-gray paragraph-text">One of the first groups to explore web3 technology were artists and creatives. Digital
+						artists, electronic musicians and video game creators were intrigued by the blockchain and what they could
+						build with it.</p>
+						<p class="text-gray paragraph-text">They quickly learned that provenance and permanence matters to maintain the value of
+							their art - <a href="https://ardrive.io/stories/" target="_blank">read some of their stories</a> on the
+							ArDrive site. This led many to Arweave and the importance of permanent data. It also opened new
+							possibilities as permanent data pushed their work in new directions - like BT’s songs that never end and
+							never repeat.</p>
+							<p class="text-gray paragraph-text">The ar.io Team is building tools to help artists and entrepreneurs explore the
+								potential of the permaweb. For example, the <a href="../arns"> Arweave Name System (ArNS)</a> enables
+								creators to assign a friendly name to permaweb data. So instead of being stuck with a random, 90-character
+								URL, your art or new business website could launch with a more memorable name.</p>
+								<p class="text-gray paragraph-text">Art explores the unexplored. We are excited to see what sparks your imagination as you
+									tap into the power of permanent data.</p>
+									<br>
+								</div>
+							</div>
+
+							<div class="tt-accordion-item anim-fadeinup">
+								<div class="tt-accordion-heading">
+									<div class="tt-ac-head " id="tt-diagram-token">
+
+										<h3 class="tt-ac-head-title" id="use">Are you an IO Token Holder?</h3>
+										<!-- <div class="tt-accordion-subtext"><strong>The token that incentivizes the permaweb.</strong>
+										</div> -->
+									</div>
+
+									<div class="tt-accordion-caret-wrap">
+										<div class="tt-accordion-caret-inner magnetic-item">
+											<div class="tt-accordion-caret"></div>
+										</div>
+									</div>
+								</div>
+								<div class="tt-accordion-content max-width-1400">
+									<!-- <p><strong>The IO Token powers the permaweb.</strong></p> -->
+									<p class="text-gray paragraph-text">The IO Token powers the permaweb. IO token holders play a crucial role in making
+										permanent data available to everyone.</p>
+										<p class="text-gray paragraph-text">For example, token holders will be able to stake their tokens with ar.io Gateways,
+											helping support a robust gateway ecosystem and giving them a chance to take part in governance and
+											generate revenue.</p>
+											<p class="text-gray paragraph-text">IO Token Holders will also be able to lease ArNS names so they can buy and trade
+												permaweb URLs.</p>
+												<p class="text-gray paragraph-text">Last but not least, token holders will have a say in the overall governance of the
+													ar.io Network and will help shape our dynamic community. The ar.io Network will become what we make of it
+													together!</p>
+													<p class="text-gray paragraph-text">Help build the permaweb, and watch it grow from the inside! <a
+														href="https://twitter.com/ar_io_team" target="_blank">Follow us on Twitter</a> for announcements
+														regarding the launch of the IO Token.</p>
+
+										<br>
+									</div>
+								</div>
+
+							</div>
+	<br>
+		<br>
+			<br>
+
+<!-- <h3 id="explore"><span style="background-color: #fafafa !important; color: #121212; font-size: 1.25em; font-weight: 600; margin-bottom: 25px !important;"> Are you an End-User?</span></a></h3>
+<br>
+<br>
+<p class="text-gray paragraph-text">Permanent data is a zero to one invention, something never seen before. It opens a
+	world of possibilities: websites that no longer need maintenance fees, family history archived for
+	generations, photos that survive the next time your phone or computer dies.</p>
+	<p class="text-gray paragraph-text">Want to explore permanent data for the first time? <a href="https://ardrive.io/"
+		target="_blank">Try ArDrive.</a></p>
+		<p class="text-gray paragraph-text">ArDrive is our flagship file storage application that allows you to permanently save,
+			organize and manage your most important files. You’ll never pay a subscription fee, reach a storage cap,
+			or have your account canceled. With ArDrive, simply pay once and store forever.</p>
+			<p class="text-gray paragraph-text">ArDrive isn’t just limited to family photos. You can use it to host a static website or
+				a React app. Or try the ArDrive mobile app on your iPhone or Android device. For the rest of 2022, early
+				adopters will be rewarded with ArDrive tokens for being one of the top 50 uploaders every week.</p>
+				<p class="text-gray paragraph-text">ArDrive is one of many great products in the Arweave ecosystem that leverages permanent
+					data. <a href="https://twitter.com/ar_io_team" target="_blank">Follow the ar.io Team</a> to hear about all
+					the developments in the ecosystem and how you can interact with it.</p>
+					<p class="text-gray paragraph-text" style="font-weight:bold;">Feel the difference permanence makes.</p>
+					<br>
+
+
+					<h3 id="operate"><span style="background-color: #fafafa !important; color: #121212; font-size: 1.25em; font-weight: 600; margin-bottom: 25px !important;"> Are you a Gateway Operator?</span></h3>
+					<br>
+					<br>
+					<p class="text-gray paragraph-text">The Arweave protocol doesn’t exist on its own.</p>
+					<p class="text-gray paragraph-text">The various nodes on the ar.io Network, known as Gateways, are the interface between
+						users and the Arweave network. Each Gateway acts like a “Permaweb Service Provider” and supports multiple,
+						value-added, low-trust services for users and applications that need to read and write data on Arweave.
+						Gateway services are modular, extendable, and configurable to include:</p>
+						<p class="text-gray paragraph-text">
+							<ul class="paragraph">
+								<li>· seeding layer one transactions to the greater Arweave network</li>
+								<li>· caching and serving chain and transaction data</li>
+								<li>· resolving friendly names to transaction data with the Arweave Name System</li>
+								<li>· indexing and querying layer one and two transactions</li>
+								<li>· proxy for Arweave nodes serving the Arweave HTTP API</li>
+							</ul>
+							<br>
+							<br>
+						</p>
+						<script src="//embed.typeform.com/next/embed.js"></script>
+						<p class="text-gray paragraph-text">Gateway operators keep the front doors to the permaweb open by running reliable and
+							performant systems for their own use cases, their community or even the whole Permaweb.</p>
+							<p class="text-gray paragraph-text"><strong>Get in on the action.</strong> Becoming a gateway operator is currently one of
 								the biggest opportunities in the Arweave ecosystem. A good gateway operator will be able to generate
 								revenue as they increase network traffic, optimize their servers, and take part in network governance.
 								<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left"
@@ -873,28 +1153,32 @@ padding-left: 32px
 						</p>
 						<br>
 
-						<!-- Developers -->
-						<h3 id="build"><span style="background-color: #fafafa; color: #121212;"> Are you a Developer?</span></h3>
-						<p class="text-gray">Arweave is easier, cheaper and more fun to build on than most developers ever imagined.
+
+						<h3 id="build"><span style="background-color: #fafafa !important; color: #121212; font-size: 1.25em; font-weight: 600; margin-bottom: 25px !important;"> Are you a Developer?</span></h3>
+						<br>
+						<br>
+						<p class="text-gray paragraph-text">Arweave is easier, cheaper and more fun to build on than most developers ever imagined.
 						</p>
-						<p class="text-gray">Within the Arweave community there are many great development tools to help build your
+						<p class="text-gray paragraph-text">Within the Arweave community there are many great development tools to help build your
 							app such as <a href="https://github.com/ArweaveTeam/arweave-js" target="_blank">arweave.js</a>, <a
 							href="https://academy.warp.cc/" target="_blank">warp contracts</a>, and <a
 							href="https://arcademy.arweave.dev/" target="_blank">many other community tools and protocols</a>.</p>
 
-							<p class="text-gray">One of the premier tool for building on Arweave is the Arweave File System (ArFS). ArFS
+							<p class="text-gray paragraph-text">One of the premier tool for building on Arweave is the Arweave File System (ArFS). ArFS
 								enhances the Arweave protocol by adding the ability to create data hierarchy (folders), private
 								encryption, file versioning, controlled sharing and more. It lets you harness the power of the permaweb
 								for the projects you have in mind.</p>
-								<p class="text-gray" style="font-weight: bold;">As Arweave’s founder Sam Williams says:</p>
+								<p class="text-gray paragraph-text" style="font-weight: bold;">As Arweave’s founder Sam Williams says:</p>
 								<blockquote class="open-quote">
 									ArFS really is awesome! Arweave is a hard drive at heart -- focused purely on permanent data replication.
 									ArFS turns that hard drive into a filesystem, complete with directories, file names, updates etc. Pretty
 									sure ArFS will end up in the stack of most Arweave apps.
 									<footer>Sam Williams, Founder of Arweave</footer>
 								</blockquote>
-								<!-- <p class="text-gray">“ArFS really is awesome! Arweave is a hard drive at heart -- focused purely on permanent data replication. ArFS turns that hard drive into a filesystem, complete with directories, file names, updates etc. Pretty sure ArFS will end up in the stack of most Arweave apps.”</p> -->
-								<p class="text-gray"><strong>Get started.</strong> We’re developers building for developers. And we’re
+								<br>
+								<br>
+
+								<p class="text-gray paragraph-text"><strong>Get started.</strong> We’re developers building for developers. And we’re
 									available to help you get launched. To see how ArFS can help you get started on your first Arweave dapp,
 									<a href="https://github.com/ar-io" target="_blank">head over to our GitHub</a> to browse through docs, <a
 									href="https://discord.gg/KkTqDe4GAF" target="_blank">connect with us on Discord</a> to ask the team and
@@ -903,58 +1187,44 @@ padding-left: 32px
 								</p>
 								<br>
 
-								<!-- Community -->
-								<h3 id="create"><span style="background-color: #fafafa; color: #121212;"> Are you a Creator?</span></h3>
-								<p class="text-gray">One of the first groups to explore web3 technology were artists and creatives. Digital
+
+								<h3 id="create"><span style="background-color: #fafafa !important; color: #121212; font-size: 1.25em; font-weight: 600; margin-bottom: 25px !important;"> Are you a Creator?</span></h3>
+								<br>
+								<br>
+								<p class="text-gray paragraph-text">One of the first groups to explore web3 technology were artists and creatives. Digital
 									artists, electronic musicians and video game creators were intrigued by the blockchain and what they could
 									build with it.</p>
-									<p class="text-gray">They quickly learned that provenance and permanence matters to maintain the value of
+									<p class="text-gray paragraph-text">They quickly learned that provenance and permanence matters to maintain the value of
 										their art - <a href="https://ardrive.io/stories/" target="_blank">read some of their stories</a> on the
 										ArDrive site. This led many to Arweave and the importance of permanent data. It also opened new
 										possibilities as permanent data pushed their work in new directions - like BT’s songs that never end and
 										never repeat.</p>
-										<p class="text-gray">The ar.io Team is building tools to help artists and entrepreneurs explore the
+										<p class="text-gray paragraph-text">The ar.io Team is building tools to help artists and entrepreneurs explore the
 											potential of the permaweb. For example, the <a href="../arns"> Arweave Name System (ArNS)</a> enables
 											creators to assign a friendly name to permaweb data. So instead of being stuck with a random, 90-character
 											URL, your art or new business website could launch with a more memorable name.</p>
-											<p class="text-gray">Art explores the unexplored. We are excited to see what sparks your imagination as you
+											<p class="text-gray paragraph-text">Art explores the unexplored. We are excited to see what sparks your imagination as you
 												tap into the power of permanent data.</p>
 												<br>
 
-												<!-- Token -->
-												<h3 id="use"><span style="background-color: #fafafa; color: #121212;"> Are you an IO Token Holder?</span></h3>
-												<p class="text-gray">The IO Token powers the permaweb. IO token holders play a crucial role in making
+
+												<h3 id="use"><span style="background-color: #fafafa !important; color: #121212; font-size: 1.25em; font-weight: 600; margin-bottom: 25px !important;"> Are you an IO Token Holder?</span></h3>
+												<br>
+												<br>
+												<p class="text-gray paragraph-text">The IO Token powers the permaweb. IO token holders play a crucial role in making
 													permanent data available to everyone.</p>
-													<p class="text-gray">For example, token holders will be able to stake their tokens with ar.io Gateways,
+													<p class="text-gray paragraph-text">For example, token holders will be able to stake their tokens with ar.io Gateways,
 														helping support a robust gateway ecosystem and giving them a chance to take part in governance and
 														generate revenue.</p>
-														<p class="text-gray">IO Token Holders will also be able to lease ArNS names so they can buy and trade
+														<p class="text-gray paragraph-text">IO Token Holders will also be able to lease ArNS names so they can buy and trade
 															permaweb URLs.</p>
-															<p class="text-gray">Last but not least, token holders will have a say in the overall governance of the
+															<p class="text-gray paragraph-text">Last but not least, token holders will have a say in the overall governance of the
 																ar.io Network and will help shape our dynamic community. The ar.io Network will become what we make of it
 																together!</p>
-																<p class="text-gray">Help build the permaweb, and watch it grow from the inside! <a
+																<p class="text-gray paragraph-text">Help build the permaweb, and watch it grow from the inside! <a
 																	href="https://twitter.com/ar_io_team" target="_blank">Follow us on Twitter</a> for announcements
-																	regarding the launch of the IO Token.</p>
+																	regarding the launch of the IO Token.</p> -->
 
-																	<!-- Begin tt-image
-																	====================
-																	* Use class "tti-fixed-height" to enable image fixed height (no effect on small screens!).
-																	* Use class "anim-image-parallax" on <img> tag to enable parallax effect.
-																	* Use class "margin-bottom-*" to enable bottom margins. For example "margin-bottom-40". More info about helper classes can be found in the file "helper.css".
-																-->
-																<!-- <div class="tt-image margin-bottom-40">
-																<figure>
-																<img class="anim-image-parallax tt-lazy" src="../assets/img/" data-src="../assets/img/stack.gif" alt="image">
-
-															</figure>
-															<div class="diagram">
-
-															<img src="../assets/img/stack.gif" alt="">
-														</div>
-													</div> -->
-													<!-- End tt-image -->
-													<!-- Intro -->
 													<br>
 													<br>
 													<div class="tt-image margin-bottom-40 margin--40">
@@ -980,176 +1250,297 @@ padding-left: 32px
 
 
 									<!-- ======================
-									///// Begin tt-footer 1/////
+									///// OLD FOOTER /////
 									=========================== -->
-									<footer id="tt-footer">
-										<div class="tt-footer-inner">
-
-											<!-- Begin footer column
-											========================= -->
-											<div class="footer-col tt-align-center-left">
-												<div class="footer-col-inner">
+									<!-- <footer id="tt-footer">
+									<div class="tt-footer-inner">
 
 
-													<div class="magnetic-item subscribe-hide">
+									<div class="footer-col tt-align-center-left">
+									<div class="footer-col-inner">
 
 
-														<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left"
-														data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet"
-														style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
-														Subscribe <i class="fas fa-paper-plane" style="padding-left: 10px;"></i>
-													</button>
-													<script src="//embed.typeform.com/next/embed.js"></script>
-												</div>
-
-											</div> <!-- /.footer-col-inner -->
-										</div>
-										<!-- Begin footer column -->
-
-										<!-- Begin footer column
-										========================= -->
-										<div class="footer-col tt-align-center order-m-last">
-											<div class="footer-col-inner">
-
-												<!-- <div class="tt-copyright text-gray">
-												<a href="https://ardrive.io/tos-and-privacy/" target="_blank" rel="noopener" class="tt-btn tt-btn-link">
-												<span class="tt-btn-icon"><i class="far fa-copyright"></i></span>
-												<div data-hover="T&C">ar.io</div>
+									<div class="magnetic-item subscribe-hide">
 
 
-											</a>
-										</div> -->
-										<div class="magnetic-item">
-											<a href="../terms-and-conditions" target="_blank" rel="noopener" class="tt-btn tt-btn-link">Terms and
-												Conditions</a>
-											</div>
+									<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left"
+									data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet"
+									style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
+									Subscribe <i class="fas fa-paper-plane" style="padding-left: 10px;"></i>
+								</button>
+								<script src="//embed.typeform.com/next/embed.js"></script>
+							</div>
 
-										</div> <!-- /.footer-col-inner -->
-									</div>
-									<!-- Begin footer column -->
-
-									<!-- Begin footer column
-									========================= -->
-									<div class="footer-col tt-align-center-right">
-										<div class="footer-col-inner">
-
-											<div class="footer-social">
-												<div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-												<div class="social-buttons">
-													<ul>
-														<li><a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank" rel="noopener"><i
-															class="fab fa-github"></i></a></li>
-															<li><a href="https://discord.gg/HGG52EtTc2"
-																class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a></li>
-																<li><a href="https://www.instagram.com/ardriveapp/" class="magnetic-item" target="_blank"
-																	rel="noopener"><i class="fab fa-instagram"></i></a></li>
-																	<li><a href="https://www.reddit.com/r/ar_io/" class="magnetic-item" target="_blank"
-																		rel="noopener"><i class="fab fa-reddit"></i></a></li>
-																		<li><a href="https://www.tiktok.com/@ardrive.io" class="magnetic-item" target="_blank"
-																			rel="noopener"><i class="fab fa-tiktok"></i></a></li>
-																			<li><a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g" class="magnetic-item"
-																				target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-																				<li><a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
-																					rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-																					<li><a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank" rel="noopener"><i
-																						class="fab fa-twitter"></i></a></li>
-
-																					</ul>
-																				</div> <!-- /.social-buttons -->
-																			</div> <!-- /.footer-social -->
-
-																		</div> <!-- /.footer-col-inner -->
-																	</div>
-																	<!-- Begin footer column -->
-
-																</div> <!-- /.tt-section-inner -->
-															</footer>
-															<!-- End tt-footer 1-->
-
-															<!-- ======================
-															///// Begin tt-footer 2/////
-															=========================== -->
-															<footer id="tt-footer">
-																<div class="tt-footer-inner">
-
-																	<!-- Begin footer column
-
-
-																	<!-- Begin footer column
-																	========================= -->
-																	<div class="footer-col tt-align-center order-m-last">
-																		<div class="footer-col-inner">
-
-																			<!-- <div class="tt-copyright text-gray">
-																			<a href="https://ardrive.io/tos-and-privacy/" target="_blank" rel="noopener" class="tt-btn tt-btn-link">
-																			<span class="tt-btn-icon"><i class="far fa-copyright"></i></span>
-																			<div data-hover="T&C">ar.io</div>
-
-
-																		</a>
-																	</div> -->
-																	<div class="tt-copyright">
-																		<div class="tt-btn  tt-btn-link" style="cursor: default !important;"> v. 0.1984</div>
-																	</div>
-
-																</div> <!-- /.footer-col-inner -->
-															</div>
-															<!-- Begin footer column -->
+						</div>
+					</div>
 
 
 
-														</div> <!-- /.tt-section-inner -->
-													</footer>
-													<!-- End tt-footer 2-->
+					<div class="footer-col tt-align-center order-m-last">
+					<div class="footer-col-inner">
+
+
+					<div class="magnetic-item">
+					<a href="../terms-and-conditions" target="_blank" rel="noopener" class="tt-btn tt-btn-link">Terms and
+					Conditions</a>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<div class="footer-col tt-align-center-right">
+		<div class="footer-col-inner">
+
+		<div class="footer-social">
+		<div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
+		<div class="social-buttons">
+		<ul>
+		<li><a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank" rel="noopener"><i
+		class="fab fa-github"></i></a></li>
+		<li><a href="https://discord.gg/HGG52EtTc2"
+		class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a></li>
+		<li><a href="https://www.instagram.com/ardriveapp/" class="magnetic-item" target="_blank"
+		rel="noopener"><i class="fab fa-instagram"></i></a></li>
+		<li><a href="https://www.reddit.com/r/ar_io/" class="magnetic-item" target="_blank"
+		rel="noopener"><i class="fab fa-reddit"></i></a></li>
+		<li><a href="https://www.tiktok.com/@ardrive.io" class="magnetic-item" target="_blank"
+		rel="noopener"><i class="fab fa-tiktok"></i></a></li>
+		<li><a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g" class="magnetic-item"
+		target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+		<li><a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
+		rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+		<li><a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank" rel="noopener"><i
+		class="fab fa-twitter"></i></a></li>
+
+	</ul>
+</div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</footer>
+
+<footer id="tt-footer">
+<div class="tt-footer-inner">
+
+
+<div class="footer-col tt-align-center order-m-last">
+<div class="footer-col-inner">
+
+
+<div class="tt-copyright">
+<div class="tt-btn  tt-btn-link" style="cursor: default !important;"> v. 0.1984</div>
+</div>
+
+</div>
+</div>
 
 
 
 
-												</div>
-												<!-- End content wrap -->
-
-											</div>
-											<!-- End scroll container -->
+</div>
+</footer> -->
 
 
-										</main>
-										<!-- End body inner -->
+<footer class="" aria-labelledby="footer-heading" style="background: linear-gradient(45deg, #1f1f1f, #171717, #121212, #2c2c2c); background-size: 400% 400%; animation: gradient 15s ease infinite;">
+	<h2 id="footer-heading" class="sr-only">Footer</h2>
+	<div class="mx-auto  px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+		<div class="xl:grid xl:grid-cols-3 xl:gap-8 ">
+			<img class="h-14" src="../assets/img/elephant-light.png" class=" magnetic-item" alt="ar.io Logo">
+
+			<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+				<div class="md:grid md:grid-cols-2 md:gap-8">
+
+					<div>
+						<h3 class="text-sm font-bold leading-6 text-white">Use</h3>
+						<ul role="list" class="mt-6 space-y-4">
+							<li>
+								<a href="../ardrive" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<li>
+								<a href="../arns" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArNS (Beta)  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<li>
+								<a href="https://prices.ardrive.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Pricing Calculator  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<li>
+								<a href="https://viewblock.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Viewblock  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<li>
+								<a href="../wallet" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Wallet</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-10 md:mt-0">
+						<h3 class="text-sm font-bold leading-6 text-white">Develop</h3>
+						<ul role="list" class="mt-6 space-y-4">
+							<li>
+								<a href="https://github.com/ardriveapp/ardrive-cli" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive CLI  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<li>
+								<a href="https://github.com/ardriveapp/ardrive-core-js" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive Core-JS  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<!-- <li>
+								<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs</a>
+							</li> -->
+
+						</ul>
+					</div>
+				</div>
+				<div class="md:grid md:grid-cols-2 md:gap-8">
+
+
+					<div>
+						<h3 class="text-sm font-bold leading-6 text-white">Engage</h3>
+						<ul role="list" class="mt-6 space-y-4">
+							<li>
+								<a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArCast  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+
+							<li>
+								<a href="../articles" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Blog</a>
+							</li>
+
+							<li>
+								<a href="../brand-kit" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Brand Kit</a>
+							</li>
+
+							<li>
+								<a href="../live" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Live</a>
+							</li>
+
+
+
+							<li>
+								<a href="https://ar-io-store.myshopify.com/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Merch  <i class="fa-solid fa-location-arrow"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-10 md:mt-0">
+						<h3 class="text-sm font-bold leading-6 text-white">Learn</h3>
+						<ul role="list" class="mt-6 space-y-4">
+							<!-- <li>
+								<a href="../why-ario" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Why ar.io?</a>
+							</li> -->
+
+							<!-- <li>
+								<a href="../what-is-ario" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">What is ar.io?</a>
+							</li> -->
+
+							<!-- <li>
+								<a href="../what-is-the-permaweb" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">What is the permaweb?</a>
+							</li> -->
+
+							<!-- <li>
+								<a href="../what-is-a-gateway" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">What is a gateway?</a>
+							</li> -->
+
+							<!-- <li>
+								<a href="../benefits-of-long-term-storage" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Benefits of long-term storage</a>
+							</li> -->
+
+							<li>
+								<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Story</a>
+							</li>
+
+							<!-- <li>
+								<a href="../foundation" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Foundation</a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
+			<div>
+				<h3 class="text-sm font-bold leading-6 text-gray-300">Subscribe to our newsletter</h3>
+				<p class="mt-2 mb-4 text-sm leading-6 text-gray-400">The latest news, articles, and resources, sent to your inbox weekly.</p>
+			</div>
+			<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#121212;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
+			</button>
+			<script src="//embed.typeform.com/next/embed.js"></script>
+		</div>
+		<div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+			<div class="flex space-x-6 md:order-2">
+
+				<a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
+				rel="noopener"><i class="fab fa-github" style="color: #fafafa;"></i></a>
+
+				<a href="https://discord.gg/HGG52EtTc2"
+				class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord" style="color: #fafafa;"></i></a>
+
+				<a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
+				rel="noopener"><i class="fab fa-twitter" style="color: #fafafa;"></i></a>
+
+				<a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
+				rel="noopener"><i class="fab fa-linkedin" style="color: #fafafa;"></i></a>
+
+			</div>
+			<p class="mt-8 text-xs leading-6 text-gray-400 md:order-1 md:mt-0"><strong>ar.io</strong> | v. 0.1984</p>
+			<h3 class=" text-sm font-bold leading-6 text-white"><a href="../terms-and-conditions" target="_blank" rel="noopener" style="text-decoration: none !important; font-style: normal !important;  ">Terms and Conditions</a></h3>
+		</div>
+	</div>
+</footer>
+
+
+</div>
+<!-- End content wrap -->
+
+</div>
+<!-- End scroll container -->
+
+
+</main>
+<!-- End body inner -->
 
 
 
 
-										<!-- ====================
-										///// Scripts below /////
-										===================== -->
+<!-- ====================
+///// Scripts below /////
+===================== -->
 
-										<!-- Core JS -->
-										<script src="../assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
+<!-- Core JS -->
+<script src="../assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
 
-										<!-- Libs and Plugins JS -->
-										<script src="../assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
-										<script src="../assets/vendor/gsap/ScrollToPlugin.min.js"></script>
-										<!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
-										<script src="../assets/vendor/gsap/ScrollTrigger.min.js"></script>
-										<!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
+<!-- Libs and Plugins JS -->
+<script src="../assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
+<script src="../assets/vendor/gsap/ScrollToPlugin.min.js"></script>
+<!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
+<script src="../assets/vendor/gsap/ScrollTrigger.min.js"></script>
+<!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
 
-										<script src="../assets/vendor/smooth-scrollbar.js"></script>
-										<!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
-										<script src="../assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
-										<script src="../assets/vendor/isotope/imagesloaded.pkgd.min.js"></script>
-										<!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
-										<script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
-										<script src="../assets/vendor/isotope/packery-mode.pkgd.min.js"></script>
-										<!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
-										<script src="../assets/vendor/lightgallery/js/lightgallery-all.min.js"></script>
-										<!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
-										<script src="../assets/vendor/jquery.mousewheel.min.js"></script>
-										<!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
+<script src="../assets/vendor/smooth-scrollbar.js"></script>
+<!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
+<script src="../assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
+<script src="../assets/vendor/isotope/imagesloaded.pkgd.min.js"></script>
+<!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
+<script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
+<script src="../assets/vendor/isotope/packery-mode.pkgd.min.js"></script>
+<!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
+<script src="../assets/vendor/lightgallery/js/lightgallery-all.min.js"></script>
+<!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
+<script src="../assets/vendor/jquery.mousewheel.min.js"></script>
+<!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
 
-										<!-- Template master JS -->
-										<script src="../assets/js/theme.js"></script>
+<!-- Template master JS -->
+<script src="../assets/js/theme.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/0625966738.js" crossorigin="anonymous"></script>
+<script src="//embed.typeform.com/next/embed.js"></script>
 
 
+</body>
 
-									</body>
-
-									</html>
+</html>
