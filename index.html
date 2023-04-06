@@ -99,9 +99,22 @@
 	</span>
 </div>
 
+<style media="screen">
+	.delayed-download-alert {
+		opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
 
 <aside
-  class="fixed bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white"
+  class="fixed delayed-download-alert bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white"
 >
   <a
     href="https://play.google.com/store/apps/details?id=io.ardrive.app&hl=en_US&gl=US&pli=1"
@@ -770,21 +783,21 @@ document.getElementById('button-4').style.display='none';
 
             </div>
             <div class="space-y-2 py-6">
-              <a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-white">Arcast</a>
+              <a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Arcast</a>
 
-							<a href="./articles" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-white">Blog</a>
+							<a href="./articles" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Blog</a>
 
-              <a href="./brand-kit" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-white">Brand Kit</a>
+              <a href="./brand-kit" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Brand Kit</a>
 
-              <a href="./live" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-white">Live</a>
+              <a href="./live" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Live</a>
 
-              <a href="https://ar-io-store.myshopify.com/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-white">Merch</a>
+              <a href="https://ar-io-store.myshopify.com/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Merch</a>
 
-							<a href="https://prices.ardrive.io/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-white">Pricing Calculator</a>
+							<a href="https://prices.ardrive.io/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Pricing Calculator</a>
 
             </div>
             <div class="py-6">
-              <a href="https://bobinstein.github.io/docs/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 hover:text-black">DOCS <span aria-hidden="true">&rarr;</span></a>
+              <a href="https://bobinstein.github.io/docs/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-black">DOCS <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
         </div>
