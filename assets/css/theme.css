@@ -6518,6 +6518,19 @@ button {
 	color: #111;
 }
 
+.tt-btn-primary-arns {
+	background-color: #FFBB38;
+	border-radius: 0px !important;
+	border: 1px solid #fafafa;
+}
+.tt-btn-primary-arns > *,
+.tt-btn-primary-arns > *::after {
+	color: #121212;
+}
+.tt-btn-primary-arns:hover > * {
+	color: #121212;
+}
+
 /* Button light outline */
 .tt-btn-light-outline {
 	box-shadow: inset 0 0 0 2px #FFF;
