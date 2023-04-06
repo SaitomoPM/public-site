@@ -984,6 +984,11 @@ button {}
 		z-index: 999;
 		/* pointer-events: none; */
 	}
+	@media (max-width: 767px) {
+		#tt-header {
+			pointer-events: none;
+		}
+	}
 
 	/* header position fixed */
 	#tt-header.tt-header-fixed {
