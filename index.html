@@ -107,28 +107,25 @@
     animation-fill-mode: forwards;
 }
 
+.tt-style-switch {
+	display: none;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 @media (max-width: 767px) {
-	#mobile-announcement-bar {
+	.mobile-announcement-bar {
 		pointer-events: auto;
 	}
 }
 
 </style>
 
-<aside
-  class="fixed delayed-download-alert bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white"
->
-  <a
-    href="https://play.google.com/store/apps/details?id=io.ardrive.app&hl=en_US&gl=US&pli=1"
-    target="_blank"
-    rel="noreferrer"
-    class="text-sm font-medium hover:opacity-75"
-  >
+<aside class="fixed delayed-download-alert bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white">
+  <a href="https://play.google.com/store/apps/details?id=io.ardrive.app&hl=en_US&gl=US&pli=1" target="_blank" rel="noreferrer" class="text-sm font-medium hover:opacity-75">
     ArDrive mobile has landed.  🚀
   </a>
 	<span onclick="this.parentElement.style.display='none';"
@@ -367,9 +364,9 @@
 
 
 
-<header id="tt-header mobile-announcement-bar" class="bg-none" style="">
+<header id="tt-header" class="bg-none" style="">
 	<div id="announcement-spacer" style="height: 56px;"></div>
-  <nav class="mx-auto flex  items-center justify-between p-6 lg:px-8" aria-label="Global">
+  <nav class="mx-auto flex  items-center justify-between p-6 mobile-announcement-bar lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="./" class="-m-1.5 p-1.5">
         <span class="sr-only">ar.io</span>
@@ -739,7 +736,7 @@ document.getElementById('button-4').style.display='none';
     </div>
   </nav>
   <!-- Mobile menu, show/hide based on menu open state. -->
-  <div class="lg:hidden" role="dialog" aria-modal="true" style="display: none;" id="mobile-menu">
+  <div class="lg:hidden mobile-announcement-bar" role="dialog" aria-modal="true" style="display: none;" id="mobile-menu">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
     <div class="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" style="z-index:1000; background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #2c2c2c); animation: gradient 15s ease infinite;">
@@ -955,12 +952,12 @@ document.getElementById('button-4').style.display='none';
 					<!-- Add is-open as a class to the line below to have unfolded. -->
 					<div class="tt-accordion-content max-width-1400">
 						<!-- <p><strong>	ar.io will become what we make of it together.</strong></p> -->
-						<p>Get involved with ar.io as a developer, gateway operator, content creator, or simply by
+						<p style="margin: 0 0 30px;">Get involved with ar.io as a developer, gateway operator, content creator, or simply by
 							exploring the permaweb.</p>
-							<p>Web3 puts control back into the hands of all its users and builders. Our first priority is
+							<p style="margin: 0 0 30px;">Web3 puts control back into the hands of all its users and builders. Our first priority is
 								building a community, knowing that the ar.io Network will become what we make of it together.
 							</p>
-							<p>We are confident that we are only scratching the surface of what is to come, and are excited at
+							<p style="margin: 0 0 30px;">We are confident that we are only scratching the surface of what is to come, and are excited at
 								the innovations that will be created in the coming years by our community.</p>
 							</div>
 						</div>
@@ -983,7 +980,7 @@ document.getElementById('button-4').style.display='none';
 							</div>
 							<div class="tt-accordion-content max-width-1400">
 								<!-- <p><strong>We build the tools that help you build the products.</strong></p> -->
-								<p>The ar.io Team is developing an expanding set of open-source infrastructure-focused protocols
+								<p style="margin: 0 0 30px;">The ar.io Team is developing an expanding set of open-source infrastructure-focused protocols
 									already adopted by the Arweave ecosystem:
 								</p>
 								<p>
@@ -1017,14 +1014,18 @@ document.getElementById('button-4').style.display='none';
 							</div>
 							<div class="tt-accordion-content max-width-1400">
 								<!-- <p><strong>What do you want to build?</strong></p> -->
-								<p>The ar.io Team is behind a growing number of perma-products. Our flagship data storage
+								<p style="margin: 0 0 30px;">The ar.io Team is behind a growing number of perma-products. Our flagship data storage
 									platform, ArDrive, accounts for more than 10% of the weave with increasing user adoption.</p>
-									<p>ArDrive is a cross-platform app, available on all modern web browsers and the Android and Apple
-										(coming soon) app stores.</p>
-										<p>Advanced users can use the flexible ArDrive Command Line Interface, and developers can
-											integrate ArDrive-Core-JS to bring the Permaweb right into their app.</p>
+									<p style="margin: 0 0 30px;">ArDrive is a cross-platform app, available on all modern web browsers, as well as for Android on Google Play, and iOS coming soon. Advanced users can use the flexible ArDrive Command Line Interface, and developers can
+										integrate ArDrive-Core-JS to bring the Permaweb right into their app.</p>
 											<p>
-												<ul>
+												<ul style="    display: block;
+												    list-style-type: disc;
+												    margin-block-start: 1em;
+												    margin-block-end: 1em;
+												    margin-inline-start: 0px;
+												    margin-inline-end: 0px;
+												    padding-inline-start: 40px;">
 													<a href="https://ardrive.io/" target="_blank" style="text-decoration: underline;">
 														<li>ArDrive Web</li>
 													</a>
@@ -1054,7 +1055,7 @@ document.getElementById('button-4').style.display='none';
 										<li>ar.io Network app (governance, staking, network joining)</li>
 									</ul>
 								</p>
-								<p>All of our products are open-sourced and ready for your imagination.</p>
+								<p style="margin: 0 0 30px;">All of our products are open-sourced and ready for your imagination.</p>
 							</div>
 						</div>
 
@@ -1076,15 +1077,15 @@ document.getElementById('button-4').style.display='none';
 							</div>
 							<div class="tt-accordion-content max-width-1400">
 								<!-- <p><strong>ar.io is the front door to the permaweb.</strong></p> -->
-								<p>The permaweb is just like the currently existing web, but everything published on it will be
+								<p style="margin: 0 0 30px;">The permaweb is just like the currently existing web, but everything published on it will be
 									available forever. For users and builders, the permaweb will offer low-cost, zero maintenance,
 									permanent hosting of their web apps, files, and web pages.</p>
-									<p>In other words, the permaweb is the layer built on top of Arweave’s protocol, which is
+									<p style="margin: 0 0 30px;">In other words, the permaweb is the layer built on top of Arweave’s protocol, which is
 										essentially a global permanent hard drive.</p>
-										<p>The implications of a permaweb are significant. What if you never lost a file again? What if
+										<p style="margin: 0 0 30px;">The implications of a permaweb are significant. What if you never lost a file again? What if
 											the web belonged to you and not big tech? Arweave’s permaweb is a globally distributed network
 											that puts the power back in your hands.</p>
-											<p>Step inside to explore what you can do with permanent data and its unmatched level of
+											<p style="margin: 0 0 30px;">Step inside to explore what you can do with permanent data and its unmatched level of
 												incentives and customization.</p>
 											</div>
 										</div>
@@ -1560,7 +1561,7 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 
       <div class="col-span-2 hidden sm:block sm:rounded-1xl  sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
         <div class="p-6 text-md font-semibold leading-8 tracking-tight text-white">
-          <p>"Operating an AR.IO node as a developer was straight forward to setup and run, the readme provided clear instructions and the onboarding documentation clear. Knowledge of docker helps. By operating a permaweb gateway server, you're not only contributing to the growth of the decentralized web, but also ensuring the preservation of valuable information for future generations. Every gateway in the AR.IO Network is a part of building a more secure and permanent internet."</p>
+          <p>"Operating an ar.io node as a developer was straight forward to setup and run, the readme provided clear instructions and the onboarding documentation clear. Knowledge of docker helps. By operating a permaweb gateway server, you're not only contributing to the growth of the decentralized web, but also ensuring the preservation of valuable information for future generations. Every gateway in the AR.IO Network is a part of building a more secure and permanent internet."</p>
         </div>
         <div class="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
           <img class="h-10 w-10 flex-none rounded-full bg-gray-50" src="./assets/img/pp.png" alt="">
@@ -1576,7 +1577,7 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
         <div class="space-y-8 xl:row-span-2">
           <div class="rounded-1xl  p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
             <div class="text-white">
-              <p>"We are blown away by the performance boost that the new Ar.io gateways offer. Being able to receive 1000x more data per query is an absolute game changer when building applications on the permaweb."</p>
+              <p>"We are blown away by the performance boost that the new ar.io gateways offer. Being able to receive 1000x more data per query is an absolute game changer when building applications on the permaweb."</p>
             </div>
             <div class="mt-6 flex items-center gap-x-4">
               <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/CL.png" alt="">
@@ -1615,7 +1616,7 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
               <p>"It's pretty cool to see... this idea of distributing the (Arweave) database itself, across many different ar.io nodes."</p>
             </div>
             <div class="mt-6 flex items-center gap-x-4">
-              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/ar.png" alt="">
+              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/arw.png" alt="">
               <div>
                 <div class="font-semibold text-gray-100">Sam Williams</div>
                 <div class="text-gray-400">Arweave</div>
