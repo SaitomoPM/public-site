@@ -2252,6 +2252,18 @@ button {}
 		font-weight: 800;
 	}
 
+	.ario-navbar-links {
+		color: #121212 !important;
+		background-color: #fafafa !important;
+		font-weight: 800;
+	}
+
+	.ario-navbar-links:hover{
+		color: #fafafa !important;
+		background-color: #121212 !important;
+		font-weight: 800;
+	}
+
 	.ario-caption {
 		background-color: #121212 !important;
 		font-weight: 800;
@@ -7561,7 +7573,7 @@ body:not(.is-mobile) .tt-btn:hover .tt-btn-line {
 	}
 	.tt-scrolling-text-inner {
 		padding-left: 2vw;
-		font-size: calc(16px + 6vw);
+		font-size: calc(14px + 4vw);
 		line-height: 1;
 		font-weight: bold;
 		font-weight: 600;
@@ -7576,6 +7588,28 @@ body:not(.is-mobile) .tt-btn:hover .tt-btn-line {
 	.tt-scrolling-text-inner:after {
 		content: attr(data-text);
 	}
+
+	.tt-scrolling-text-inner span {
+  /* Fallback: Set a background color. */
+  background-color: #ccc;
+
+
+  background-image: linear-gradient(-45deg, #F7DFD2, #F7D9C7, #F8CCD9, #F6BDFA);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+	animation: gradient 5s ease infinite;
+	background-size: 400% 400%;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 
 	@keyframes tt_scrolling_text {
 		0% { transform: translateX(0) }
