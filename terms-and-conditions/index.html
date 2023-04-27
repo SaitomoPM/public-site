@@ -75,6 +75,12 @@
 		display: none;
 	}
 
+	@media (max-width: 767px) {
+		.mobile-announcement-bar {
+			pointer-events: auto;
+		}
+	}
+
 </style>
 
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
@@ -116,259 +122,522 @@
 			========================
 			* Use class "tt-header-fixed" to set header to fixed position.
 		-->
-			<header id="tt-header" class="">
-				<div class="tt-header-inner">
-					<!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). There is a helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More about helper classes can be found in the file "helper.css". -->
+		<header id="tt-header" class="bg-none" style="">
+			<!-- <div id="announcement-spacer" style="height: 56px;"></div> -->
+		  <nav class="mx-auto flex  items-center justify-between p-6 mobile-announcement-bar lg:px-8" aria-label="Global">
+		    <div class="flex lg:flex-1">
+		      <a href="../" class="-m-1.5 p-1.5">
+		        <span class="sr-only">ar.io</span>
+		        <img class="h-12 w-auto magnetic-item" src="../assets/img/elephant-light.png" alt="">
+		      </a>
+		    </div>
+		    <div class="flex lg:hidden">
+		      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onclick="document.getElementById('mobile-menu').style.display='unset'">
+		        <span class="sr-only">Open main menu</span>
+		        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+		          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+		        </svg>
+		      </button>
+		    </div>
+		    <div class="hidden lg:flex lg:gap-x-12">
+		      <div class="relative">
+		        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
 
-					<div class="tt-header-col">
+		document.getElementById('button-2').style.display='none';
+		document.getElementById('button-3').style.display='none';
+		document.getElementById('button-4').style.display='none';
 
-						<!-- Begin logo
-					================ -->
-						<div class="tt-logo">
-							<a href="../">
+						if(document.getElementById('button-1').style.display=='none'){document.getElementById('button-1').style.display='unset'} else {document.getElementById('button-1').style.display='none'}">
 
-								<!-- logo light: -->
-								<!-- <img src="../assets/img/logo-party.gif" class="tt-logo-light magnetic-item"  alt="Logo">  -->
-								<!-- logo dark: -->
-								<!-- <img src="../assets/img/logo-party.gif" class="tt-logo-dark magnetic-item"  alt="Logo">  -->
-								<!-- <img src="../assets/img/logo-lights.gif" class="tt-logo-light magnetic-item"  alt="Logo">
-							<img src="../assets/img/logo-lights.gif" class="tt-logo-dark magnetic-item"  alt="Logo"> -->
-								<img src="../assets/img/elephant-light.png" class="tt-logo-light magnetic-item" alt="Logo">
-								<img src="../assets/img/elephant-dark.png" class="tt-logo-dark magnetic-item" alt="Logo">
-							</a>
-						</div>
-						<!-- End logo -->
+		          <span class="" >&nbsp; USE &nbsp;</span>
+							<!-- <span class="ario-navbar-links" >&nbsp; USE &nbsp;</span> -->
 
-					</div> <!-- /.tt-header-col -->
+		        </button>
 
-					<div class="tt-header-col">
+		        <!--
+		          'Product' flyout menu, show/hide based on flyout menu state.
 
-						<!-- Begin overlay menu toggle button -->
-						<div id="tt-ol-menu-toggle-btn-wrap">
-							<div class="tt-ol-menu-toggle-btn-text-wrap hide-cursor">
-								<div class="tt-ol-menu-toggle-btn-text">
-									<span class="text-menu" data-hover="Explore">Explore</span>
-									<span class="text-close">Close</span>
-								</div> <!-- /.tt-ol-menu-toggle-btn-text -->
-							</div> <!-- /.tt-ol-menu-toggle-btn-text-wrap -->
-							<div class="tt-ol-menu-toggle-btn-holder">
-								<a href="#" class="tt-ol-menu-toggle-btn magnetic-item"><span></span></a>
-							</div> <!-- /.tt-ol-menu-toggle-btn-holder -->
-						</div>
-						<!-- End overlay menu toggle button -->
+		          Entering: "transition ease-out duration-200"
+		            From: "opacity-0 translate-y-1"
+		            To: "opacity-100 translate-y-0"
+		          Leaving: "transition ease-in duration-150"
+		            From: "opacity-100 translate-y-0"
+		            To: "opacity-0 translate-y-1"
+		        -->
+		        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5" id="button-1" style="display: none;">
+		          <div class="p-4">
+		            <!-- <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="../ardrive" class="block font-semibold text-gray-900 hover:text-black">
+		                  ArDrive
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Your private hard drive.</p>
+		              </div>
+		            </div> -->
 
-						<!-- Begin overlay menu
-					========================
-					* Use class "tt-ol-menu-count" to enable menu counter.
-				-->
-						<nav class="tt-overlay-menu tt-ol-menu-count">
-							<div class="tt-ol-menu-ghost"></div>
-							<div class="tt-ol-menu-holder">
-								<div class="tt-ol-menu-inner tt-wrap">
-									<div class="tt-ol-menu-content">
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="../arns" class="block font-semibold text-gray-900 hover:text-black">
+		                  ArNS (Beta)
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Get a permanent domain.</p>
+		              </div>
+		            </div>
 
-										<!-- Begin menu list -->
-										<ul class="tt-ol-menu-list">
+		            <!-- <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="https://prices.ardrive.io/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+		                  Pricing Calculator
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Convert AR to storage and USD.</p>
+		              </div>
+		            </div> -->
 
-											<li><a href="../">Home</a></li>
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="https://viewblock.io/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+		                  Viewblock
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Blockchain exploration for the masses.</p>
+		              </div>
+		            </div>
 
-											<!-- Begin submenu (submenu master)
-									==================================== -->
-											<li class="tt-ol-submenu-wrap">
-												<div class="tt-ol-submenu-trigger">
-													<a href="#">About</a>
-													<div class="tt-ol-submenu-caret-wrap">
-														<div class="tt-ol-submenu-caret magnetic-item"></div>
-													</div> <!-- /.tt-ol-submenu-caret-wrap -->
-												</div> <!-- /.tt-ol-submenu-trigger -->
-												<div class="tt-ol-submenu">
-													<ul class="tt-ol-submenu-list">
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="../wallet" class="block font-semibold text-gray-900 hover:text-black">
+		                  Wallet
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Your passport to the permaweb.</p>
+		              </div>
+		            </div>
+		          </div>
+		          <!-- <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+		            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+		              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+		                <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
+		              </svg>
+		              Watch demo
+		            </a>
 
-														<!-- Begin submenu
-												=================== -->
-														<!-- <li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#" class="tt-ol-submenu-link">Contact</a>
+		            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+		              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+		                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+		              </svg>
+		              Contact sales
+		            </a>
+		          </div> -->
+		        </div>
+		      </div>
 
-													</div>
+					<div class="relative">
+		        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
 
-												</li> -->
-														<!-- End submenu -->
+						document.getElementById('button-1').style.display='none';
+						document.getElementById('button-3').style.display='none';
+						document.getElementById('button-4').style.display='none';
 
-														<!-- Begin submenu
-												=================== -->
-														<li class="tt-ol-submenu-wrap">
-															<div class="tt-ol-submenu-trigger">
-																<a href="../articles" class="tt-ol-submenu-link">Articles</a>
+						if(document.getElementById('button-2').style.display=='none'){document.getElementById('button-2').style.display='unset'} else {document.getElementById('button-2').style.display='none'}">
 
-															</div> <!-- /.tt-ol-submenu-trigger -->
+		          <span class="" >&nbsp; DEVELOP &nbsp;</span>
+							<!-- <span class="ario-navbar-links" >&nbsp; DEVELOP &nbsp;</span> -->
 
-														</li>
-														<li class="tt-ol-submenu-wrap">
-															<div class="tt-ol-submenu-trigger">
-																<a href="../wallet" class="tt-ol-submenu-link">Get a Wallet</a>
+		        </button>
 
-															</div> <!-- /.tt-ol-submenu-trigger -->
+		        <!--
+		          'Product' flyout menu, show/hide based on flyout menu state.
 
-														</li>
-														<li class="tt-ol-submenu-wrap">
-															<div class="tt-ol-submenu-trigger">
-																<a href="../start" class="tt-ol-submenu-link">Learn</a>
-
-															</div> <!-- /.tt-ol-submenu-trigger -->
-
-														</li>
-														<li class="tt-ol-submenu-wrap">
-															<div class="tt-ol-submenu-trigger">
-																<a href="../story" class="tt-ol-submenu-link">Story</a>
-																<!-- <div class="tt-ol-submenu-caret-wrap">
-															<div class="tt-ol-submenu-caret magnetic-item"></div>
-														</div>  -->
-															</div>
-															<!-- <div class="tt-ol-submenu">
-														<ul class="tt-ol-submenu-list">
-
-															<li><a href="">ArDrive Questions</a></li>
-															<li><a href="">ArFS Questions</a></li>
-															<li><a href="">ArNS Questions</a></li>
-															<li><a href="">GNAT Questions</a></li>
-
-
-														</ul>
-													</div>  -->
-														</li>
-														<!-- End submenu -->
-
-														<!-- Begin submenu
-												=================== -->
-														<!-- <li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#" class="tt-ol-submenu-link">Jobs</a>
-
-													</div> -->
-
-											</li>
-
-											<!-- End submenu -->
-
-
-
-
-
-
-
-										</ul> <!-- /.tt-ol-submenu-list -->
-									</div> <!-- /.tt-ol-submenu -->
-									</li>
-									<!-- End submenu (sub-master) -->
-
-									<!-- Begin submenu (submenu master)
-									==================================== -->
-									<!-- <li class="tt-ol-submenu-wrap">
-										<div class="tt-ol-submenu-trigger">
-											<a href="#">Community</a>
-											<div class="tt-ol-submenu-caret-wrap">
-												<div class="tt-ol-submenu-caret magnetic-item"></div>
-											</div>
-										</div>
-										<div class="tt-ol-submenu">
-											<ul class="tt-ol-submenu-list">
-
-												<li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="https://discord.com/invite/BXk8tq7" target="_blank" class="tt-ol-submenu-link">Arweave Dev Discord</a>
-
-													</div>
-
-												</li>
+		          Entering: "transition ease-out duration-200"
+		            From: "opacity-0 translate-y-1"
+		            To: "opacity-100 translate-y-0"
+		          Leaving: "transition ease-in duration-150"
+		            From: "opacity-100 translate-y-0"
+		            To: "opacity-0 translate-y-1"
+		        -->
 
 
-								<li class="tt-ol-submenu-wrap">
-									<div class="tt-ol-submenu-trigger">
-										<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left" data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet" style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none; font-weight: bold;">
-											Newsletter
-										</button>
 
+		        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5" id="button-2" style="display: none;">
+		          <div class="p-4">
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="https://github.com/ar-io" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+		                  ar.io GitHub
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Node.js application for terminal-based ArDrive workflows.</p>
+		              </div>
+		            </div>
+
+								<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+									<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+										<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+		</svg>
 									</div>
+									<div class="flex-auto">
+										<a href="https://cookbook.ar-io.dev" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+											Arweave Cookbook
+											<span class="absolute inset-0"></span>
+										</a>
+										<p class="mt-1 text-gray-600">Node.js application for terminal-based ArDrive workflows.</p>
+									</div>
+								</div>
 
-								</li>
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <div class="block font-semibold text-gray-400 ">
+		                  Gateways Operator Manual
+		                  <span class="absolute inset-0"></span>
+		                </div>
+		                <p class="mt-1 text-gray-400 font-semibold">Coming Soon</p>
+		              </div>
+		            </div>
 
 
 
 
-							</ul>
+
+
+		          </div>
+
+		        </div>
+		      </div>
+
+					<div class="relative">
+		        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
+
+						document.getElementById('button-1').style.display='none';
+						document.getElementById('button-2').style.display='none';
+						document.getElementById('button-4').style.display='none';
+
+
+						if(document.getElementById('button-3').style.display=='none'){document.getElementById('button-3').style.display='unset'} else {document.getElementById('button-3').style.display='none'}">
+
+		          <span class="" >&nbsp; ENGAGE &nbsp;</span>
+							<!-- <span class="ario-navbar-links" >&nbsp; ENGAGE &nbsp;</span> -->
+
+		        </button>
+
+		        <!--
+		          'Product' flyout menu, show/hide based on flyout menu state.
+
+		          Entering: "transition ease-out duration-200"
+		            From: "opacity-0 translate-y-1"
+		            To: "opacity-100 translate-y-0"
+		          Leaving: "transition ease-in duration-150"
+		            From: "opacity-100 translate-y-0"
+		            To: "opacity-0 translate-y-1"
+		        -->
+		        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5" id="button-3" style="display: none;">
+		          <div class="p-4">
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+		                  ArCast
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">A biweekly podcast that features interviews and discussions about blockchain, NFTs, web3, and permanent storage.</p>
+		              </div>
+		            </div>
+
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="../brand-kit" class="block font-semibold text-gray-900 hover:text-black">
+		                  Brand Kit
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">The visual source of truth for ar.io brands and products.</p>
+		              </div>
+		            </div>
+
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5l16.5-4.125M12 6.75c-2.708 0-5.363.224-7.948.655C2.999 7.58 2.25 8.507 2.25 9.574v9.176A2.25 2.25 0 004.5 21h15a2.25 2.25 0 002.25-2.25V9.574c0-1.067-.75-1.994-1.802-2.169A48.329 48.329 0 0012 6.75zm-1.683 6.443l-.005.005-.006-.005.006-.005.005.005zm-.005 2.127l-.005-.006.005-.005.005.005-.005.005zm-2.116-.006l-.005.006-.006-.006.005-.005.006.005zm-.005-2.116l-.006-.005.006-.005.005.005-.005.005zM9.255 10.5v.008h-.008V10.5h.008zm3.249 1.88l-.007.004-.003-.007.006-.003.004.006zm-1.38 5.126l-.003-.006.006-.004.004.007-.006.003zm.007-6.501l-.003.006-.007-.003.004-.007.006.004zm1.37 5.129l-.007-.004.004-.006.006.003-.004.007zm.504-1.877h-.008v-.007h.008v.007zM9.255 18v.008h-.008V18h.008zm-3.246-1.87l-.007.004L6 16.127l.006-.003.004.006zm1.366-5.119l-.004-.006.006-.004.004.007-.006.003zM7.38 17.5l-.003.006-.007-.003.004-.007.006.004zm-1.376-5.116L6 12.38l.003-.007.007.004-.004.007zm-.5 1.873h-.008v-.007h.008v.007zM17.25 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zm0 4.5a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="../live" class="block font-semibold text-gray-900 hover:text-black">
+		                  Live
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Catch live streams from IRL events.</p>
+		              </div>
+		            </div>
+
+		            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+		              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+		                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+		</svg>
+		              </div>
+		              <div class="flex-auto">
+		                <a href="https://ar-io-store.myshopify.com/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+		                  Merch
+		                  <span class="absolute inset-0"></span>
+		                </a>
+		                <p class="mt-1 text-gray-600">Official store for ar.io merch.</p>
+		              </div>
+		            </div>
+		          </div>
+		          <!-- <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+		            <a href="../wallet" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+		              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+		                <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
+		              </svg>
+		              Watch demo
+		            </a>
+
+		            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+		              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+		                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+		              </svg>
+		              Contact sales
+		            </a>
+		          </div> -->
+		        </div>
+		      </div>
+
+		      <div class="relative">
+		        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
+
+						document.getElementById('button-1').style.display='none';
+						document.getElementById('button-2').style.display='none';
+						document.getElementById('button-3').style.display='none';
+
+
+						if(document.getElementById('button-4').style.display=='none'){document.getElementById('button-4').style.display='unset'} else {document.getElementById('button-4').style.display='none'}">
+		          <span class="" >&nbsp; LEARN &nbsp;</span>
+							<!-- <span class="ario-navbar-links" >&nbsp; LEARN &nbsp;</span> -->
+
+		        </button>
+
+		        <!--
+		          'Company' flyout menu, show/hide based on flyout menu state.
+
+		          Entering: "transition ease-out duration-200"
+		            From: "opacity-0 translate-y-1"
+		            To: "opacity-100 translate-y-0"
+		          Leaving: "transition ease-in duration-150"
+		            From: "opacity-100 translate-y-0"
+		            To: "opacity-0 translate-y-1"
+		        -->
+		        <div class="absolute -left-8 top-full z-10 mt-3 w-96 rounded-2xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5" id="button-4" style="display: none;">
+							<!-- <div class="relative rounded-md p-4 hover:bg-gray-50">
+								<a href="https://bobinstein.github.io/docs/" target="_blank" class="block text-sm font-semibold leading-6 text-gray-900 hover:text-black">
+									Docs
+									<span class="absolute inset-0"></span>
+								</a>
+								<p class="mt-1 text-sm leading-6 text-gray-600">The complete library of everything ar.io. Start here.</p>
+							</div> -->
+
+							<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+								<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+									<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+		</svg>
+								</div>
+								<div class="flex-auto">
+									<a href="../articles" class="block font-semibold text-gray-900 hover:text-black">
+										Articles
+										<span class="absolute inset-0"></span>
+									</a>
+									<p class="mt-1 text-gray-600">News, posts, and thoughts from ar.io.</p>
+								</div>
 							</div>
-							</li> -->
-									<!-- End submenu (sub-master) -->
 
-									<!-- Begin submenu (submenu master)
-									==================================== -->
-									<li class="tt-ol-submenu-wrap">
-										<div class="tt-ol-submenu-trigger">
-											<a href="#">Products</a>
-											<div class="tt-ol-submenu-caret-wrap">
-												<div class="tt-ol-submenu-caret magnetic-item"></div>
-											</div> <!-- /.tt-ol-submenu-caret-wrap -->
-										</div> <!-- /.tt-ol-submenu-trigger -->
-										<div class="tt-ol-submenu">
-											<ul class="tt-ol-submenu-list">
+							<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+								<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
+									<svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+		</svg>
+								</div>
+								<div class="flex-auto">
+									<div class="block font-semibold text-gray-400 ">
+										Docs
+										<span class="absolute inset-0"></span>
+									</div>
+									<p class="mt-1 text-gray-400 font-semibold">Coming Soon.</p>
+								</div>
+							</div>
 
-												<li class="tt-logo-light"><a href="../ardrive" target="_blank"><img
-															src="../assets/img/ardrive-logo-light.png" width="80" alt="ardrive-logo"></a></li>
-												<li class="tt-logo-dark"><a href="../ardrive" target="_blank"><img
-															src="../assets/img/ardrive-logo-dark.png" width="80" alt="ardrive-logo"></a></li>
+							<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+								<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+									<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		  <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+		</svg>
+								</div>
+								<div class="flex-auto">
+									<a href="../story" class="block font-semibold text-gray-900 hover:text-black">
+										Story
+										<span class="absolute inset-0"></span>
+									</a>
+									<p class="mt-1 text-gray-600">How the project started.</p>
+								</div>
+							</div>
 
-												<!-- <li class="active"><a href="../arns" style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;" >ArNS</a></li> -->
-												<li class="active"><a href="../arns"
-														style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;">ArNS</a></li>
-												<li class="active coming-soon">Gateways <strong style="opacity: 0;">-</strong> <span
-														style="font-weight: 600;">coming soon</span></li>
-												<br>
-												<!-- <li class="active coming-soon">Merch <strong style="opacity: 0;">-</strong> <span
-														style="font-weight: 600;">coming soon</span></li> -->
+							<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+								<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
+									<svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+		</svg>
+								</div>
+								<div class="flex-auto">
+									<div class="block font-semibold text-gray-400 ">
+										White Paper
+										<span class="absolute inset-0"></span>
+									</div>
+									<p class="mt-1 text-gray-400 font-semibold">Coming Soon.</p>
+								</div>
+							</div>
 
 
-											</ul> <!-- /.tt-ol-submenu-list -->
-										</div> <!-- /.tt-ol-submenu -->
-									</li>
-									<!-- End submenu (sub-master) -->
 
 
 
 
-									</ul>
-									<!-- End menu list -->
+		        </div>
+		      </div>
+		    </div>
+		    <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+		      <a href="https://bobinstein.github.io/docs/" target="_blank" class="text-sm font-semibold leading-6 text-gray-300 hover:text-white">START <span aria-hidden="true">&rarr;</span></a>
+		    </div> -->
+				<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+		      <a href="../start"  class=" font-semibold leading-6 text-gray-300 hover:text-white" style="font-size: 16px;">START <span aria-hidden="true">&rarr;</span></a>
+		    </div>
+		  </nav>
+		  <!-- Mobile menu, show/hide based on menu open state. -->
+		  <div class="lg:hidden mobile-announcement-bar" role="dialog" aria-modal="true" style="display: none;" id="mobile-menu">
+		    <!-- Background backdrop, show/hide based on slide-over state. -->
+		    <div class="fixed inset-0 z-10"></div>
+		    <div class="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" style="z-index:1000; background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #2c2c2c); animation: gradient 15s ease infinite;">
+		      <div class="p-6">
+		        <div class="flex items-center justify-between">
+		          <a href="../" class="-m-1.5 p-1.5">
+		            <span class="sr-only">ar.io</span>
+		            <img class="h-8 w-auto" src="../assets/img/elephant-light.png" alt="">
+		          </a>
+		          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-100" onclick="document.getElementById('mobile-menu').style.display='none'">
+		            <span class="sr-only">Close menu</span>
+		            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+		              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+		            </svg>
+		          </button>
+		        </div>
+		        <div class="mt-6 flow-root">
+		          <div class="-my-6 divide-y divide-gray-500/10">
+		            <div class="space-y-2 py-6">
+		              <!-- <a href="../ardrive" class="group -mx-3 flex items-center gap-x-6 rounded-md p-3 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">
+		                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-black group-hover:bg-white">
+		                  <svg class="h-6 w-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+			</svg>
+		                </div>
+		                ArDrive
+		              </a> -->
 
-									<!-- Begin overlay menu social links
-								===================================== -->
-									<ul class="tt-ol-menu-social">
+									<a href="../arns" class="group -mx-3 flex items-center gap-x-6 rounded-md p-3 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">
+										<div class="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-black group-hover:bg-white">
+											<svg class="h-6 w-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
+			</svg>
+										</div>
+										ArNS (Beta)
+									</a>
 
-										<li><a href="https://github.com/ardriveapp" target="_blank" rel="noopener">GitHub</a></li>
-										<li><a href="https://discord.gg/HGG52EtTc2" target="_blank"
-												rel="noopener">Discord</a></li>
-										<li><a href="https://www.instagram.com/ardriveapp/" target="_blank" rel="noopener">Instagram</a>
-										</li>
-										<li><a href="https://www.reddit.com/r/ar_io/" target="_blank" rel="noopener">Reddit</a></li>
-										<li><a href="https://www.tiktok.com/@ardrive.io" target="_blank" rel="noopener">TikTok</a></li>
-										<li><a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g" target="_blank"
-												rel="noopener">Youtube</a></li>
-										<li><a href="https://www.linkedin.com/company/68614891" target="_blank" rel="noopener">LinkedIn</a>
-										</li>
-										<li><a href="https://twitter.com/ar_io_team" target="_blank" rel="noopener">Twitter</a></li>
 
-									</ul>
-									<!-- End overlay menu social links -->
+									<a href="../wallet" class="group -mx-3 flex items-center gap-x-6 rounded-md p-3 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">
+										<div class="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-black group-hover:bg-white">
+											<svg class="h-6 w-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+			</svg>
+										</div>
+										Wallet
+									</a>
 
-								</div> <!-- /.tt-ol-menu-content -->
-							</div> <!-- /.tt-ol-menu-inner -->
-					</div> <!-- /.tt-ol-menu-holder -->
-					</nav>
-					<!-- End overlay menu -->
 
-				</div> <!-- /.header-col -->
-		</div> <!-- /.header-inner -->
+		            </div>
+		            <div class="space-y-2 py-6">
+		              <a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">ArCast</a>
+
+									<a href="../articles" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Articles</a>
+
+		              <a href="../brand-kit" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Brand Kit</a>
+
+		              <a href="../live" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Live</a>
+
+		              <a href="https://ar-io-store.myshopify.com/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Merch</a>
+
+									<!-- <a href="https://prices.ardrive.io/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Pricing Calculator</a> -->
+
+		            </div>
+		            <!-- <div class="py-6">
+			              <a href="https://bobinstein.github.io/docs/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">DOCS <span aria-hidden="true">&rarr;</span></a>
+		            </div> -->
+								<div class="py-6">
+										<a href="../start" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">START <span aria-hidden="true">&rarr;</span></a>
+								</div>
+		          </div>
+		        </div>
+		      </div>
+		      <!-- <div class="sticky bottom-0 grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 text-center">
+		        <a href="#" class="p-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100">Watch demo</a>
+
+		        <a href="#" class="p-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100">Contact sales</a>
+		      </div> -->
+		    </div>
+		  </div>
 		</header>
-		<!-- End header -->
 
 
 
@@ -482,121 +751,113 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">The services offered on our AR.IO platform (the “Platform”) are owned and operated by
 							Permanent Data Solutions, Inc. d/b/a AR.IO (“AR.IO”, “we”, “us”, “our”, or the “Company”). Please read
 							these Terms of Service and Privacy Policy (this “Agreement”) carefully, as you are agreeing to be bound by
-							these terms by using our Service.
+							these terms by using our Service.</p>
 
-							This Agreement applies to all Users of the Service. If you do not agree with any part of this Agreement,
+						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">This Agreement applies to all Users of the Service. If you do not agree with any part of this Agreement,
 							you must not use the Service. Your continued use of the Service will constitute your acceptance of this
 							Agreement. Any new features or tools which are added to the current Service shall also be subject to this
 							Agreement. You can review the most recent version of this Agreement at any time here. We reserve the right
 							to update, change, or replace any part of this Agreement by posting updates and/or changes. It is your
 							responsibility to check the Service periodically for changes. Your continued use of the Service following
-							the posting of any changes constitutes acceptance of those changes.
+							the posting of any changes constitutes acceptance of those changes.</p>
 
-							PLEASE NOTE: OUR PLATFORM DOES NOT REQUIRE YOU TO PROVIDE US WITH ANY INFORMATION ABOUT YOURSELF SUCH AS
+						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">PLEASE NOTE: OUR PLATFORM DOES NOT REQUIRE YOU TO PROVIDE US WITH ANY INFORMATION ABOUT YOURSELF SUCH AS
 							NAME, AGE, CONTACT INFORMATION, AND SIMILAR DEMOGRAPHIC INFORMATION AS MAY BE COLLECTED BY OTHER
 							PLATFORMS. THE ONLY INFORMATION ABOUT YOU COLLECTED BY OUR PLATFORM IS PURELY USAGE ANALYTICS NOT IN ANY
 							WAY CONNECTED TO YOUR IDENTITY. OUR USE AND SHARING OF SUCH INFORMATION IS DISCLOSED IN AND GOVERNED BY
 							THIS AGREEMENT (SEE THE PRIVACY SECTION BELOW) WHICH YOU ACKNOWLEDGE YOU HAVE READ AND WITH WHICH YOU
-							AGREE AS PART OF USING THE PLATFORM.
+							AGREE AS PART OF USING THE PLATFORM.</p>
 
-							PLEASE NOTE FURTHER: THIS AGREEMENT CONTAINS A MANDATORY ARBITRATION CLAUSE. BY BINDING YOURSELF TO THIS
+						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">PLEASE NOTE FURTHER: THIS AGREEMENT CONTAINS A MANDATORY ARBITRATION CLAUSE. BY BINDING YOURSELF TO THIS
 							AGREEMENT AND USING OUR SERVICES HEREUNDER, YOU EXPRESSLY WAIVE YOUR RIGHT TO BRING CLAIMS OUTSIDE OF
-							ARBITRATION.
-						</p>
+							ARBITRATION.</p>
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text"><strong>General Terms</strong></p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 2. Definitions </span></h3>
 
-
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							Throughout this Agreement, we may use certain words or phrases, and it is important that you understand
 							the meaning of them. The list is not all-encompassing, and no definition should be considered binding to
-							the point that it renders this Agreement nonsensical:
+							the point that it renders this Agreement nonsensical:</p>
 
-							“Agreement” means these Terms of Service.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Agreement” means these Terms of Service.</p>
 
-							“AR.IO”, “we”, “us”, “our”, or the “Company” refers to our company, Platform, Service, or a combination of
-							all or some of the preceding definitions, depending on the context of the word.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“AR.IO”, “we”, “us”, “our”, or the “Company” refers to our company, Platform, Service, or a combination of
+								all or some of the preceding definitions, depending on the context of the word.</p>
 
-							“Registered User” means a User who has created a User Account, as described in Section 7.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Registered User” means a User who has created a User Account, as described in Section 7.</p>
 
-							“Service” refers to our Platform, and any other products, websites, applications, and services offered by
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Service” refers to our Platform, and any other products, websites, applications, and services offered by
 							us including, without limitation, the ArWeave wallet, the ArDrive and AR.IO services, and any mobile and
-							desktop applications/software offered by us.
+								desktop applications/software offered by us.</p>
 
-							“User” refers but is not limited to all users of the Service.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“User” refers but is not limited to all users of the Service.</p>
 
-							“User Content” refers to any content, digital files, text, communications, images, photos, links, and
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“User Content” refers to any content, digital files, text, communications, images, photos, links, and
 							other material submitted by a User to any section of the Service where Users are allowed to submit
-							content.
+								content.</p>
 
-							“You” refers to you, the person who is entering into this Agreement with AR.IO.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“You” refers to you, the person who is entering into this Agreement with AR.IO.</p>
 
-						</p>
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 3. Eligibility </span></h3>
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
-							In order to use our Service, you must meet a number of conditions, including but not limited to:
+							In order to use our Service, you must meet a number of conditions, including but not limited to:</p>
 
-							You must not be in violation of any embargoes, export controls, or other laws of the United States or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You must not be in violation of any embargoes, export controls, or other laws of the United States or
 							other countries having jurisdiction over this Agreement, us, and you. For example, if the Office of
 							Foreign Assets Control prohibits conducting financial transactions with nationals, residents, or banks of
-							your country, you must not use our Service.
+								your country, you must not use our Service.</p>
 
-							You must be over the age of eighteen (18) or at least thirteen (13) having the written consent of your
-							parent or guardian.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You must be over the age of eighteen (18) or at least thirteen (13) having the written consent of your
+								parent or guardian.</p>
 
-							You must not sign up or use the Services on behalf of a natural person or entity other than (i) yourself,
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You must not sign up or use the Services on behalf of a natural person or entity other than (i) yourself,
 							(ii) a person to whom you are a legal guardian, and/or (iii) a person on whose behalf you are legally
-							authorized to act (e.g., a spouse or family member under certain medical protocols).
+								authorized to act (e.g., a spouse or family member under certain medical protocols).</p>
 
-						</p>
-						
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;">4. Rules of Use</span></h3>
-
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							All of the content in the Service is made available only for your personal, lawful, non-commercial use.
-							Use of the Service by a competitor company or other non-consumer third party is prohibited.
+							Use of the Service by a competitor company or other non-consumer third party is prohibited.</p>
 
-							You may not use our Service for any unlawful purpose and agree that it is solely your responsibility to
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You may not use our Service for any unlawful purpose and agree that it is solely your responsibility to
 							ensure that the use of the Service is lawful in the jurisdiction in which you are located. In addition to
-							other prohibitions as set forth in the Agreement, you must not:
+								other prohibitions as set forth in the Agreement, you must not:</p>
 
-							Use the Service to solicit others to perform or participate in any unlawful acts.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to solicit others to perform or participate in any unlawful acts.</p>
 
-							Use the Service to violate any international, federal, provincial, or state regulations, rules, laws, or
-							local ordinances.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to violate any international, federal, provincial, or state regulations, rules, laws, or
+								local ordinances.</p>
 
-							Use the Service to infringe upon or violate our intellectual property rights or the intellectual property
-							rights of others.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to infringe upon or violate our intellectual property rights or the intellectual property
+								rights of others.</p>
 
-							Use the Service to harass, abuse, insult, harm, defame, slander, disparage, intimidate, bully, or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to harass, abuse, insult, harm, defame, slander, disparage, intimidate, bully, or
 							discriminate, or threaten any of the above, based on gender, sexual orientation, religion, ethnicity,
 							race, age, national origin, or disability; or to use hateful speech against any other person or User for
-							any reason.
+								any reason.</p>
 
-							Use the Service to submit false or misleading information.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to submit false or misleading information.</p>
 
-							Use the Service to collect, track, and/or publish the personal information of others.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to collect, track, and/or publish the personal information of others.</p>
 
-							Use the Service to spam, phish, pharm, pretext, spider, crawl, or scrape.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to spam, phish, pharm, pretext, spider, crawl, or scrape.</p>
 
-							Use the Service to interfere with or circumvent the security features of the Service or any related
-							website, other websites, or the Internet.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Use the Service to interfere with or circumvent the security features of the Service or any related
+								website, other websites, or the Internet.</p>
 
-							We reserve the right to terminate your use of the Service or any related website for violating any of the
-							prohibited uses without any refund to you for prepaid Service, if any.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We reserve the right to terminate your use of the Service or any related website for violating any of the
+								prohibited uses without any refund to you for prepaid Service, if any.</p>
 
-							We reserve the right to limit functionality of your account (temporarily or permanently) due to technical,
-							security, legal, or other reasons, including, but not limited to:
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We reserve the right to limit functionality of your account (temporarily or permanently) due to technical,
+							security, legal, or other reasons, including, but not limited to:</p>
 
-							ability to log into your account;
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">ability to log into your account;</p>
 
-							ability to edit existing content.
-
-						</p>
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">ability to edit existing content.</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 5. Acknowledgment </span></h3>
 
@@ -604,36 +865,33 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							You acknowledge and agree that the Service is intended solely for file storage. We have no control over
 							the type of files that you or other Users upload to our Service. We are not responsible, and you hereby
 							fully release us, from any damages resulting from your use of the Service.
-
 						</p>
-						
+
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 6. Modifications to the Services </span></h3>
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) in
 							its entirety as well as with regard to any individual User without notice at any time. We reserve the
-							right to reclaim and repurpose any username or URL on the Service.
+							right to reclaim and repurpose any username or URL on the Service.</p>
 
-							We shall not be liable to you or to any third-party for any modification, suspension, or discontinuance of
-							the Service in accordance with this Section.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We shall not be liable to you or to any third-party for any modification, suspension, or discontinuance of
+								the Service in accordance with this Section.</p>
 
-						</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 7. Account Creation </span></h3>
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							In order to access certain features of the Service, you must become a Registered User by creating an
-							account (“User Account”).
+							account (“User Account”).</p>
 
-							You should not reveal your login credentials to any other person. We will never ask you to reveal your
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You should not reveal your login credentials to any other person. We will never ask you to reveal your
 							credentials. If you misplace your credentials, you CANNOT request to have your access to the Service
 							restored. You agree to indemnify AR.IO and its employees, contractors, officers, directors, shareholders,
 							agents, representatives, vendors, and content providers harmless for any improper or illegal use of any of
 							your User Account. This includes illegal or improper use by someone to whom you have given permission to
-							use your User Account or whom you have negligently allowed to access your User Account.
+								use your User Account or whom you have negligently allowed to access your User Account.</p>
 
-						</p>
-						
+
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 8. User Content </span></h3>
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
@@ -652,15 +910,15 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							violates another party's rights (including, but not limited to, intellectual property rights, or rights of
 							privacy or publicity). You will not provide inaccurate, misleading or false information to us or to any
 							other User of the Service. If information provided to us, or another user of the Service, subsequently
-							becomes inaccurate, misleading or false, you will promptly notify us of such change.
+							becomes inaccurate, misleading or false, you will promptly notify us of such change.</p>
 
-							WE HAVE NO ABILITY TO DELETE FILES OR COMMUNICATIONS THAT YOU ADD TO THE PERMAWEB. YOUR UPLOADING OF ANY
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">WE HAVE NO ABILITY TO DELETE FILES OR COMMUNICATIONS THAT YOU ADD TO THE PERMAWEB. YOUR UPLOADING OF ANY
 							FILES TO THE PERMAWEB SHALL BE PERMANENT AND YOU ASSUME ALL RISKS IN CONNECTION WITH SUCH FILES. We have
 							no responsibility for the conduct of any user in the Service, including any User Content submitted in the
 							Service. We assume no responsibility for monitoring the Service for inappropriate content or conduct. Your
-							use of the Service is at your own risk.
+								use of the Service is at your own risk.</p>
 
-							You represent and warrant that you have all necessary rights in and to any User Content that you submit
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You represent and warrant that you have all necessary rights in and to any User Content that you submit
 							within the Service, that such User Content does not infringe any proprietary or other rights of third
 							parties, that all such content is accurate and will not cause injury to any person or entity, and that you
 							will indemnify AR.IO and its employees, contractors, officers, directors, shareholders, agents,
@@ -668,13 +926,11 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							content. If any such materials incorporate the name, voice, likeness and/or image of any individual, you
 							represent and warrant that you have the right to grant AR.IO permission to use any such name, voice,
 							likeness and/or image of such individual appearing in the materials you post throughout the world in
-							perpetuity.
+								perpetuity.</p>
 
-							You acknowledge and agree that all User Content whether publicly posted or privately transmitted to the
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You acknowledge and agree that all User Content whether publicly posted or privately transmitted to the
 							Service is at your sole responsibility and risk. We disclaim any responsibility for the backup and/or
-							retention of any User Content transmitted to the Service.
-
-						</p>
+							retention of any User Content transmitted to the Service.</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 9. Your Interactions with Other Users </span></h3>
 
@@ -683,32 +939,29 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							conduct criminal background checks or other screenings of our Users. We also do not verify the statements
 							of our Users and make no representations or warranties as to the conduct of Users or their compatibility
 							with any current or future User. We reserve the right to conduct any criminal background check or other
-							screenings, at any time and using available public records.
+							screenings, at any time and using available public records.</p>
 
-							We are not responsible for the conduct of any User. In no event shall we, our agents, affiliates, or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We are not responsible for the conduct of any User. In no event shall we, our agents, affiliates, or
 							partners be liable (directly or indirectly) for any losses or damages, whatsoever, whether direct,
 							indirect, general, special, compensatory, consequential, and/or incidental, arising out of or relating to
 							conduct of you or anyone else in connection with the use of the Service including, without limitation,
 							death, bodily injury, emotional distress, and/or any other damages resulting from communications or
-							meetings with other Users or persons you meet through the Service.
+								meetings with other Users or persons you meet through the Service.</p>
 
-							You agree to take all necessary precautions in all interactions with other Users in both online and in
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You agree to take all necessary precautions in all interactions with other Users in both online and in
 							person settings. You understand that we make no guarantees, either express or implied, regarding your
 							compatibility with Users or other persons you encounter while in use of the Service or as a result of
-							using the Service.
+								using the Service.</p>
 
-							You may not use any portion of the Service to collect information, including login credentials, about
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You may not use any portion of the Service to collect information, including login credentials, about
 							other users, and use of such information to send unsolicited communications or for any other purpose is
 							strictly prohibited. You may not advertise any goods or services on any component of the Service, or
-							otherwise exploit your participation on or through the Service for any commercial purpose.
-
-						</p>
+							otherwise exploit your participation on or through the Service for any commercial purpose.</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.4em;"> 10. Your Personal Information </span></h3>
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							Your submission of personal information through the Service is governed by this Agreement.
-
 						</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.3em;"> 11. In Service Purchases </span></h3>
@@ -719,28 +972,27 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							displayed in the Service in connection with the respective feature of the Service. We have published
 							Services fees on our website which is fully incorporated herein by reference and to which, by using our
 							Service, you consent and agree. We reserve the right to change the pricing for the goods and services
-							offered through the Service at any time.
+							offered through the Service at any time.</p>
 
-							You are responsible for all charges and usage on your User Account or using your user credentials and all
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You are responsible for all charges and usage on your User Account or using your user credentials and all
 							purchases made by you or anyone that uses your User Account or user credentials, including applicable
 							taxes. You may pay using the methods available in the Service from time to time, and you agree to the
 							terms and conditions applicable to each payment method you choose, including any additional payment
 							processing fees which may be applicable. We are not responsible or liable for any issues related to the
-							services provided by the payment provider to you in connection with the purchase.
+								services provided by the payment provider to you in connection with the purchase.</p>
 
-							You (i) represent that you are authorized to use the payment method you use and that any payment
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You (i) represent that you are authorized to use the payment method you use and that any payment
 							information you provide is true and accurate; and (ii) authorize us and/or the applicable payment provider
 							to charge you for the Service using your payment method. You must promptly update all billing information
 							to keep it current, complete, and accurate (such as a change in billing address, credit card number, or
 							credit card expiration date), and you must promptly notify the us and the applicable payment provider if
 							your credit card is canceled, lost or stolen or if the security of your payment method has otherwise
-							become compromised.
+								become compromised.</p>
 
-							You are solely responsible for any costs you incur to access the Service through any Internet, wireless or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You are solely responsible for any costs you incur to access the Service through any Internet, wireless or
 							other communication service, such as any fees for web browsing, messaging, and data usage on an Internet
-							provider’s or wireless carrier’s network. Check with your carrier to determine the fees that apply.
+							provider’s or wireless carrier’s network. Check with your carrier to determine the fees that apply.</p>
 
-						</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.3em;"> 12. License Restrictions </span></h3>
 
@@ -752,9 +1004,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							you are solely responsible and liable, and agree to indemnify us to the fullest extent, including
 							attorneys’ fees and court costs, for any legal action or dispute that arises from the use of your license
 							by someone other than you. You must not attempt to reverse engineer, redistribute, resell, or otherwise
-							copy or manipulate our Service.
+							copy or manipulate our Service.</p>
 
-							We may revoke our license to you at any time for any reason without notice or explanation, and we shall
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We may revoke our license to you at any time for any reason without notice or explanation, and we shall
 							not, in any event, be liable to you for any losses suffered as a result of any unanticipated cancellation
 							of our Service. We will generally attempt to notify you prior to cancelling your access to our Service
 							unless you have breached this Agreement or any applicable law, though we are not obligated to do so.
@@ -791,9 +1043,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							errors. Occasionally, our Services may contain typographical mistakes, inaccuracies, or omissions, some of
 							which may relate to pricing and availability, and some information may not be complete or current. We
 							reserve the right to correct any errors, inaccuracies, or omissions at any time and to change or update
-							information at any time without prior notice.
+							information at any time without prior notice.</p>
 
-							We assume no obligation to update, amend, or clarify information in the Service or any Third-Party Service
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We assume no obligation to update, amend, or clarify information in the Service or any Third-Party Service
 							(as defined below), including without limitation, pricing information, except as required by law. No
 							specified update or refresh date applied in the Service or on any Third-Party Service, should be taken to
 							indicate that all information in the Service or on any Third-Party Service has been modified or updated.
@@ -878,30 +1130,30 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							such, we cannot remove a file from the servers; however, if we receive a DMCA notice from you, we will
 							work to have the IPFS pin to such content removed so that the content is not searchable or accessible via
 							gateways that are operated by us (we have no control over third-party gateways using our open source
-							technology).
+							technology).</p>
 
-							If you believe that your copyright has been infringed, please send us a message which contains:
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">If you believe that your copyright has been infringed, please send us a message which contains:</p>
 
-							Your name.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Your name.</p>
 
-							The name of the party whose copyright has been infringed, if different from your name.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">The name of the party whose copyright has been infringed, if different from your name.</p>
 
-							The name and description of the work that is being infringed.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">The name and description of the work that is being infringed.</p>
 
-							The location on our Platform of the infringing copy.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">The location on our Platform of the infringing copy.</p>
 
-							A statement that you have a good faith belief that use of the copyrighted work described above is not
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">A statement that you have a good faith belief that use of the copyrighted work described above is not
 							authorized by the copyright owner (or by a third party who is legally entitled to do so on behalf of the
-							copyright owner) and is not otherwise permitted by law.
+								copyright owner) and is not otherwise permitted by law.</p>
 
-							A statement that you swear, under penalty of perjury, that the information contained in this notification
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">A statement that you swear, under penalty of perjury, that the information contained in this notification
 							is accurate and that you are the copyright owner or have an exclusive right in law to bring infringement
-							proceedings with respect to its use.
+								proceedings with respect to its use.</p>
 
-							You must sign this notification electronically and send it to our Copyright Agent at legal (at) ar (dot)
-							io.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You must sign this notification electronically and send it to our Copyright Agent at legal (at) ar (dot)
+								io.</p>
 
-							Letters containing the foregoing may be mailed to:
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Letters containing the foregoing may be mailed to:</p>
 
 							Copyright Agent
 							Permanent Data Solutions, Inc.
@@ -909,15 +1161,12 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 							Clifton, NJ 07013
 
-							legal (at) ardrive (dot) io
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">legal (at) ardrive (dot) io</p>
 
-
-
-							Although U.S. law does not provide for a similar procedure for trademark infringement, we recommend that
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Although U.S. law does not provide for a similar procedure for trademark infringement, we recommend that
 							you send us similar information to that above in regard to any allegation of trademark infringement, and
-							we will address it as soon as practicable.
+								we will address it as soon as practicable.</p>
 
-						</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.3em;"> 21. Communications Decency Act & Constitutional Protection </span></h3>
 
@@ -943,56 +1192,52 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							YOU IN RELATION TO OR ARISING FROM THIS AGREEMENT OR OUR SERVICES, FOR REASONS INCLUDING, BUT NOT LIMITED
 							TO, FAILURE OF OUR SERVICE, NEGLIGENCE, OR ANY OTHER TORT. TO THE EXTENT THAT PLATFORMLICABLE LAW
 							RESTRICTS THIS RELEASE OF LIABILITY, YOU AGREE THAT WE ARE ONLY LIABLE TO YOU FOR THE MINIMUM AMOUNT OF
-							DAMAGES THAT THE LAW RESTRICTS OUR LIABILITY TO, IF SUCH A MINIMUM EXISTS.
+							DAMAGES THAT THE LAW RESTRICTS OUR LIABILITY TO, IF SUCH A MINIMUM EXISTS.</p>
 
-							YOU AGREE THAT WE ARE NOT RESPONSIBLE IN ANY WAY FOR DAMAGES CAUSED BY THIRD PARTIES WHO MAY USE OUR
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">YOU AGREE THAT WE ARE NOT RESPONSIBLE IN ANY WAY FOR DAMAGES CAUSED BY THIRD PARTIES WHO MAY USE OUR
 							SERVICES, INCLUDING BUT NOT LIMITED TO PEOPLE WHO COMMIT INTELLECTUAL PROPERTY INFRINGEMENT, DEFAMATION,
-							TORTIOUS INTERFERENCE WITH ECONOMIC RELATIONS, OR ANY OTHER ACTIONABLE CONDUCT TOWARDS YOU.
+							TORTIOUS INTERFERENCE WITH ECONOMIC RELATIONS, OR ANY OTHER ACTIONABLE CONDUCT TOWARDS YOU.</p>
 
-							WE ARE NOT RESPONSIBLE FOR ANY ACTIONS BY AN ADMINISTRATOR, MANAGER, EMPLOYEE, OR OTHER USER WHICH MAY
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">WE ARE NOT RESPONSIBLE FOR ANY ACTIONS BY AN ADMINISTRATOR, MANAGER, EMPLOYEE, OR OTHER USER WHICH MAY
 							CAUSE HARM TO YOU, EVEN IF WE BECOME AWARE IN ADVANCE THAT SUCH ACTIONS MAY OR WILL OCCUR AND DO NOT
-							NOTIFY YOU.
+								NOTIFY YOU.</p>
 
-							WE ARE NOT RESPONSIBLE FOR ANY ERRORS IN INFORMATION PROVIDED THROUGH OUR SERVICE OR ANY OTHER DAMAGE THAT
-							MAY ARISE FROM SUCH CONTENT.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">WE ARE NOT RESPONSIBLE FOR ANY ERRORS IN INFORMATION PROVIDED THROUGH OUR SERVICE OR ANY OTHER DAMAGE THAT
+								MAY ARISE FROM SUCH CONTENT.</p>
 
-							WE ARE NOT LIABLE FOR ANY FAILURE OF THE SERVICES PROVIDED BY OUR SERVICE OR A THIRD PARTY, INCLUDING ANY
-							FAILURES OR DISRUPTIONS WHICH PREVENT ACCESS TO OUR SERVICE TEMPORARILY OR PERMANENTLY.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">WE ARE NOT LIABLE FOR ANY FAILURE OF THE SERVICES PROVIDED BY OUR SERVICE OR A THIRD PARTY, INCLUDING ANY
+								FAILURES OR DISRUPTIONS WHICH PREVENT ACCESS TO OUR SERVICE TEMPORARILY OR PERMANENTLY.</p>
 
-							THE PROVISION OF OUR SERVICE TO YOU IS CONTINGENT ON YOUR AGREEMENT WITH THIS AND ALL OTHER SECTIONS OF
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">THE PROVISION OF OUR SERVICE TO YOU IS CONTINGENT ON YOUR AGREEMENT WITH THIS AND ALL OTHER SECTIONS OF
 							THIS AGREEMENT. NOTHING IN THE PROVISIONS OF THIS “REPRESENTATIONS & WARRANTIES” SECTION SHALL BE
-							CONSTRUED TO LIMIT THE GENERALITY OF THE FIRST PARAGRAPH OF THIS SECTION.
+								CONSTRUED TO LIMIT THE GENERALITY OF THE FIRST PARAGRAPH OF THIS SECTION.</p>
 
-							NOTE TO USERS OF OUR AR.IO VALET™ SERVICE: BY USING ANY OF OUR SERVICES, INCLUDING THE AR.IO VALET™
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">NOTE TO USERS OF OUR AR.IO VALET™ SERVICE: BY USING ANY OF OUR SERVICES, INCLUDING THE AR.IO VALET™
 							SERVICE, YOU ACKNOWLEDGE AND AGREE THAT THE DISCLAIMERS AND THE LIMITATIONS OF LIABILITY OF THIS SECTION
-							APPLY EQUALLY ACROSS ALL OF OUR SERVICES.
+								APPLY EQUALLY ACROSS ALL OF OUR SERVICES.</p>
 
-							For Jurisdictions that Do Not Allow Us to Limit Our Liability
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">For Jurisdictions that Do Not Allow Us to Limit Our Liability</p>
 
-							Notwithstanding any provision of these Terms, if your jurisdiction has provisions specific to waiver or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Notwithstanding any provision of these Terms, if your jurisdiction has provisions specific to waiver or
 							liability that conflict with the above then our liability is limited to the smallest extent possible by
 							law. Specifically, in those jurisdictions not allowed, we do not disclaim liability for: (a) death or
 							personal injury caused by its negligence or that of any of its officers, employees or agents; or (b)
 							fraudulent misrepresentation; or (c) any liability which it is not lawful to exclude either now or in the
-							future.
+								future.</p>
 
-							IF YOU ARE A RESIDENT OF A JURISDICTION THAT REQUIRES A SPECIFIC STATEMENT REGARDING RELEASE THEN THE
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">IF YOU ARE A RESIDENT OF A JURISDICTION THAT REQUIRES A SPECIFIC STATEMENT REGARDING RELEASE THEN THE
 							FOLLOWING PLATFORMLIES. FOR EXAMPLE, CALIFORNIA RESIDENTS MUST, AS A CONDITION OF THIS AGREEMENT, WAIVE
 							THE PLATFORMLICABILITY OF CALIFORNIA CIVIL CODE SECTION 1542, WHICH STATES, “A GENERAL RELEASE DOES NOT
 							EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF
 							EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT
 							WITH THE DEBTOR.” YOU HEREBY WAIVE THIS SECTION OF THE NEW YORK CIVIL CODE. YOU HEREBY WAIVE ANY SIMILAR
-							PROVISION IN LAW, REGULATION, OR CODE THAT HAS THE SAME INTENT OR EFFECT AS THE AFOREMENTIONED RELEASE.
+							PROVISION IN LAW, REGULATION, OR CODE THAT HAS THE SAME INTENT OR EFFECT AS THE AFOREMENTIONED RELEASE.</p>
 
-							Those who access or use the Service from other jurisdictions not in the United States do so at their own
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Those who access or use the Service from other jurisdictions not in the United States do so at their own
 							volition and are entirely responsible for compliance with all applicable United States, foreign, and local
 							laws and regulations, including but not limited to export and import regulations. Your promise and agree
 							to use the Service in strict compliance with any local, domestic, national, and/or territorial laws,
-							rules, and regulation that are or may be applicable.
-
-
-
-						</p>
+							rules, and regulation that are or may be applicable.</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.3em;"> 23. Indemnification </span></h3>
 
@@ -1044,40 +1289,39 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							Small Claims Court. At the time of drafting this Agreement, the monetary jurisdiction of the Small Claims
 							Court is $5,000. You agree that if a dispute is eligible to be heard in Small Claims Court but you would
 							be entitled to an additional or alternative remedy in a higher court, such as injunctive relief, you will
-							waive your right to that remedy and still bring the dispute within the Small Claims Court.
+							waive your right to that remedy and still bring the dispute within the Small Claims Court.</p>
 
-							Except as specifically stated herein, all other Disputes not eligible for resolution in Small Claims Court
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Except as specifically stated herein, all other Disputes not eligible for resolution in Small Claims Court
 							shall be resolved exclusively by final, binding arbitration. You hereby waive your right to have any
 							future Dispute heard by a judge or jury (except as otherwise set forth in this Section 26). The provisions
 							of this Section 26 shall constitute your and AR.IO’s written agreement to arbitrate Disputes under the
 							Federal Arbitration Act. Any modification to this Agreement shall be in writing and signed by you and
 							AR.IO. The arbitration will be administered by the American Arbitration Association and conducted before a
-							single arbitrator pursuant to its rules.
+								single arbitrator pursuant to its rules.</p>
 
-							You agree that you may bring claims against us only in your individual capacity and not as a plaintiff or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You agree that you may bring claims against us only in your individual capacity and not as a plaintiff or
 							class member in any purported class or representative proceeding. In addition, you agree that disputes
 							shall be arbitrated only on an individual basis and not in a class, consolidated, or representative
-							action. The arbitrator does not have the power to vary these provisions.
+								action. The arbitrator does not have the power to vary these provisions.</p>
 
-							Notwithstanding anything to the contrary in this Agreement, either party may bring suit in court of
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Notwithstanding anything to the contrary in this Agreement, either party may bring suit in court of
 							competent jurisdiction in the State of California, seeking an injunction or other equitable relief arising
-							out of or relating to the infringement of a party’s or a third party’s intellectual property rights.
+							out of or relating to the infringement of a party’s or a third party’s intellectual property rights.</p>
 
-							You agree that any cause of action arising out of or related to the service must commence within one (1)
-							year after the cause of action accrues. Otherwise, such cause of action shall be permanently barred.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You agree that any cause of action arising out of or related to the service must commence within one (1)
+							year after the cause of action accrues. Otherwise, such cause of action shall be permanently barred.</p>
 
-							If you bring a dispute in a manner other than in accordance with this section, you agree that we may move
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">If you bring a dispute in a manner other than in accordance with this section, you agree that we may move
 							to have it dismissed, and that you will be responsible for our reasonable attorneys’ fees, court costs,
-							and disbursements in doing so.
+								and disbursements in doing so.</p>
 
-							You agree that any Dispute that, for whatever reason, is deemed not subject to the jurisdiction
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">You agree that any Dispute that, for whatever reason, is deemed not subject to the jurisdiction
 							requirements set forth above shall be subject to exclusive jurisdiction in the state or federal courts in
 							Los Angeles, California.
 
 						</p>
 
 						<h3 style="margin: 0 0 15px;"><span style="background-color: #fafafa; color: #121212; font-weight: 700; font-size: 1.3em;"> 27. Force Majeure </span></h3>
-
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							You agree that we are not responsible to you for anything that we may otherwise be responsible for, if it
@@ -1094,9 +1338,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							In the event that a provision of this Agreement is found to be unlawful, conflicting with another
 							provision of the Agreement, or otherwise unenforceable, the Agreement will remain in force as though it
-							had been entered into without that unenforceable provision being included in it.
+							had been entered into without that unenforceable provision being included in it.</p>
 
-							If two or more provisions of this Agreement are deemed to conflict with each other’s operation, we shall
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">If two or more provisions of this Agreement are deemed to conflict with each other’s operation, we shall
 							have the sole right to elect which provision remains in force.
 
 						</p>
@@ -1146,9 +1390,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							Pursuant to California Civil Code Section 1789.3, any questions about pricing, complaints, or inquiries
 							about the Company must be addressed to our agent for notice and sent via certified mail to that agent. For
-							our agent’s most current contact information, please send a request to legal (at) ar (dot) io.
+							our agent’s most current contact information, please send a request to legal (at) ar (dot) io.</p>
 
-							Lastly, California Users are also entitled to the following specific consumer rights notice: The Complaint
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Lastly, California Users are also entitled to the following specific consumer rights notice: The Complaint
 							Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs may
 							be contacted in writing at 1625 North Market Blvd., Sacramento, CA 95834, or by telephone at (916)
 							445-1254 or (800) 952-5210.
@@ -1162,52 +1406,43 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							In addition to the definitions outlined in Section 2, please also use this Glossary to understand the
-							meaning of the terms used in these User Privacy Terms.
+							meaning of the terms used in these User Privacy Terms.</p>
 
-							Lawful Basis
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Lawful Basis</p>
 
-
-
-							“Legitimate Interest” means the interest of our business in conducting and managing our business to enable
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Legitimate Interest” means the interest of our business in conducting and managing our business to enable
 							us to give you the best Service and the best and most secure experience. We make sure we consider and
 							balance any potential impact on you (both positive and negative) and your rights before we process your
 							personal data for our Legitimate Interests. We do not use your personal data for activities where our
 							interests are overridden by the impact on you (unless we have your consent or are otherwise required or
-							permitted to by law).
+								permitted to by law).</p>
+
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Performance of Contract” means processing your data where it is necessary for the performance of a
+							contract to which you are a party or to take steps at your request before entering into such a contract.</p>
+
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Comply with a legal or regulatory obligation” means processing your personal data where it is necessary
+								for compliance with a legal or regulatory obligation that we are subject to.</p>
 
 
-
-							“Performance of Contract” means processing your data where it is necessary for the performance of a
-							contract to which you are a party or to take steps at your request before entering into such a contract.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Third Parties</p>
 
 
-
-							“Comply with a legal or regulatory obligation” means processing your personal data where it is necessary
-							for compliance with a legal or regulatory obligation that we are subject to.
-
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Internal Third Parties” means other companies controlled by us acting as joint controllers or processors
+								and who are based in the US.</p>
 
 
-							Third Parties
-
-
-
-							“Internal Third Parties” means other companies controlled by us acting as joint controllers or processors
-							and who are based in the US.
-
-
-
-							“External Third Parties” means (i) service providers who provide IT and system administration services;
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“External Third Parties” means (i) service providers who provide IT and system administration services;
 							and/or (ii) professional advisers, including lawyers, bankers, auditors and insurers based in the US who
-							provide consultancy, banking, legal, insurance and accounting services.
+								provide consultancy, banking, legal, insurance and accounting services.</p>
 
-							Controller
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Controller</p>
 
-							“Controller” means us, AR.IO, who controls and is responsible for your personal data. We have appointed a
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">“Controller” means us, AR.IO, who controls and is responsible for your personal data. We have appointed a
 							data privacy manager (DPM) who is responsible for overseeing questions in relation to these User Privacy
 							Terms. If you have any questions about these User Privacy Terms, including any requests to exercise your
-							legal rights, please contact the DPM using the details set out below.
+								legal rights, please contact the DPM using the details set out below.</p>
 
-							DPM Contact Details
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">DPM Contact Details
 
 							Attn: Philip Mataras, DPM
 
@@ -1215,9 +1450,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 							Keizersgracht 391A
 
-							Amsterdam, Netherlands
+							Amsterdam, Netherlands</p>
 
-							legal (at) ardrive (dot) io
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">legal (at) ardrive (dot) io
 
 						</p>
 
@@ -1225,30 +1460,29 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
-							We use different methods to collect data from and about you including through:
+							We use different methods to collect data from and about you including through:</p>
 
-							Automated technologies or interactions: As you interact with our Service, we may automatically collect
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Automated technologies or interactions: As you interact with our Service, we may automatically collect
 							Mobile Info (see below) about your equipment, browsing actions and patterns. We collect this personal data
-							by using cookies and other similar technologies.
+								by using cookies and other similar technologies.</p>
 
 
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Identifying Information</p>
 
-							Identifying Information
-
-							We do not collect any personal information (“ID Info”) from you when you sign up to our Service that can
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We do not collect any personal information (“ID Info”) from you when you sign up to our Service that can
 							be used to identify you, such as your name, address, e-mail address, billing information, and/or other
-							information.
+								information.</p>
 
-							Non-Identifying Information
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Non-Identifying Information</p>
 
-							Whenever you use our Service, we may collect non-identifying information (“Non-ID Info”) from you, such as
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Whenever you use our Service, we may collect non-identifying information (“Non-ID Info”) from you, such as
 							your IP address, referring URL, operating system, cookie information, and Internet Service Provider.
 							Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional
-							records from a third party, this information alone cannot usually be used to identify you.
+							records from a third party, this information alone cannot usually be used to identify you.</p>
 
-							Mobile
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Mobile</p>
 
-							When you download or access the Services via a mobile device, we may receive information about your
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">When you download or access the Services via a mobile device, we may receive information about your
 							location (based on your IP address) and your mobile device, including various unique identifiers
 							associated with your device, hardware type, and the version of your operating system (“Mobile Info”). We
 							and may use this information to provide you with personalized advertising and other content, including
@@ -1260,17 +1494,17 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
-							We may use your information to:
+							We may use your information to:</p>
 
-							Enhance or improve User experience or our Service.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Enhance or improve User experience or our Service.</p>
 
-							As consented by you in Section 35 above.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">As consented by you in Section 35 above.</p>
 
-							Additionally, we have set out below, in a table format, a description of all the ways we plan to use your
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Additionally, we have set out below, in a table format, a description of all the ways we plan to use your
 							personal data, and which of the legal bases we rely on to do so. We have also identified what our
-							legitimate interests are where appropriate.
+								legitimate interests are where appropriate.</p>
 
-							Note that we may process your personal data for more than one lawful ground depending on the specific
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Note that we may process your personal data for more than one lawful ground depending on the specific
 							purpose for which we are using your data.
 
 						</p>
@@ -1296,25 +1530,25 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
-							Cookies are small data files that are placed on your computer or other devices by websites that you visit.
+							Cookies are small data files that are placed on your computer or other devices by websites that you visit.</p>
 
-							We may use cookies for various purposes including, but not limited to, remembering your preferences,
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We may use cookies for various purposes including, but not limited to, remembering your preferences,
 							maintaining user sessions, improving security of our services, collecting usage information, and targeting
-							ads.
+								ads.</p>
 
-							Since cookies are used to maintain user sessions, it is necessary that you enable cookies in your browser
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Since cookies are used to maintain user sessions, it is necessary that you enable cookies in your browser
 							to be able to log into the Service, and you hereby acknowledge that we have informed you of our use of
 							cookies and that you consent to our use of cookies in relation to the platform by which you are accessing
-							our Service.
+								our Service.</p>
 
-							We may use the Web Storage API (a.k.a, local or session storage) provided by your browser or app to cache
-							information related to your account, including your personal data.
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We may use the Web Storage API (a.k.a, local or session storage) provided by your browser or app to cache
+								information related to your account, including your personal data.</p>
 
-							We may use various third-party services that may use cookies, web beacons, and similar technologies to
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We may use various third-party services that may use cookies, web beacons, and similar technologies to
 							collect information. Such services include, but not limited to, web analytics services, advertisement
-							services, and social media services.
+								services, and social media services.</p>
 
-							This Agreement does not cover cookies practices used by third-party service providers. We will do our best
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">This Agreement does not cover cookies practices used by third-party service providers. We will do our best
 							to maintain links to privacy policies of the third-party service providers that we use in this document.
 
 						</p>
@@ -1326,9 +1560,9 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							We may post links to third-party websites on our Service. Additionally, other materials made available
 							through our Service may contain third-party website links or files. We do not screen third-party websites
 							or files for privacy or security issues, and you release us from any liability for the conduct or content
-							of these third parties.
+							of these third parties.</p>
 
-							Please be aware that this Agreement, and any other policies in place, in addition to any amendments, does
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Please be aware that this Agreement, and any other policies in place, in addition to any amendments, does
 							not create rights enforceable by third parties or require disclosure of any personal information relating
 							to members of the Service. We bear no responsibility for the information collected or used by any
 							advertiser or third-party website. Please review the privacy policy and terms of service for each site you
@@ -1342,23 +1576,23 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
 							Although you are entering into an agreement with us to disclose your information to us, we do use
 							third-party individuals and organizations to assist us, including contractors, advertising partners, web
-							hosting companies, and others.
+							hosting companies, and others.</p>
 
-							Throughout the course of our provision of our Service to you, we may delegate our authority to collect,
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Throughout the course of our provision of our Service to you, we may delegate our authority to collect,
 							access, use, and disseminate your information. For example, our web host stores the information that you
 							provide us, and we may hire outside contractors to perform maintenance or assist us in securing our
-							Service.
+								Service.</p>
 
-							It is therefore necessary that you grant the third parties we may use in the course of our business the
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">It is therefore necessary that you grant the third parties we may use in the course of our business the
 							same rights that you afford us under this Agreement. For this reason, you hereby agree that for every
 							authorization which you grant to us in this Agreement, you also grant to any third party that we may hire,
 							contract, or otherwise retain the services of for the purpose of operating, maintaining, repairing, or
 							otherwise improving or preserving our Service or its underlying files or systems. You agree not to hold us
 							liable for the actions of any of these third parties, even if we would normally be held vicariously liable
 							for their actions, and that you must take legal action against them directly should they commit any tort
-							or other actionable wrong against you.
+								or other actionable wrong against you.</p>
 
-							Without limiting the generality of the foregoing, you authorize us to collect, share, store, exchange, and
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Without limiting the generality of the foregoing, you authorize us to collect, share, store, exchange, and
 							otherwise use your information in conjunction with the Service.
 
 						</p>
@@ -1396,60 +1630,60 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 						<p style="margin: 0 0 30px;" class="text-gray paragraph-text">
-							You have the right to:
+							You have the right to:</p>
 
-							Request access to your personal data (commonly known as a "data subject access request"). This enables you
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Request access to your personal data (commonly known as a "data subject access request"). This enables you
 							to receive a copy of the personal data we hold about you and to check that we are lawfully processing it.
-							This would be a pointless request for you because we do not collect any personal data from you.
+							This would be a pointless request for you because we do not collect any personal data from you.</p>
 
-							Request correction of the personal data that we hold about you. This enables you to have any incomplete or
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Request correction of the personal data that we hold about you. This enables you to have any incomplete or
 							inaccurate data we hold about you corrected, though we may need to verify the accuracy of the new data you
 							provide to us. This would be a pointless request for you because we do not collect any personal data from
-							you.
+								you.</p>
 
-							Request erasure of your personal data. This enables you to ask us to delete or remove personal data where
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Request erasure of your personal data. This enables you to ask us to delete or remove personal data where
 							there is no good reason for us continuing to process it. You also have the right to ask us to delete or
 							remove your personal data where you have successfully exercised your right to object to processing (see
 							below), where we may have processed your information unlawfully or where we are required to erase your
 							personal data to comply with local law. Note, however, that we may not always be able to comply with your
 							request of erasure for specific legal reasons which will be notified to you, if applicable, at the time of
 							your request. This would be a pointless request for you because we do not collect any personal data from
-							you.
+								you.</p>
 
-							Object to processing of your personal data where we are relying on a legitimate interest (or those of a
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Object to processing of your personal data where we are relying on a legitimate interest (or those of a
 							third party) and there is something about your particular situation which makes you want to object to
 							processing on this ground as you feel it impacts on your fundamental rights and freedoms. In some cases,
 							we may demonstrate that we have compelling legitimate grounds to process your information which override
 							your rights and freedoms. This would be a pointless request for you because we do not collect any personal
-							data from you.
+								data from you.</p>
 
-							Request restriction of processing of your personal data. This enables you to ask us to suspend the
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Request restriction of processing of your personal data. This enables you to ask us to suspend the
 							processing of your personal data in the following scenarios: (i) if you want us to establish the data's
 							accuracy; (ii) where our use of the data is unlawful but you do not want us to erase it; (iii) where you
 							need us to hold the data even if we no longer require it as you need it to establish, exercise or defend
 							legal claims; or (iv) you have objected to our use of your data but we need to verify whether we have
 							overriding legitimate grounds to use it. This would be a pointless request for you because we do not
-							collect any personal data from you.
+								collect any personal data from you.</p>
 
-							Request the transfer of your personal data to you or to a third party. We will provide to you, or a third
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Request the transfer of your personal data to you or to a third party. We will provide to you, or a third
 							party you have chosen, your personal data in a structured, commonly used, machine-readable format. This
-							would be a pointless request for you because we do not collect any personal data from you.
+							would be a pointless request for you because we do not collect any personal data from you.</p>
 
-							Withdraw consent at any time where we are relying on consent to process your personal data. However, this
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Withdraw consent at any time where we are relying on consent to process your personal data. However, this
 							will not affect the lawfulness of any processing carried out before you withdraw your consent. If you
 							withdraw your consent, we may not be able to provide our Service to you. We will advise you if this is the
-							case at the time you withdraw your consent.
+								case at the time you withdraw your consent.</p>
 
-							No fee usually required so that you will not have to pay a fee to access your personal data (or to
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">No fee usually required so that you will not have to pay a fee to access your personal data (or to
 							exercise any of the other rights). However, we may charge a reasonable fee if your request is clearly
 							unfounded, repetitive or excessive. Alternatively, we may refuse to comply with your request in these
-							circumstances.
+								circumstances.</p>
 
-							Time limit to respond to your legitimate requests will be one (1) month. Occasionally it may take us
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Time limit to respond to your legitimate requests will be one (1) month. Occasionally it may take us
 							longer than a month if your request is particularly complex or you have made a number of requests. In this
-							case, we will notify you and keep you updated.
+								case, we will notify you and keep you updated.</p>
 
-							If you wish to exercise any of the rights set out above, please contact our DPM (see above).
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">If you wish to exercise any of the rights set out above, please contact our DPM (see above).
 
 						</p>
 
@@ -1475,26 +1709,22 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							We ensure your personal data is protected by requiring all our group companies to follow the same rules
 							when processing your personal data. These rules are called "binding corporate rules". Some of our external
 							third parties are based outside the European Economic Area (EEA) so their processing of your personal data
-							will involve a transfer of data outside the EEA.
+							will involve a transfer of data outside the EEA.</p>
 
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Whenever we transfer your personal data out of the EEA, we ensure a similar degree of protection is
+								afforded to it by ensuring at least one of the following safeguards is implemented:</p>
 
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">We will only transfer your personal data to countries that have been deemed to provide an adequate level
+								of protection for personal data by the European Commission.</p>
 
-							Whenever we transfer your personal data out of the EEA, we ensure a similar degree of protection is
-							afforded to it by ensuring at least one of the following safeguards is implemented:
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Where we use certain service providers, we may use specific contracts approved by the European Commission
+								which give personal data the same protection it has in Europe.</p>
 
-
-
-							We will only transfer your personal data to countries that have been deemed to provide an adequate level
-							of protection for personal data by the European Commission.
-
-							Where we use certain service providers, we may use specific contracts approved by the European Commission
-							which give personal data the same protection it has in Europe.
-
-							Where we use providers based in the US, we may transfer data to them if they are part of the Privacy
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Where we use providers based in the US, we may transfer data to them if they are part of the Privacy
 							Shield which requires them to provide similar protection to personal data shared between the Europe and
-							the US.
+								the US.</p>
 
-							Please contact our DPM (see Section 35) if you want further information on the specific mechanism used by
+							<p style="margin: 0 0 30px;" class="text-gray paragraph-text">Please contact our DPM (see Section 35) if you want further information on the specific mechanism used by
 							us when transferring your personal data out of the EEA.
 
 						</p>
@@ -1524,25 +1754,24 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 				<h2 id="footer-heading" class="sr-only">Footer</h2>
 				<div class="mx-auto  px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
 					<div class="xl:grid xl:grid-cols-3 xl:gap-8 ">
-						<img class="h-14" src="../assets/img/elephant-light.png" class=" magnetic-item" alt="ar.io Logo">
-
+						<a href="../"><img class="h-12" src="../assets/img/elephant-light.png" class=" magnetic-item" alt="ar.io Logo"></a>
 						<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
 							<div class="md:grid md:grid-cols-2 md:gap-8">
 
 								<div>
-									<h3 class="text-sm font-bold leading-6 text-white">Use</h3>
+									<h3 class="text-sm font-bold leading-6 text-white">USE</h3>
 									<ul role="list" class="mt-6 space-y-4">
-										<li>
-											<a href="../ardrive" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive  <i class="fa-solid fa-location-arrow"></i></a>
-										</li>
+										<!-- <li>
+											<a href="../ardrive" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive</a>
+										</li> -->
 
 										<li>
-											<a href="../arns" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArNS (Beta)  <i class="fa-solid fa-location-arrow"></i></a>
+											<a href="../arns" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArNS (Beta)</a>
 										</li>
 
-										<li>
+										<!-- <li>
 											<a href="https://prices.ardrive.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Pricing Calculator  <i class="fa-solid fa-location-arrow"></i></a>
-										</li>
+										</li> -->
 
 										<li>
 											<a href="https://viewblock.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Viewblock  <i class="fa-solid fa-location-arrow"></i></a>
@@ -1554,16 +1783,19 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 									</ul>
 								</div>
 								<div class="mt-10 md:mt-0">
-									<h3 class="text-sm font-bold leading-6 text-white">Develop</h3>
+									<h3 class="text-sm font-bold leading-6 text-white">DEVELOP</h3>
 									<ul role="list" class="mt-6 space-y-4">
 										<li>
-											<a href="https://github.com/ardriveapp/ardrive-cli" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive CLI  <i class="fa-solid fa-location-arrow"></i></a>
+											<a href="https://github.com/ar-io" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ar.io GitHub  <i class="fa-solid fa-location-arrow"></i></a>
 										</li>
 
 										<li>
-											<a href="https://github.com/ardriveapp/ardrive-core-js" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive Core-JS  <i class="fa-solid fa-location-arrow"></i></a>
+											<a href="https://cookbook.ar-io.dev" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Arweave Cookbook  <i class="fa-solid fa-location-arrow"></i></a>
 										</li>
 
+										<li>
+											<div class="text-sm leading-6 text-gray-300" style="font-weight:500;">Gateways Operating Manual <span class="text-gray-500">(Coming Soon)</span></div>
+										</li>
 										<!-- <li>
 											<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs</a>
 										</li> -->
@@ -1575,14 +1807,10 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 
 
 								<div>
-									<h3 class="text-sm font-bold leading-6 text-white">Engage</h3>
+									<h3 class="text-sm font-bold leading-6 text-white">ENGAGE</h3>
 									<ul role="list" class="mt-6 space-y-4">
 										<li>
 											<a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArCast  <i class="fa-solid fa-location-arrow"></i></a>
-										</li>
-
-										<li>
-											<a href="../articles" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Blog</a>
 										</li>
 
 										<li>
@@ -1601,7 +1829,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 									</ul>
 								</div>
 								<div class="mt-10 md:mt-0">
-									<h3 class="text-sm font-bold leading-6 text-white">Learn</h3>
+									<h3 class="text-sm font-bold leading-6 text-white">LEARN</h3>
 									<ul role="list" class="mt-6 space-y-4">
 										<!-- <li>
 											<a href="../why-ario" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Why ar.io?</a>
@@ -1623,9 +1851,27 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 											<a href="../benefits-of-long-term-storage" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Benefits of long-term storage</a>
 										</li> -->
 
+										<!-- <li>
+											<a href="https://bobinstein.github.io/docs/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs <i class="fa-solid fa-location-arrow"></i></a>
+										</li> -->
+
 										<li>
-											<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Story</a>
+											<a href="../articles" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Articles</a>
 										</li>
+
+										<li>
+											<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">Docs <span class="text-gray-500">(Coming Soon)</span></div>
+										</li>
+
+										<li>
+											<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Story</a>
+										</li>
+
+
+										<li>
+											<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">White Paper <span class="text-gray-500">(Coming Soon)</span></div>
+										</li>
+
 
 										<!-- <li>
 											<a href="../foundation" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Foundation</a>
@@ -1640,17 +1886,18 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							<h3 class="text-sm font-bold leading-6 text-gray-300">Subscribe to our newsletter</h3>
 							<p class="mt-2 mb-4 text-sm leading-6 text-gray-400">The latest news, articles, and resources, sent to your inbox weekly.</p>
 						</div>
-						<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#121212;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
+						<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" onMouseOver="this.style.background='#fff', this.style.color='#121212'"
+			   onMouseOut="this.style.background='#121212', this.style.color='#fff'"  style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
 						</button>
 						<script src="//embed.typeform.com/next/embed.js"></script>
 					</div>
 					<div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
 						<div class="flex space-x-6 md:order-2">
 
-							<a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
+							<a href="https://github.com/ar-io" class="magnetic-item" target="_blank"
 							rel="noopener"><i class="fab fa-github" style="color: #fafafa;"></i></a>
 
-							<a href="https://discord.gg/HGG52EtTc2"
+							<a href="https://discord.gg/NTcTc3DQ"
 							class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord" style="color: #fafafa;"></i></a>
 
 							<a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
@@ -1660,7 +1907,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							rel="noopener"><i class="fab fa-linkedin" style="color: #fafafa;"></i></a>
 
 						</div>
-						<p class="mt-8 text-xs leading-6 text-gray-400 md:order-1 md:mt-0"><strong>ar.io</strong> | v. 0.1984</p>
+						<p class="mt-8 text-xs leading-6 text-gray-400 md:order-1 md:mt-0"><strong>ar.io</strong> | v. 1.984</p>
 						<h3 class=" text-sm font-bold leading-6 text-white"><a href="../terms-and-conditions" target="_blank" rel="noopener" style="text-decoration: none !important; font-style: normal !important;  ">Terms and Conditions</a></h3>
 					</div>
 				</div>

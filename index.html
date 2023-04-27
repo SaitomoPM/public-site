@@ -43,22 +43,14 @@
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-
 	<!-- Google fonts (https://www.google.com/fonts) -->
-
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 	href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 	rel="stylesheet">
 
-
-
 	<link rel="stylesheet" href="https://kit.fontawesome.com/0625966738.css" crossorigin="anonymous">
-
-	<!-- JavaScript Bundle with Popper -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
 
 	<!-- Libs and Plugins CSS -->
 	<link rel="stylesheet" href="./assets/vendor/normalize/normalize.min.css">
@@ -72,17 +64,6 @@
 
 	<script defer data-domain="ar.io" src="https://plausible.io/js/plausible.js"></script>
 
-	<!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8075f6a7bf5448456087af1e0/1c511e1dbbf76bcb1b994b19a.js");</script> -->
-
-
-
-	<!-- LANGUAGE WIDGET -->
-	<!-- <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-	<script>
-	Weglot.initialize({
-	api_key: 'wg_148c257c536db023455438d28d94c4589'
-});
-</script> -->
 
 </head>
 
@@ -91,30 +72,6 @@
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
 
-
-	<!-- <section class="" style="position:fixed; z-index: 100000;  bottom:10px; right: 10px; ">
-	<div class="text-center anim-skewinup">
-	<div class="tt-header-col max-width-600">
-	<div class="apps-banner apps-banner-success alert alert-dismissible fade show " role="alert"
-	style="margin:25px; padding: 15px; border: 2px solid #fafafa;">
-	<a href="https://ardrive.io/mobile" target="_blank"> <strong>ArDrive Mobile has landed. </strong></a>
-	<span onclick="this.parentElement.style.display='none';"
-	style="cursor: pointer; padding-left: 10px; font-weight: bold;">X
-
-</span>
-</div>
-</div>
-</div>
-</section> -->
-
-<!-- <div class="fixed inset-x-0 bottom-0 p-4">
-  <div class=" bg-gradient-to-r from-amber-200 via-fuchsia-300 to-violet-300  px-4 py-3 text-white shadow-lg">
-
-      <a href="https://finance.yahoo.com/news/ardrive-raises-17m-arweave-data-224200496.html?guccounter=1&guce_referrer=aHR0cDovL2xvY2FsaG9zdDo4MDAwLw&guce_referrer_sig=AQAAANkl0I_9stly8YTnBBQ2OhrKOsn2D2NqKWq4HdPo4RYNkymu_Igtn1rqSHZgrY1AG_SNXQGdFqUOZxmvVCLq-_DiWK62FFj2B3Vk__KgKJOyx1Si1qr1QcAXoZFqpVKlsxMJPYwyIe_lRxzZbBEHKatv3y3lj6ULUfKHbaRCeome" target="_blank" style="text-decoration: none; font-style: !important none; font-size: 1rem;"><p class="text-center">	<strong>ar.io</strong> raises USD 17.2M 🎉</p></a>
-
-  </div>
-</div> -->
-<!-- <div class="flex absolute items-center text-center justify-between gap-4 bg-gradient-to-r from-amber-200 via-fuchsia-300 to-violet-300 px-4 py-3 text-black" style="z-index: 100; width:100%;"> -->
 <div class="flex absolute items-center text-center justify-between gap-4 px-4 py-3 text-white" style="z-index: 100; width:100%; background: linear-gradient(45deg, #2c2c2c, #1f1f1f, #171717, #121212); background-size: 400% 400%; animation: gradient 15s ease infinite;">
   <p class="text-sm text-center font-medium">
 
@@ -142,17 +99,34 @@
 	</span>
 </div>
 
+<style media="screen">
+	.delayed-download-alert {
+		opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
 
-<aside
-  class="fixed bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white"
->
-  <a
-    href="https://ardrive.io/mobile"
-    target="_blank"
-    rel="noreferrer"
-    class="text-sm font-medium hover:opacity-75"
-  >
-    ArDrive mobile has landed.  🚀
+.tt-style-switch {
+	display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 767px) {
+	.mobile-announcement-bar {
+		pointer-events: auto;
+	}
+}
+
+</style>
+
+<!-- <aside class="fixed delayed-download-alert bottom-4 alert-dismissible right-4 z-50 flex items-center justify-center gap-4  bg-black px-5 py-3 text-white">
+  <a href="https://play.google.com/store/apps/details?id=io.ardrive.app&hl=en_US&gl=US&pli=1" target="_blank" rel="noreferrer" class="text-sm font-medium hover:opacity-75">
+    The ar.io white paper has landed.
   </a>
 	<span onclick="this.parentElement.style.display='none';"
 	style="cursor: pointer; padding-left: 10px; font-weight: bold;">
@@ -172,7 +146,7 @@
     </svg>
   </button>
 	</span>
-</aside>
+</aside> -->
 
 
 
@@ -225,217 +199,113 @@
 	<div id="scroll-container">
 
 
-		<!-- <div id="alert-border-2" class="flex p-4 mb-2  " style="background: radial-gradient(#F5BBFB, #F8D5C1);" role="alert">
 
-		<div class="ml-3 text-sm font-medium " >
-		<a href="https://finance.yahoo.com/news/ardrive-raises-17m-arweave-data-224200496.html" target="_blank" class=" underline text-black hover:text-gray-700" style="font-size: 14px !important;"> <strong> ArDrive Raises $17M to Make Arweave’s Data Storage Blockchain More Usable</strong></a> 🚀
-	</div>
-	<button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-red-100 dark:bg-red-200 text-black hover:text-white square-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-black dark:hover:black inline-flex h-8 w-8" data-dismiss-target="#alert-border-2" aria-label="Close">
-	<span class="sr-only">Dismiss</span>
-	<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-</button>
-</div> -->
 
-<!-- ===================
-///// Begin header /////
-========================
-* Use class "tt-header-fixed" to set header to fixed position.
--->
-
-<header id="tt-header" class="">
+<!-- <header id="tt-header" class="">
 	<div id="announcement-spacer" style="height: 56px; width: 100%;"></div>
 	<div class="tt-header-inner" style="position: relative;">
-		<!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). There is a helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More about helper classes can be found in the file "helper.css". -->
+
 
 		<div class="tt-header-col">
 
 
-			<!-- Begin logo
-			================ -->
+
 			<div class="tt-logo">
 				<a href="./">
 
-					<!-- logo light: -->
-					<!-- <img src="./assets/img/logo-party.gif" class="tt-logo-light magnetic-item"  alt="Logo">  -->
-					<!-- logo dark: -->
-					<!-- <img src="./assets/img/logo-party.gif" class="tt-logo-dark magnetic-item"  alt="Logo">  -->
-					<!-- <img src="./assets/img/logo-lights.gif" class="tt-logo-light magnetic-item"  alt="Logo">
-					<img src="./assets/img/logo-lights.gif" class="tt-logo-dark magnetic-item"  alt="Logo"> -->
+
 					<img src="./assets/img/elephant-light.png" class="tt-logo-light magnetic-item" alt="Logo">
 					<img src="./assets/img/elephant-dark.png" class="tt-logo-dark magnetic-item" alt="Logo">
 				</a>
 			</div>
-			<!-- End logo -->
 
-		</div> <!-- /.tt-header-col -->
+
+		</div>
 
 		<div class="tt-header-col">
 
-			<!-- Begin overlay menu toggle button -->
+
 			<div id="tt-ol-menu-toggle-btn-wrap">
 				<div class="tt-ol-menu-toggle-btn-text-wrap hide-cursor">
 					<div class="tt-ol-menu-toggle-btn-text">
 						<span class="text-menu" data-hover="Explore">Explore</span>
 						<span class="text-close">Close</span>
-					</div> <!-- /.tt-ol-menu-toggle-btn-text -->
-				</div> <!-- /.tt-ol-menu-toggle-btn-text-wrap -->
+					</div>
+				</div>
 				<div class="tt-ol-menu-toggle-btn-holder">
 					<a href="#" class="tt-ol-menu-toggle-btn magnetic-item"><span></span></a>
-				</div> <!-- /.tt-ol-menu-toggle-btn-holder -->
+				</div>
 			</div>
-			<!-- End overlay menu toggle button -->
 
-			<!-- Begin overlay menu
-			========================
-			* Use class "tt-ol-menu-count" to enable menu counter.
-		-->
 		<nav class="tt-overlay-menu tt-ol-menu-count">
 			<div class="tt-ol-menu-ghost"></div>
 			<div class="tt-ol-menu-holder">
 				<div class="tt-ol-menu-inner tt-wrap">
 					<div class="tt-ol-menu-content">
 
-						<!-- Begin menu list -->
+
 						<ul class="tt-ol-menu-list">
 
 							<li class="active"><a href="./">Home</a></li>
 
-							<!-- Begin submenu (submenu master)
-							==================================== -->
+
 							<li class="tt-ol-submenu-wrap">
 								<div class="tt-ol-submenu-trigger">
 									<a href="#">About</a>
 									<div class="tt-ol-submenu-caret-wrap">
 										<div class="tt-ol-submenu-caret magnetic-item"></div>
-									</div> <!-- /.tt-ol-submenu-caret-wrap -->
-								</div> <!-- /.tt-ol-submenu-trigger -->
+									</div>
+								</div>
 								<div class="tt-ol-submenu">
 									<ul class="tt-ol-submenu-list">
 
-										<!-- Begin submenu
-										=================== -->
-										<!-- <li class="tt-ol-submenu-wrap">
-										<div class="tt-ol-submenu-trigger">
-										<a href="#" class="tt-ol-submenu-link">Contact</a>
-
-									</div>
-
-								</li> -->
-								<!-- End submenu -->
-
-								<!-- Begin submenu
-								=================== -->
 
 								<li class="tt-ol-submenu-wrap">
 									<div class="tt-ol-submenu-trigger">
 										<a href="./articles" class="tt-ol-submenu-link">Articles</a>
 
-									</div> <!-- /.tt-ol-submenu-trigger -->
+									</div>
 
 								</li>
 								<li class="tt-ol-submenu-wrap">
 									<div class="tt-ol-submenu-trigger">
 										<a href="./wallet" class="tt-ol-submenu-link">Get a Wallet</a>
 
-									</div> <!-- /.tt-ol-submenu-trigger -->
+									</div>
 
 								</li>
 								<li class="tt-ol-submenu-wrap">
 									<div class="tt-ol-submenu-trigger">
 										<a href="./start" class="tt-ol-submenu-link">Learn</a>
 
-									</div> <!-- /.tt-ol-submenu-trigger -->
+									</div>
 
 								</li>
 
-								<!-- <li class="tt-ol-submenu-wrap">
-									<div class="tt-ol-submenu-trigger">
-										<a href="./live" class="tt-ol-submenu-link">Live 🔥</a>
-
-									</div>
-
-								</li> -->
 
 								<li class="tt-ol-submenu-wrap">
 									<div class="tt-ol-submenu-trigger">
-										<!-- <a href="./faq" class="tt-ol-submenu-link">FAQs</a> -->
+
 										<a href="./story" class="tt-ol-submenu-link">Story</a>
-										<!-- <div class="tt-ol-submenu-caret-wrap">
-										<div class="tt-ol-submenu-caret magnetic-item"></div>
-									</div>  -->
+
 								</div>
-								<!-- <div class="tt-ol-submenu">
-								<ul class="tt-ol-submenu-list">
 
-								<li><a href="">ArDrive Questions</a></li>
-								<li><a href="">ArFS Questions</a></li>
-								<li><a href="">ArNS Questions</a></li>
-								<li><a href="">GNAT Questions</a></li>
-
-
-							</ul>
-						</div>  -->
 					</li>
-					<!-- End submenu -->
-
-					<!-- Begin submenu
-					=================== -->
-					<!-- <li class="tt-ol-submenu-wrap">
-					<div class="tt-ol-submenu-trigger">
-					<a href="#" class="tt-ol-submenu-link">Jobs</a>
-
-				</div> -->
 
 			</li>
 
-			<!-- End submenu -->
 
-		</ul> <!-- /.tt-ol-submenu-list -->
-	</div> <!-- /.tt-ol-submenu -->
-</li>
-<!-- End submenu (sub-master) -->
-
-<!-- Begin submenu (submenu master)
-==================================== -->
-<!-- <li class="tt-ol-submenu-wrap">
-<div class="tt-ol-submenu-trigger">
-<a href="#">Community</a>
-<div class="tt-ol-submenu-caret-wrap">
-<div class="tt-ol-submenu-caret magnetic-item"></div>
-</div>
-</div>
-<div class="tt-ol-submenu">
-<ul class="tt-ol-submenu-list">
-
-<li class="tt-ol-submenu-wrap">
-<div class="tt-ol-submenu-trigger">
-<a href="https://discord.com/invite/BXk8tq7" target="_blank" class="tt-ol-submenu-link">Arweave Dev Discord</a>
-
-</div>
-
+		</ul>
+	</div>
 </li>
 
-<li class="tt-ol-submenu-wrap">
-<div class="tt-ol-submenu-trigger">
-<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left" data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet" style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none; font-weight: bold;">
-Newsletter
-</button>
-</div>
-</li>
-</ul>
-</div>
-</li> -->
-<!-- End submenu (sub-master) -->
-
-<!-- Begin submenu (submenu master)
-==================================== -->
 <li class="tt-ol-submenu-wrap">
 	<div class="tt-ol-submenu-trigger">
 		<a href="#">Products</a>
 		<div class="tt-ol-submenu-caret-wrap">
 			<div class="tt-ol-submenu-caret magnetic-item"></div>
-		</div> <!-- /.tt-ol-submenu-caret-wrap -->
-	</div> <!-- /.tt-ol-submenu-trigger -->
+		</div>
+	</div>
 	<div class="tt-ol-submenu">
 		<ul class="tt-ol-submenu-list">
 
@@ -444,32 +314,24 @@ Newsletter
 				<li class="tt-logo-dark"><a href="./ardrive" target="_blank"><img
 					src="./assets/img/ardrive-logo-dark.png" width="80" alt="ardrive-logo"></a></li>
 
-					<!-- <li class="active"><a href="./arns" style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;" >ArNS</a></li> -->
+
 					<li class="active"><a href="./arns"
 						style="font-size: 1rem; font-weight: 800 !important; opacity: 1 !important;">ArNS</a></li>
 						<li class="active coming-soon">Gateways <strong style="opacity: 0;">-</strong> <span
 							style="font-weight: 600;">coming soon</span></li>
 							<br>
-							<!-- <li class="active coming-soon">Merch <strong style="opacity: 0;">-</strong> <span
-								style="font-weight: 600;">coming soon</span></li> -->
-								<!-- <li class="active" style="font-size: .85rem !important; opacity: 0.75;"><a href="#" target="_blank" style="font-size: 1rem; font-weight: 800 !important; opacity: 0.75;">👕 MERCH</a>  coming soon</li> -->
-
-								<!-- <li style="font-size: 1rem;"><a href="https://ar.io/arns" style="opacity: 0.5; font-weight: 800 !important;" >ArNS</a>  coming soon</li> -->
 
 
-							</ul> <!-- /.tt-ol-submenu-list -->
-						</div> <!-- /.tt-ol-submenu -->
+							</ul>
+						</div>
 					</li>
-					<!-- End submenu (sub-master) -->
+
 
 
 
 
 				</ul>
-				<!-- End menu list -->
 
-				<!-- Begin overlay menu social links
-				===================================== -->
 				<ul class="tt-ol-menu-social">
 
 					<li><a href="https://github.com/ardriveapp" target="_blank" rel="noopener">GitHub</a></li>
@@ -486,18 +348,539 @@ Newsletter
 							<li><a href="https://twitter.com/ar_io_team" target="_blank" rel="noopener">Twitter</a></li>
 
 						</ul>
-						<!-- End overlay menu social links -->
 
-					</div> <!-- /.tt-ol-menu-content -->
-				</div> <!-- /.tt-ol-menu-inner -->
-			</div> <!-- /.tt-ol-menu-holder -->
+
+					</div>
+				</div>
+			</div>
 		</nav>
-		<!-- End overlay menu -->
 
-	</div> <!-- /.header-col -->
-</div> <!-- /.header-inner -->
+
+	</div>
+</div>
+</header> -->
+
+
+
+
+
+<header id="tt-header" class="bg-none" style="">
+	<div id="announcement-spacer" style="height: 56px;"></div>
+  <nav class="mx-auto flex  items-center justify-between p-6 mobile-announcement-bar lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="./" class="-m-1.5 p-1.5">
+        <span class="sr-only">ar.io</span>
+        <img class="h-12 w-auto magnetic-item" src="./assets/img/elephant-light.png" alt="">
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onclick="document.getElementById('mobile-menu').style.display='unset'">
+        <span class="sr-only">Open main menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <div class="relative">
+        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
+
+document.getElementById('button-2').style.display='none';
+document.getElementById('button-3').style.display='none';
+document.getElementById('button-4').style.display='none';
+
+				if(document.getElementById('button-1').style.display=='none'){document.getElementById('button-1').style.display='unset'} else {document.getElementById('button-1').style.display='none'}">
+
+          <span class="" >&nbsp; USE &nbsp;</span>
+					<!-- <span class="ario-navbar-links" >&nbsp; USE &nbsp;</span> -->
+
+        </button>
+
+        <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5" id="button-1" style="display: none;">
+          <div class="p-4">
+            <!-- <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="./ardrive" class="block font-semibold text-gray-900 hover:text-black">
+                  ArDrive
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Your private hard drive.</p>
+              </div>
+            </div> -->
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="./arns" class="block font-semibold text-gray-900 hover:text-black">
+                  ArNS (Beta)
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Get a permanent domain.</p>
+              </div>
+            </div>
+
+            <!-- <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="https://prices.ardrive.io/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+                  Pricing Calculator
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Convert AR to storage and USD.</p>
+              </div>
+            </div> -->
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="https://viewblock.io/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+                  Viewblock
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Blockchain exploration for the masses.</p>
+              </div>
+            </div>
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="./wallet" class="block font-semibold text-gray-900 hover:text-black">
+                  Wallet
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Your passport to the permaweb.</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
+              </svg>
+              Watch demo
+            </a>
+
+            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+              </svg>
+              Contact sales
+            </a>
+          </div> -->
+        </div>
+      </div>
+
+			<div class="relative">
+        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
+
+				document.getElementById('button-1').style.display='none';
+				document.getElementById('button-3').style.display='none';
+				document.getElementById('button-4').style.display='none';
+
+				if(document.getElementById('button-2').style.display=='none'){document.getElementById('button-2').style.display='unset'} else {document.getElementById('button-2').style.display='none'}">
+
+          <span class="" >&nbsp; DEVELOP &nbsp;</span>
+					<!-- <span class="ario-navbar-links" >&nbsp; DEVELOP &nbsp;</span> -->
+
+        </button>
+
+        <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+
+
+
+        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5" id="button-2" style="display: none;">
+          <div class="p-4">
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="https://github.com/ar-io" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+                  ar.io GitHub
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Node.js application for terminal-based ArDrive workflows.</p>
+              </div>
+            </div>
+
+						<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+							<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+								<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+</svg>
+							</div>
+							<div class="flex-auto">
+								<a href="https://cookbook.ar-io.dev" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+									Arweave Cookbook
+									<span class="absolute inset-0"></span>
+								</a>
+								<p class="mt-1 text-gray-600">Node.js application for terminal-based ArDrive workflows.</p>
+							</div>
+						</div>
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <div class="block font-semibold text-gray-400 ">
+                  Gateways Operator Manual
+                  <span class="absolute inset-0"></span>
+                </div>
+                <p class="mt-1 text-gray-400 font-semibold">Coming Soon</p>
+              </div>
+            </div>
+
+
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+			<div class="relative">
+        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
+
+				document.getElementById('button-1').style.display='none';
+				document.getElementById('button-2').style.display='none';
+				document.getElementById('button-4').style.display='none';
+
+
+				if(document.getElementById('button-3').style.display=='none'){document.getElementById('button-3').style.display='unset'} else {document.getElementById('button-3').style.display='none'}">
+
+          <span class="" >&nbsp; ENGAGE &nbsp;</span>
+					<!-- <span class="ario-navbar-links" >&nbsp; ENGAGE &nbsp;</span> -->
+
+        </button>
+
+        <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5" id="button-3" style="display: none;">
+          <div class="p-4">
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+                  ArCast
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">A biweekly podcast that features interviews and discussions about blockchain, NFTs, web3, and permanent storage.</p>
+              </div>
+            </div>
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="./brand-kit" class="block font-semibold text-gray-900 hover:text-black">
+                  Brand Kit
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">The visual source of truth for ar.io brands and products.</p>
+              </div>
+            </div>
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5l16.5-4.125M12 6.75c-2.708 0-5.363.224-7.948.655C2.999 7.58 2.25 8.507 2.25 9.574v9.176A2.25 2.25 0 004.5 21h15a2.25 2.25 0 002.25-2.25V9.574c0-1.067-.75-1.994-1.802-2.169A48.329 48.329 0 0012 6.75zm-1.683 6.443l-.005.005-.006-.005.006-.005.005.005zm-.005 2.127l-.005-.006.005-.005.005.005-.005.005zm-2.116-.006l-.005.006-.006-.006.005-.005.006.005zm-.005-2.116l-.006-.005.006-.005.005.005-.005.005zM9.255 10.5v.008h-.008V10.5h.008zm3.249 1.88l-.007.004-.003-.007.006-.003.004.006zm-1.38 5.126l-.003-.006.006-.004.004.007-.006.003zm.007-6.501l-.003.006-.007-.003.004-.007.006.004zm1.37 5.129l-.007-.004.004-.006.006.003-.004.007zm.504-1.877h-.008v-.007h.008v.007zM9.255 18v.008h-.008V18h.008zm-3.246-1.87l-.007.004L6 16.127l.006-.003.004.006zm1.366-5.119l-.004-.006.006-.004.004.007-.006.003zM7.38 17.5l-.003.006-.007-.003.004-.007.006.004zm-1.376-5.116L6 12.38l.003-.007.007.004-.004.007zm-.5 1.873h-.008v-.007h.008v.007zM17.25 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zm0 4.5a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="./live" class="block font-semibold text-gray-900 hover:text-black">
+                  Live
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Catch live streams from IRL events.</p>
+              </div>
+            </div>
+
+            <div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+                <svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+</svg>
+              </div>
+              <div class="flex-auto">
+                <a href="https://ar-io-store.myshopify.com/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+                  Merch
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Official store for ar.io merch.</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+            <a href="./wallet" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
+              </svg>
+              Watch demo
+            </a>
+
+            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+              </svg>
+              Contact sales
+            </a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="relative">
+        <button type="button" class="flex items-center gap-x-1 font-semibold leading-6 text-gray-300 hover:text-white"  style="font-size: 16px;" aria-expanded="false" onclick="
+
+				document.getElementById('button-1').style.display='none';
+				document.getElementById('button-2').style.display='none';
+				document.getElementById('button-3').style.display='none';
+
+
+				if(document.getElementById('button-4').style.display=='none'){document.getElementById('button-4').style.display='unset'} else {document.getElementById('button-4').style.display='none'}">
+          <span class="" >&nbsp; LEARN &nbsp;</span>
+					<!-- <span class="ario-navbar-links" >&nbsp; LEARN &nbsp;</span> -->
+
+        </button>
+
+        <!--
+          'Company' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+        <div class="absolute -left-8 top-full z-10 mt-3 w-96 rounded-2xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5" id="button-4" style="display: none;">
+					<!-- <div class="relative rounded-md p-4 hover:bg-gray-50">
+						<a href="https://bobinstein.github.io/docs/" target="_blank" class="block text-sm font-semibold leading-6 text-gray-900 hover:text-black">
+							Docs
+							<span class="absolute inset-0"></span>
+						</a>
+						<p class="mt-1 text-sm leading-6 text-gray-600">The complete library of everything ar.io. Start here.</p>
+					</div> -->
+
+					<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+						<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+							<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+</svg>
+						</div>
+						<div class="flex-auto">
+							<a href="./articles" class="block font-semibold text-gray-900 hover:text-black">
+								Articles
+								<span class="absolute inset-0"></span>
+							</a>
+							<p class="mt-1 text-gray-600">News, posts, and thoughts from ar.io.</p>
+						</div>
+					</div>
+
+					<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+						<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
+							<svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	<path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+</svg>
+						</div>
+						<div class="flex-auto">
+							<div class="block font-semibold text-gray-400 ">
+								Docs
+								<span class="absolute inset-0"></span>
+							</div>
+							<p class="mt-1 text-gray-400 font-semibold">Coming Soon.</p>
+						</div>
+					</div>
+
+					<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+						<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+							<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+</svg>
+						</div>
+						<div class="flex-auto">
+							<a href="./story" class="block font-semibold text-gray-900 hover:text-black">
+								Story
+								<span class="absolute inset-0"></span>
+							</a>
+							<p class="mt-1 text-gray-600">How the project started.</p>
+						</div>
+					</div>
+
+					<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
+						<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
+							<svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+</svg>
+						</div>
+						<div class="flex-auto">
+							<div class="block font-semibold text-gray-400 ">
+								White Paper
+								<span class="absolute inset-0"></span>
+							</div>
+							<p class="mt-1 text-gray-400 font-semibold">Coming Soon.</p>
+						</div>
+					</div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="https://bobinstein.github.io/docs/" target="_blank" class="text-sm font-semibold leading-6 text-gray-300 hover:text-white">START <span aria-hidden="true">&rarr;</span></a>
+    </div> -->
+		<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="./start"  class=" font-semibold leading-6 text-gray-300 hover:text-white" style="font-size: 16px;">START <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="lg:hidden mobile-announcement-bar" role="dialog" aria-modal="true" style="display: none;" id="mobile-menu">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 z-10"></div>
+    <div class="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" style="z-index:1000; background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #2c2c2c); animation: gradient 15s ease infinite;">
+      <div class="p-6">
+        <div class="flex items-center justify-between">
+          <a href="./" class="-m-1.5 p-1.5">
+            <span class="sr-only">ar.io</span>
+            <img class="h-8 w-auto" src="./assets/img/elephant-light.png" alt="">
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-100" onclick="document.getElementById('mobile-menu').style.display='none'">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <!-- <a href="./ardrive" class="group -mx-3 flex items-center gap-x-6 rounded-md p-3 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">
+                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-black group-hover:bg-white">
+                  <svg class="h-6 w-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+	</svg>
+                </div>
+                ArDrive
+              </a> -->
+
+							<a href="./arns" class="group -mx-3 flex items-center gap-x-6 rounded-md p-3 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">
+								<div class="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-black group-hover:bg-white">
+									<svg class="h-6 w-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
+	</svg>
+								</div>
+								ArNS (Beta)
+							</a>
+
+
+							<a href="./wallet" class="group -mx-3 flex items-center gap-x-6 rounded-md p-3 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">
+								<div class="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-black group-hover:bg-white">
+									<svg class="h-6 w-6 text-gray-100 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+	</svg>
+								</div>
+								Wallet
+							</a>
+
+
+            </div>
+            <div class="space-y-2 py-6">
+              <a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">ArCast</a>
+
+							<a href="./articles" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Articles</a>
+
+              <a href="./brand-kit" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Brand Kit</a>
+
+              <a href="./live" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Live</a>
+
+              <a href="https://ar-io-store.myshopify.com/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Merch</a>
+
+							<!-- <a href="https://prices.ardrive.io/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">Pricing Calculator</a> -->
+
+            </div>
+            <!-- <div class="py-6">
+	              <a href="https://bobinstein.github.io/docs/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">DOCS <span aria-hidden="true">&rarr;</span></a>
+            </div> -->
+						<div class="py-6">
+								<a href="./start" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">START <span aria-hidden="true">&rarr;</span></a>
+						</div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="sticky bottom-0 grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 text-center">
+        <a href="#" class="p-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100">Watch demo</a>
+
+        <a href="#" class="p-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100">Contact sales</a>
+      </div> -->
+    </div>
+  </div>
 </header>
-<!-- End header -->
+
 
 
 <!-- *************************************
@@ -635,12 +1018,12 @@ Newsletter
 					<!-- Add is-open as a class to the line below to have unfolded. -->
 					<div class="tt-accordion-content max-width-1400">
 						<!-- <p><strong>	ar.io will become what we make of it together.</strong></p> -->
-						<p>Get involved with ar.io as a developer, gateway operator, content creator, or simply by
+						<p style="margin: 0 0 30px;">Get involved with ar.io as a developer, gateway operator, content creator, or simply by
 							exploring the permaweb.</p>
-							<p>Web3 puts control back into the hands of all its users and builders. Our first priority is
+							<p style="margin: 0 0 30px;">Web3 puts control back into the hands of all its users and builders. Our first priority is
 								building a community, knowing that the ar.io Network will become what we make of it together.
 							</p>
-							<p>We are confident that we are only scratching the surface of what is to come, and are excited at
+							<p style="margin: 0 0 30px;">We are confident that we are only scratching the surface of what is to come, and are excited at
 								the innovations that will be created in the coming years by our community.</p>
 							</div>
 						</div>
@@ -663,23 +1046,22 @@ Newsletter
 							</div>
 							<div class="tt-accordion-content max-width-1400">
 								<!-- <p><strong>We build the tools that help you build the products.</strong></p> -->
-								<p>The ar.io Team is developing an expanding set of open-source infrastructure-focused protocols
+								<p style="margin: 0 0 30px;">There are an expanding set of open-source infrastructure-focused protocols
 									already adopted by the Arweave ecosystem:
 								</p>
 								<p>
-									<li>Build apps on top of ArDrive with ArFS - <code><strong>Arweave File System</strong></code>
-									</li>
+
 									<li>Give permaweb data a friendly name with ArNS -
 										<code><strong>Arweave Name System</strong></code>
 									</li>
-									<li>Connect your gateway and leverage the benefits of the incentivized ar.io Network with the
-										<code><strong>ArIO Network Protocol</strong></code>
+									<li>Connect your gateway and leverage the benefits of the incentivized gateway network protocol
+
 									</li>
 								</p>
 							</div>
 						</div>
 
-						<div class="tt-accordion-item anim-fadeinup">
+						<!-- <div class="tt-accordion-item anim-fadeinup">
 							<div class="tt-accordion-heading">
 								<div class="tt-ac-head " id="tt-diagram-products">
 									<img src="assets/img/products.png" width="75" class="tt-diagram-products-light" alt="" style=" position: absolute; margin-left: -5px; padding-bottom: 10px;">
@@ -696,15 +1078,19 @@ Newsletter
 								</div>
 							</div>
 							<div class="tt-accordion-content max-width-1400">
-								<!-- <p><strong>What do you want to build?</strong></p> -->
-								<p>The ar.io Team is behind a growing number of perma-products. Our flagship data storage
+
+								<p style="margin: 0 0 30px;">The ar.io Team is behind a growing number of perma-products. Our flagship data storage
 									platform, ArDrive, accounts for more than 10% of the weave with increasing user adoption.</p>
-									<p>ArDrive is a cross-platform app, available on all modern web browsers and the Android and Apple
-										(coming soon) app stores.</p>
-										<p>Advanced users can use the flexible ArDrive Command Line Interface, and developers can
-											integrate ArDrive-Core-JS to bring the Permaweb right into their app.</p>
+									<p style="margin: 0 0 30px;">ArDrive is a cross-platform app, available on all modern web browsers, as well as for Android on Google Play, and iOS coming soon. Advanced users can use the flexible ArDrive Command Line Interface, and developers can
+										integrate ArDrive-Core-JS to bring the Permaweb right into their app.</p>
 											<p>
-												<ul>
+												<ul style="    display: block;
+												    list-style-type: disc;
+												    margin-block-start: 1em;
+												    margin-block-end: 1em;
+												    margin-inline-start: 0px;
+												    margin-inline-end: 0px;
+												    padding-inline-start: 40px;">
 													<a href="https://ardrive.io/" target="_blank" style="text-decoration: underline;">
 														<li>ArDrive Web</li>
 													</a>
@@ -734,9 +1120,9 @@ Newsletter
 										<li>ar.io Network app (governance, staking, network joining)</li>
 									</ul>
 								</p>
-								<p>All of our products are open-sourced and ready for your imagination.</p>
+								<p style="margin: 0 0 30px;">All of our products are open-sourced and ready for your imagination.</p>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="tt-accordion-item anim-fadeinup">
 							<div class="tt-accordion-heading">
@@ -756,15 +1142,15 @@ Newsletter
 							</div>
 							<div class="tt-accordion-content max-width-1400">
 								<!-- <p><strong>ar.io is the front door to the permaweb.</strong></p> -->
-								<p>The permaweb is just like the currently existing web, but everything published on it will be
+								<p style="margin: 0 0 30px;">The permaweb is just like the currently existing web, but everything published on it will be
 									available forever. For users and builders, the permaweb will offer low-cost, zero maintenance,
 									permanent hosting of their web apps, files, and web pages.</p>
-									<p>In other words, the permaweb is the layer built on top of Arweave’s protocol, which is
+									<p style="margin: 0 0 30px;">In other words, the permaweb is the layer built on top of Arweave’s protocol, which is
 										essentially a global permanent hard drive.</p>
-										<p>The implications of a permaweb are significant. What if you never lost a file again? What if
+										<p style="margin: 0 0 30px;">The implications of a permaweb are significant. What if you never lost a file again? What if
 											the web belonged to you and not big tech? Arweave’s permaweb is a globally distributed network
 											that puts the power back in your hands.</p>
-											<p>Step inside to explore what you can do with permanent data and its unmatched level of
+											<p style="margin: 0 0 30px;">Step inside to explore what you can do with permanent data and its unmatched level of
 												incentives and customization.</p>
 											</div>
 										</div>
@@ -851,9 +1237,14 @@ Newsletter
 							Use class "scr-text-stroke" to enable text stroke style (no effect on smaller screens!).
 						-->
 						<div class="tt-scrolling-text" data-scroll-speed="19">
-							<div class="tt-scrolling-text-inner" data-text="11.1B requests served ← 899 TB downloaded ←">
-								899 TB downloaded ←
-							</div>
+
+								<div class="tt-scrolling-text-inner">
+									<span class="gradient-text">11.5B requests served ←</span>
+									<span class="gradient-text">779 TB downloaded ←</span>
+									<span class="gradient-text">11.5B requests served ←</span>
+									<span class="gradient-text">779 TB downloaded ←</span>
+								</div>
+
 						</div>
 						<!-- End scrolling text -->
 
@@ -864,15 +1255,15 @@ Newsletter
 						Use class "scr-text-stroke" to enable text stroke style (no effect on smaller screens!).
 					-->
 					<div class="tt-scrolling-text scr-text-stroke scr-text-reverse" data-scroll-speed="19">
-						<div class="tt-scrolling-text-inner" data-text="396M requests per day → 70M new transactions indexed →">
-							70M new transactions indexed →
+						<div class="tt-scrolling-text-inner" data-text="370M requests per day → 81M new transactions indexed →">
+							81M new transactions indexed →
 						</div>
 					</div>
 					<!-- End scrolling text -->
 
 
 
-					<p class="text-gray" style="font-size: 12px !important; padding-top: 50px; text-align: center;">February
+					<p class="text-gray" style="font-size: 12px !important; padding-top: 50px; text-align: center;">March
 						2023 - arweave.net stats</p>
 					</div> <!-- /.tt-section-inner -->
 
@@ -953,8 +1344,7 @@ Newsletter
 </div>
 </section> -->
 
-<br>
-<br>
+
 
 <!-- <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -992,12 +1382,136 @@ Newsletter
 </div>
 </section> -->
 
+<div class="relative isolate bg-none pb-32 pt-24 sm:pt-32">
+  <!-- <div class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl" aria-hidden="true">
+    <div class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div> -->
+  <!-- <div class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end" aria-hidden="true">
+    <div class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div> -->
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- <div class="mx-auto max-w-xl text-center">
+      <h1 class="" style="font-weight: 800;">Community Anticipation</h1>
 
-<!-- =======================
-///// Begin tt-section /////
-============================
+    </div> -->
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
 
--->
+      <div class="col-span-2 hidden sm:block sm:rounded-1xl  sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+        <div class="p-6 text-md  leading-8 tracking-tight text-white">
+          <p>"Operating an ar.io node as a developer was straight forward to setup and run, the readme provided clear instructions and the onboarding documentation clear. Knowledge of docker helps. By operating a permaweb gateway server, you're not only contributing to the growth of the decentralized web, but also ensuring the preservation of valuable information for future generations. Every gateway in the AR.IO Network is a part of building a more secure and permanent internet."</p>
+        </div>
+        <div class="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
+          <img class="h-10 w-10 flex-none rounded-full bg-gray-50" src="./assets/img/pp.png" alt="">
+          <div class="flex-auto">
+            <div class="font-semibold text-gray-100">Tom Wilson</div>
+            <div class="text-gray-400">Permapages</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="space-y-8 xl:contents xl:space-y-0">
+        <div class="space-y-8 xl:row-span-2">
+          <div class="rounded-1xl  p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+            <div class="text-white text-md">
+              <p>"We are blown away by the performance boost that the new ar.io gateways offer. Being able to receive 1000x more data per query is an absolute game changer when building applications on the permaweb."</p>
+            </div>
+            <div class="mt-6 flex items-center gap-x-4">
+              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/CL.png" alt="">
+              <div>
+								<div class="font-semibold text-gray-100">Tate Berenbaum</div>
+								<div class="text-gray-400">Community Labs</div>
+              </div>
+            </div>
+          </div>
+
+					<div class="rounded-1xl  p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+						<div class="text-white text-md">
+							<p>"I'm really grateful that ar.io has taken on this monumental task of not only running the existing gateway infra, but keeping it open source and staying true to decentralized, utilitarian values."</p>
+						</div>
+						<div class="mt-6 flex items-center gap-x-4">
+							<img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/abc.png" alt="">
+							<div>
+								<div class="font-semibold text-gray-100">Jim Toth</div>
+                <div class="text-gray-400">Art x By x City</div>
+							</div>
+						</div>
+					</div>
+
+
+        </div>
+
+        <div class="space-y-8 xl:row-start-1">
+          <div class="rounded-1xl p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+            <div class="text-white text-md">
+              <p>"Being able to rely on having an application served through multiple gateways has been very reassuring. If one centralized provider wants to take down your application, they can. However if anyone can run their own gateway, you can count on being able to serve an application from multiple, which is really cool."</p>
+            </div>
+            <div class="mt-6 flex items-center gap-x-4">
+              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/ah.png" alt="">
+              <div>
+                <div class="font-semibold text-gray-100">Nick Juliano</div>
+                <div class="text-gray-400">Alex.Archive</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="space-y-8 xl:contents xl:space-y-0">
+        <div class="space-y-8 xl:row-start-1">
+          <div class="rounded-1xl p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+            <div class="text-white text-md">
+              <p>"It's pretty cool to see... this idea of distributing the (Arweave) database itself, across many different ar.io nodes."</p>
+            </div>
+            <div class="mt-6 flex items-center gap-x-4">
+              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/arw.png" alt="">
+              <div>
+                <div class="font-semibold text-gray-100">Sam Williams</div>
+                <div class="text-gray-400">Arweave</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="space-y-8 xl:row-span-2">
+          <div class="rounded-1xl p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+            <div class="text-white text-md">
+              <p>"ar.io is a highly anticipated project, and it is expected to become the core basic gateway of the Arweave ecosystem."</p>
+            </div>
+            <div class="mt-6 flex items-center gap-x-4">
+              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/EV.png" alt="">
+              <div>
+                <div class="font-semibold text-gray-100">Evelyn</div>
+                <div class="text-gray-400">everVision</div>
+              </div>
+            </div>
+          </div>
+
+					<div class="rounded-1xl p-6 shadow-lg ring-1 ring-gray-900/5" style="background: linear-gradient(-45deg, #1f1f1f, #171717, #121212, #1c1c1c); background-size: 200% 200%; animation: gradient 15s ease infinite;">
+            <div class="text-white text-md">
+              <p>"I like the modularity and composability of ar.io network nodes. It significantly lowers hardware requirements and gives the ability for small teams/users to run their own gateways. This will allow horizontal scalability of the network. I hope people come to understand the full power of the ar.io gateways."</p>
+            </div>
+            <div class="mt-6 flex items-center gap-x-4">
+              <img class="h-10 w-10 rounded-full bg-gray-50" src="./assets/img/am.png" alt="">
+              <div>
+                <div class="font-semibold text-gray-100">Nik</div>
+                <div class="text-gray-400">Rareweave</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="tt-section padding-top-xlg-50 padding-bottom-xlg-150">
 	<div class="tt-section-inner tt-wrap max-width-1500">
 
@@ -1073,184 +1587,33 @@ Newsletter
 </div>
 <!-- End tt-section -->
 
-<!-- <div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150 hills">
-
-</div> -->
-
-
-<!-- ======================
-///// Begin tt-footer 1/////
-=========================== -->
-<!-- <footer id="tt-footer">
-<div class="tt-footer-inner">
-
-<div class="footer-col tt-align-center-left">
-<div class="footer-col-inner">
-
-
-<div class="magnetic-item subscribe-hide">
-
-
-<button data-tf-slider="bfozRHd0" data-tf-width="550" data-tf-hide-headers data-tf-position="left"
-data-tf-auto-close="1000" data-tf-iframe-props="title=ar.io Site Emails" data-tf-medium="snippet"
-style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
-Subscribe <i class="fas fa-paper-plane" style="padding-left: 10px;"></i>
-</button>
-<script src="//embed.typeform.com/next/embed.js"></script>
-</div>
-
-</div>
-</div>
-
-<div class="footer-col tt-align-center order-m-last">
-<div class="footer-col-inner">
-
-<div class="magnetic-item">
-<a href="./terms-and-conditions" target="_blank" rel="noopener" class="tt-btn tt-btn-link">Terms
-and Conditions</a>
-</div>
-
-</div>
-</div>
-
-
-<div class="footer-col tt-align-center-right">
-<div class="footer-col-inner">
-
-<div class="footer-social">
-<div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-<div class="social-buttons">
-<ul>
-<li><a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
-rel="noopener"><i class="fab fa-github"></i></a></li>
-<li><a href="https://discord.gg/HGG52EtTc2"
-class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a></li>
-<li><a href="https://www.instagram.com/ardriveapp/" class="magnetic-item" target="_blank"
-rel="noopener"><i class="fab fa-instagram"></i></a></li>
-<li><a href="https://www.reddit.com/r/ar_io/" class="magnetic-item" target="_blank"
-rel="noopener"><i class="fab fa-reddit"></i></a></li>
-<li><a href="https://www.tiktok.com/@ardrive.io" class="magnetic-item" target="_blank"
-rel="noopener"><i class="fab fa-tiktok"></i></a></li>
-<li><a href="https://www.youtube.com/channel/UCL4JlkVcgUjyVz4IlKvbS_g" class="magnetic-item"
-target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-<li><a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
-rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-<li><a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
-rel="noopener"><i class="fab fa-twitter"></i></a></li>
-
-</ul>
-</div>
-</div>
-
-</div>
-</div>
-
-
-</div>
-</footer>
 
 
 
-<footer id="tt-footer">
-<div class="tt-footer-inner">
-
-
-<div class="footer-col tt-align-center order-m-last">
-<div class="footer-col-inner">
-
-
-<div class="tt-copyright">
-<div class="tt-btn  tt-btn-link" style="cursor: default !important;"> v. 0.1984</div>
-</div>
-
-</div>
-</div>
-
-</div>
-</footer> -->
-
-<!-- <section class="" style="background: none;">
-    <div class="container px-8 py-8 mb-2 mx-auto">
-
-
-
-
-        <div class="grid grid-cols-1 gap-8 mx-auto mt-6 mb-12 lg:grid-cols-3 xl:mt-10 max-w-8xl">
-            <div class="p-6 dark:bg-gray-800 md:p-8" style="background: none; border: .5px solid #323232;">
-                <p class="leading-loose text-gray-500 dark:text-gray-300" style="font-weight: 600; font-size: 1.2rem;">
-                    "ar.io is a highly anticipated project, and it is expected to become the core basic gateway of the Arweave ecosystem."
-                </p>
-
-                <div class="flex items-center mt-6">
-
-
-                    <div class="mx-4">
-                        <h1 class="font-semibold text-white">Evelyn</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-300">everVision</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-6 dark:bg-gray-800 md:p-8" style="background: none; border: .5px solid #323232;">
-                <p class="leading-loose text-gray-500 dark:text-gray-300" style="font-weight: 600; font-size: 1.2rem;">
-                    "We are blown away by the performance boost that the new Ar.io gateways offer. Being able to receive 1000x more data per query is an absolute game changer when building applications on the permaweb."
-                </p>
-
-                <div class="flex items-center mt-6">
-
-
-                    <div class="mx-4">
-                        <h1 class="font-semibold text-white">Tate Berenbaum</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-300">Community Labs</span>
-                    </div>
-                </div>
-            </div>
-
-						<div class="p-6 dark:bg-gray-800 md:p-8" style="background: none; border: .5px solid #323232;">
-                <p class="leading-loose text-gray-500 dark:text-gray-300" style="font-weight: 600; font-size: 1.2rem;">
-                    "It's pretty cool to see... this idea of distributing the (Arweave) database itself, across many different ar.io nodes."
-                </p>
-
-                <div class="flex items-center mt-6">
-
-
-                    <div class="mx-4">
-                        <h1 class="font-semibold text-white">Sam Williams</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-300">Arweave</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<br>
-<br> -->
 
 
 <footer class="" aria-labelledby="footer-heading" style="background: linear-gradient(45deg, #1f1f1f, #171717, #121212, #2c2c2c); background-size: 400% 400%; animation: gradient 15s ease infinite;">
 	<h2 id="footer-heading" class="sr-only">Footer</h2>
 	<div class="mx-auto  px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
 		<div class="xl:grid xl:grid-cols-3 xl:gap-8 ">
-			<img class="h-14" src="./assets/img/elephant-light.png" class=" magnetic-item" alt="ar.io Logo">
-
+			<a href="./"><img class="h-12" src="./assets/img/elephant-light.png" class=" magnetic-item" alt="ar.io Logo"></a>
 			<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
 				<div class="md:grid md:grid-cols-2 md:gap-8">
 
 					<div>
-						<h3 class="text-sm font-bold leading-6 text-white">Use</h3>
+						<h3 class="text-sm font-bold leading-6 text-white">USE</h3>
 						<ul role="list" class="mt-6 space-y-4">
-							<li>
-								<a href="./ardrive" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive  <i class="fa-solid fa-location-arrow"></i></a>
-							</li>
+							<!-- <li>
+								<a href="./ardrive" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive</a>
+							</li> -->
 
 							<li>
-								<a href="./arns" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArNS (Beta)  <i class="fa-solid fa-location-arrow"></i></a>
+								<a href="./arns" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArNS (Beta)</a>
 							</li>
 
-							<li>
+							<!-- <li>
 								<a href="https://prices.ardrive.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Pricing Calculator  <i class="fa-solid fa-location-arrow"></i></a>
-							</li>
+							</li> -->
 
 							<li>
 								<a href="https://viewblock.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Viewblock  <i class="fa-solid fa-location-arrow"></i></a>
@@ -1262,16 +1625,19 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-bold leading-6 text-white">Develop</h3>
+						<h3 class="text-sm font-bold leading-6 text-white">DEVELOP</h3>
 						<ul role="list" class="mt-6 space-y-4">
 							<li>
-								<a href="https://github.com/ardriveapp/ardrive-cli" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive CLI  <i class="fa-solid fa-location-arrow"></i></a>
+								<a href="https://github.com/ar-io" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ar.io GitHub  <i class="fa-solid fa-location-arrow"></i></a>
 							</li>
 
 							<li>
-								<a href="https://github.com/ardriveapp/ardrive-core-js" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArDrive Core-JS  <i class="fa-solid fa-location-arrow"></i></a>
+								<a href="https://cookbook.ar-io.dev" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Arweave Cookbook  <i class="fa-solid fa-location-arrow"></i></a>
 							</li>
 
+							<li>
+								<div class="text-sm leading-6 text-gray-300" style="font-weight:500;">Gateways Operating Manual <span class="text-gray-500">(Coming Soon)</span></div>
+							</li>
 							<!-- <li>
 								<a href="./story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs</a>
 							</li> -->
@@ -1283,14 +1649,10 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 
 
 					<div>
-						<h3 class="text-sm font-bold leading-6 text-white">Engage</h3>
+						<h3 class="text-sm font-bold leading-6 text-white">ENGAGE</h3>
 						<ul role="list" class="mt-6 space-y-4">
 							<li>
 								<a href="https://ardrive.io/arcast/episodes-21-30/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">ArCast  <i class="fa-solid fa-location-arrow"></i></a>
-							</li>
-
-							<li>
-								<a href="./articles" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Blog</a>
 							</li>
 
 							<li>
@@ -1309,7 +1671,7 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
-						<h3 class="text-sm font-bold leading-6 text-white">Learn</h3>
+						<h3 class="text-sm font-bold leading-6 text-white">LEARN</h3>
 						<ul role="list" class="mt-6 space-y-4">
 							<!-- <li>
 								<a href="./why-ario" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Why ar.io?</a>
@@ -1331,9 +1693,27 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 								<a href="./benefits-of-long-term-storage" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Benefits of long-term storage</a>
 							</li> -->
 
+							<!-- <li>
+								<a href="https://bobinstein.github.io/docs/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs <i class="fa-solid fa-location-arrow"></i></a>
+							</li> -->
+
 							<li>
-								<a href="./story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Story</a>
+								<a href="./articles" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Articles</a>
 							</li>
+
+							<li>
+								<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">Docs <span class="text-gray-500">(Coming Soon)</span></div>
+							</li>
+
+							<li>
+								<a href="./story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Story</a>
+							</li>
+
+
+							<li>
+								<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">White Paper <span class="text-gray-500">(Coming Soon)</span></div>
+							</li>
+
 
 							<!-- <li>
 								<a href="./foundation" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">The Foundation</a>
@@ -1348,17 +1728,18 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 				<h3 class="text-sm font-bold leading-6 text-gray-300">Subscribe to our newsletter</h3>
 				<p class="mt-2 mb-4 text-sm leading-6 text-gray-400">The latest news, articles, and resources, sent to your inbox weekly.</p>
 			</div>
-			<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#121212;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
+			<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" onMouseOver="this.style.background='#fff', this.style.color='#121212'"
+   onMouseOut="this.style.background='#121212', this.style.color='#fff'"  style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
 			</button>
 			<script src="//embed.typeform.com/next/embed.js"></script>
 		</div>
 		<div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
 			<div class="flex space-x-6 md:order-2">
 
-				<a href="https://github.com/ardriveapp" class="magnetic-item" target="_blank"
+				<a href="https://github.com/ar-io" class="magnetic-item" target="_blank"
 				rel="noopener"><i class="fab fa-github" style="color: #fafafa;"></i></a>
 
-				<a href="https://discord.gg/HGG52EtTc2"
+				<a href="https://discord.gg/NTcTc3DQ"
 				class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord" style="color: #fafafa;"></i></a>
 
 				<a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
@@ -1368,7 +1749,7 @@ rel="noopener"><i class="fab fa-twitter"></i></a></li>
 				rel="noopener"><i class="fab fa-linkedin" style="color: #fafafa;"></i></a>
 
 			</div>
-			<p class="mt-8 text-xs leading-6 text-gray-400 md:order-1 md:mt-0"><strong>ar.io</strong> | v. 0.1984</p>
+			<p class="mt-8 text-xs leading-6 text-gray-400 md:order-1 md:mt-0"><strong>ar.io</strong> | v. 1.984</p>
 			<h3 class=" text-sm font-bold leading-6 text-white"><a href="./terms-and-conditions" target="_blank" rel="noopener" style="text-decoration: none !important; font-style: normal !important;  ">Terms and Conditions</a></h3>
 		</div>
 	</div>
