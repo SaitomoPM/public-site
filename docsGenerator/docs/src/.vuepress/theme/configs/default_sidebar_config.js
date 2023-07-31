@@ -1,13 +1,13 @@
 module.exports = [
 {
-  title: "ar.io node",
+  title: "ar.io placeholder",
   children: [
     {
-      title: "Setting up on Windows",
+      title: "First placeholder",
       path: "/placeholder/place"
     },
     {
-      title: "Setting up on Linux",
+      title: "Second placeholder",
       path: "/placeholder/holder"
     }
   ]
