@@ -3,12 +3,12 @@ module.exports = [
   title: "ar.io placeholder",
   children: [
     {
-      title: "First placeholder",
-      path: "/placeholder/place"
+      title: "Windows Setup Guide",
+      path: "/node/windows-setup"
     },
     {
-      title: "Second placeholder",
-      path: "/placeholder/holder"
+      title: "Linux Setup Guide",
+      path: "/node/linux-setup"
     }
   ]
 }
