@@ -2,8 +2,10 @@
   <header class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
-    <RouterLink :to="$localePath" class="home-link">
+    <a href="/../" class="home-link">
       <img class="logo" :src="$site.themeConfig.logo" :alt="$siteTitle" />
+      </a>
+      <RouterLink :to="$localePath" class="home-link">
       <span
         v-if="$siteTitle"
         ref="siteName"
