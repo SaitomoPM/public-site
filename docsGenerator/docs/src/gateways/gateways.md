@@ -50,7 +50,7 @@ The core functions of a general Arweave gateway are broken down into the followi
 
 ## ar.io Gateway Benefits
 
-AR.IO gateways provide many new benefits and capabilities beyond general Arweave gateways:
+ar.io gateways provide many new benefits and capabilities beyond general Arweave gateways:
 
 - Providing the modularity and configurability necessary for operating extensible gateways that can be deployed at small or large scales to meet the needs of specific applications, use cases, communities, or business models.
 
@@ -60,11 +60,11 @@ AR.IO gateways provide many new benefits and capabilities beyond general Arweave
 
 - Facilitating configurable content moderation policies.
 
-- Providing connectivity to a decentralized network of other AR.IO gateways, enabling data sharing and other shared workloads.
+- Providing connectivity to a decentralized network of other ar.io gateways, enabling data sharing and other shared workloads.
 
 ## Gateway Modularity
 
-A design principle of AR.IO gateways is that their core components should be interchangeable with compatible implementations.
+A design principle of ar.io gateways is that their core components should be interchangeable with compatible implementations.
 
 The core services in the gateway are written in Typescript and Express, with flexible interfaces to the various subsystems and databases. This allows operators to customize their gateway to meet their specific requirements. Gateway services can be turned on or off depending on the operator's needs. For example, an operator might choose to have their gateway serve data, but not actively index Layer 2 bundled data.
 
@@ -107,7 +107,7 @@ For example, small scale operators might want to use low-overhead relational dat
 
 ## ARNS Indexing and Routing
 
-The Arweave Name System’s (ArNS) state is managed by the IO token’s SmartWeave smart contract. AR.IO gateways shall perform the following minimum functions relative to ArNS:
+The Arweave Name System’s (ArNS) state is managed by the IO token’s SmartWeave smart contract. ar.io gateways shall perform the following minimum functions relative to ArNS:
 
 - Actively track state changes in the contract.
 
@@ -121,4 +121,4 @@ The Arweave Name System’s (ArNS) state is managed by the IO token’s SmartWea
 
 ## Content Moderation
 
-The AR.IO Network will adopt Arweave’s self-censorship or voluntary censorship model whereby every participant of the network has the autonomy to decide which content they want to store, serve, and see. Each gateway operating on the network has the right and ability to blocklist any content (or address) that is deemed in violation of its content policies or non-compliant with local regulations.
+The ar.io Network will adopt Arweave’s self-censorship or voluntary censorship model whereby every participant of the network has the autonomy to decide which content they want to store, serve, and see. Each gateway operating on the network has the right and ability to blocklist any content (or address) that is deemed in violation of its content policies or non-compliant with local regulations.

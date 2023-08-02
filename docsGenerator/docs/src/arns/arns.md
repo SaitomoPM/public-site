@@ -8,7 +8,7 @@ prev: false
 
 ## Overview
 
-Arweave URLs and Transaction IDs are long, difficult to remember, and occasionally miscategorized as spam. The Arweave Name System (ArNS) aims to resolve these problems in a decentralized manner. ArNS is a censorship-resistant naming system stored on Arweave, purchased with IO tokens (or test tokens while in development), enabled through AR.IO gateway domains, and used to connect friendly domain names to permaweb dApps, web pages, data, and identities.
+Arweave URLs and Transaction IDs are long, difficult to remember, and occasionally miscategorized as spam. The Arweave Name System (ArNS) aims to resolve these problems in a decentralized manner. ArNS is a censorship-resistant naming system stored on Arweave, purchased with IO tokens (or test tokens while in development), enabled through ar.io gateway domains, and used to connect friendly domain names to permaweb dApps, web pages, data, and identities.
 
 It's like a permissionless address book for anything on the permaweb, powered by SmartWeave.
 
@@ -30,7 +30,7 @@ Once added, name records cannot be removed from the registry. A leased name’s 
 
 To establish ownership of a record in the ArNS Registry, each record contains both a friendly name and a reference to an Arweave Name Token, ANT. Name Tokens are unique SmartWeave tokens that gives their owners the ability to update the Arweave Transaction IDs that their associated friendly names point to.
 
-The ANT SmartWeave Contract is a standardized contract that contains the specific ArNS Record specification required by AR.IO gateways who resolve ArNS names and their Arweave Transaction IDs. It also contains other basic functionality to establish ownership and the ability to transfer and update the Arweave Transaction ID.
+The ANT SmartWeave Contract is a standardized contract that contains the specific ArNS Record specification required by ar.io gateways who resolve ArNS names and their Arweave Transaction IDs. It also contains other basic functionality to establish ownership and the ability to transfer and update the Arweave Transaction ID.
 
 Name Tokens have an owner, who can transfer the token and control all of its modifiable settings. These settings include modifying the time to live (ttl) for each name contained in the ANT, and other settings like the ANT Name, Ticker, and an ANT Controller. The controller can only manage the ANT and set and update records, name, and the ticker, but cannot transfer the ANT. Note that ANTs are initially created by an end user, in accordance with network standards, who then has to ability to transfer its ownership or assign a controller as they see fit.
 
