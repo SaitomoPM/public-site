@@ -1,3 +1,7 @@
+---
+next: false
+---
+
 # Linux Installation Instructions
 
 ## Overview

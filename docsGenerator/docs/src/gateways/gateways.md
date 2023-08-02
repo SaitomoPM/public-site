@@ -1,6 +1,7 @@
 ---
 permalink: "/gateways/"
 prev: false
+next: false
 ---
 
 # Gateway Architecture

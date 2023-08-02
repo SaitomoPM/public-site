@@ -1,3 +1,7 @@
+---
+prev: false
+---
+
 # Windows Installation Instructions
 
 ## Overview
