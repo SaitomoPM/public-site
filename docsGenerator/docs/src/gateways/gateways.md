@@ -40,9 +40,9 @@ The core functions of a general Arweave gateway are broken down into the followi
 
 - Facilitating efficient, structured queries for Layer 1 and Layer 2 transaction and wallet data by:
 
-    - examining incoming streams of data (i.e., directly ingested transactions and data items, blocks emitted by the chain, etc.).
+  - examining incoming streams of data (i.e., directly ingested transactions and data items, blocks emitted by the chain, etc.).
 
-    - managing index data in a database or analogous data store.
+  - managing index data in a database or analogous data store.
 
 - Parsing and executing user queries.
 
@@ -70,11 +70,40 @@ The core services in the gateway are written in Typescript and Express, with fle
 
 //TODO: add gateway diagram 7.3
 
+
+
 This flexibility also allows operators to utilize the technologies that are appropriate for the scale and environments in which they operate.
 
 For example, small scale operators might want to use low-overhead relational databases to power their indexing while larger scale operators might opt to use cloud-native, horizontally scalable databases. Analogous examples for storage and caching exist as well.
 
-//TODO: add gateway table 7.3
+<div style="text-align: center">
+    <table class="inline-table">
+        <tr>
+            <th colspan="5" style="font-weight: bold">Gateway Tech Stack Options</th>
+        </tr>
+        <tr>
+            <th>Topology</th>
+            <th>Chain Index</th>
+            <th>Budle Index</th>
+            <th>Data Index</th>
+            <th>Data Store</th>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">Small</td>
+            <td>SQLite</td>
+            <td>SQLite</td>
+            <td>SQLite</td>
+            <td>Local File System</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">Large</td>
+            <td>PostgreSQL</td>
+            <td>Cassandra</td>
+            <td>Cassandra</td>
+            <td>S3 Compatible</td>
+        </tr>
+    </table>
+</div>
 
 ## ARNS Indexing and Routing
 
