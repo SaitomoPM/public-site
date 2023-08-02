@@ -233,7 +233,7 @@ export default {
     &.focused
       background-color var(--SearchColor)
       a
-        color $accentColor
+        color var(--AccentColor)
 
 @media (max-width: $MQNarrow)
   .search-box
