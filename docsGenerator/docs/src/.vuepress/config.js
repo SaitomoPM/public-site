@@ -1,16 +1,13 @@
 const { description } = require("../../package");
 const default_sidebar_config = require("./theme/configs/default_sidebar_config");
 
-
-
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   title: "ar.io Docs",
-  base: '/docs/',
-  dest: '../../docs',
-
+  base: "/docs/",
+  dest: "../../docs",
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
@@ -23,8 +20,6 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-   
-
     ["meta", { name: "theme-color", content: "#3eaf7c" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     [
@@ -32,6 +27,14 @@ module.exports = {
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
 
+    [
+      "script",
+      {
+        src: "https://plausible.io/js/script.js",
+        defer: true,
+        "data-domain": "ar.io/docs",
+      },
+    ],
   ],
 
   /**
@@ -56,9 +59,12 @@ module.exports = {
     },
   },
 
-
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom", 'vuepress-plugin-code-copy'],
+  plugins: [
+    "@vuepress/plugin-back-to-top",
+    "@vuepress/plugin-medium-zoom",
+    "vuepress-plugin-code-copy",
+  ],
 };
