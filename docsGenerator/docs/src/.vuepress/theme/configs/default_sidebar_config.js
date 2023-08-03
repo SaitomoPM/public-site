@@ -1,10 +1,14 @@
 module.exports = [
   {
-    title: "ar.io Foundation",
-    path: "/foundation/ar-io-foundation",
+    title: "AR.IO Foundation",
+    path: "/foundation",
   },
   {
-    title: "ar.io node",
+    title: "AR.IO Labs",
+    path: "/labs"
+  },
+  {
+    title: "AR.IO node",
     children: [
       {
         title: "Windows Setup Guide",
@@ -18,11 +22,19 @@ module.exports = [
   },
   {
     title: "ARNS",
-    path: "/arns/arns",
+    path: "/arns",
+  },
+  {
+    title: "Arweave",
+    path: "/arweave"
   },
   {
     title: "Gateways",
     path: "/gateways/gateways",
+  },
+  {
+    title: "IO Token",
+    path: "/token"
   },
   {
     title: "Glossary",
