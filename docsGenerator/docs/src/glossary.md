@@ -7,7 +7,7 @@ next: false
 
 Many novel terms and acronyms are used by the Arweave ecosystem as well as some new ones introduced in this paper. The list below is intended to serve as a non-exhaustive reference of those terms:
 
-- **Arweave Name System (ArNS)**: a decentralized and censorship-resistant naming system enabled by ar.io gateways which connects friendly names to permaweb applications, pages, and data.
+- **Arweave Name System (ArNS)**: a decentralized and censorship-resistant naming system enabled by AR.IO gateways which connects friendly names to permaweb applications, pages, and data.
 
 - **Arweave Name Token (ANT), “Name Token”**: a SmartWeave based token, that is connected to each registered ArNS Name. Each ANT gives the owner the ability to update the subdomains and Arweave transaction IDs used by the registered name as well as transfer ownership and other functions.
 
@@ -33,7 +33,7 @@ Many novel terms and acronyms are used by the Arweave ecosystem as well as some 
 
 - **Layer 2 (L2) - Bundles**: Unlike other blockchain projects which consider Layer 2 to be the transactions that occur on side-chains and ultimately “settled up” with their base Layer 1 network, Arweave refers to Layer 2 transactions as the files and metadata contained within bundled transactions.
 
-- **Layer 2 (L2) – Infrastructure**: Layer 2 may also refer to the technology / infrastructure stack built “above” a base layer. In this use, the ar.io Network would be considered Layer 2 infrastructure to the base Arweave protocol.
+- **Layer 2 (L2) – Infrastructure**: Layer 2 may also refer to the technology / infrastructure stack built “above” a base layer. In this use, the AR.IO Network would be considered Layer 2 infrastructure to the base Arweave protocol.
 
 - **Manifest (aka Path Manifest, Arweave Manifest)**: special “aggregate” files uploaded to Arweave that map user-definable sub-paths with other Arweave transaction IDs. This allows users to create logical groups of content, for example a directory of related files, or the files and assets that make up a web page or application. Instead of having to manually collate these assets, manifests group them together so that an entire website or app can be launched from a single manifest file. Gateways can interpret this structure, so that users can then reference individual transactions by their file name and/or path.
 

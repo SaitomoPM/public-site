@@ -5,7 +5,7 @@ prev: false
 # Windows Installation Instructions
 
 ## Overview
-This guide provides step-by-step instructions for setting up the ar.io node on a Windows computer. It covers installing necessary software, cloning the repository, creating an environment file, starting the Docker container, setting up networking, and installing and configuring NGINX Docker. No prior coding experience is required.
+This guide provides step-by-step instructions for setting up the AR.IO node on a Windows computer. It covers installing necessary software, cloning the repository, creating an environment file, starting the Docker container, setting up networking, and installing and configuring NGINX Docker. No prior coding experience is required.
 
 ## Prerequisites
 Before starting the installation process, ensure you have the following:
@@ -172,6 +172,6 @@ To expose your node to the internet and use a custom domain, follow these steps:
 
 2. Follow the instructions provided in the repository for setting up NGINX Docker.
 
-Congratulations! Your ar.io node is now running and connected to the internet. Test it by entering https://\<your-domain>/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ in your browser.
+Congratulations! Your AR.IO node is now running and connected to the internet. Test it by entering https://\<your-domain>/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ in your browser.
 
-**Note**: If you encounter any issues during the installation process, please seek assistance from the [ar.io community](https://discord.gg/7zUPfN4D6g).
+**Note**: If you encounter any issues during the installation process, please seek assistance from the [AR.IO community](https://discord.gg/7zUPfN4D6g).

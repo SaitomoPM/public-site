@@ -5,7 +5,7 @@ next: false
 # Linux Installation Instructions
 
 ## Overview
-The following instructions will guide you through the process of installing the ar.io node on a Linux machine, specifically Ubuntu 20.04.5 desktop on a home computer. Actual steps may differ slightly on different versions or distributions. This guide will cover how to set up your node, point a domain name to your home network, and create an nginx server for routing traffic to your node. No prior coding experience is required.
+The following instructions will guide you through the process of installing the AR.IO node on a Linux machine, specifically Ubuntu 20.04.5 desktop on a home computer. Actual steps may differ slightly on different versions or distributions. This guide will cover how to set up your node, point a domain name to your home network, and create an nginx server for routing traffic to your node. No prior coding experience is required.
 
 ## Install Required Packages
 
@@ -209,4 +209,4 @@ The following guide assumes you are running your node on a local home computer.
 
 Your node should now be running and connected to the internet. Test it by entering https://\<your-domain>/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ in your browser.
 
-**Note**: If you encounter any issues during the installation process, please seek assistance from the [ar.io community](https://discord.gg/7zUPfN4D6g).
+**Note**: If you encounter any issues during the installation process, please seek assistance from the [AR.IO community](https://discord.gg/7zUPfN4D6g).
