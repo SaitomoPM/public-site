@@ -1,12 +1,14 @@
 const { description } = require("../../package");
 const default_sidebar_config = require("./theme/configs/default_sidebar_config");
 
+const base = process.env.BASE_URL || "/docs/";
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   title: "ar.io Docs",
-  base: process.env.BASE_URL || "/docs/",
+  base: base,
 
   dest: "../../docs",
 
@@ -70,7 +72,7 @@ module.exports = {
     lastUpdated: false,
     initialOpenGroupIndex: -1,
     //logo path will need to be adjusted for deployment
-    logo: "/docs/images/logo-party.gif",
+    logo: `${base}/images/logo-party.gif`,
     // nav: nav_config,
     sidebar: {
       // "/docs/cli/": CLI_sidebar_config,
