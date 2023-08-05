@@ -6,7 +6,8 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   title: "ar.io Docs",
-  base: "/docs/",
+  base: process.env.BASE_URL || "/docs/",
+
   dest: "../../docs",
 
   /**
