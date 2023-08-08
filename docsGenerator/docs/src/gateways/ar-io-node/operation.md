@@ -1,14 +1,19 @@
+---
+prev: "./windows-setup"
+next: "./linux-setup"
+---
+
 # Operation
 
 ## Overview
 
 AR.IO Gateways are the interface between users and the Permaweb. Each Gateway acts like a "Permaweb Service Provider" and supports multiple, value-added, low-trust services for users and applications. The AR.IO HTTP API is served by all AR.IO Gateways, and is used by all Arweave clients looking to read, write, and query data. It supports the following capabilities:
 
-    - Seeding layer one transactions to the greater Arweave network
-    - Caching and serving chain and transaction data
-    - Resolving friendly names to transaction data with the Arweave Name System
-    - Indexing and querying layer one and two transactions
-    - Proxy for Arweave nodes serving the Arweave HTTP API
+- Seeding layer one transactions to the greater Arweave network
+- Caching and serving chain and transaction data
+- Resolving friendly names to transaction data with the Arweave Name System
+- Indexing and querying layer one and two transactions
+- Proxy for Arweave nodes serving the Arweave HTTP API
 
 ### Errors
 
@@ -361,7 +366,6 @@ https://arweave.net/tx/A8lCZPTAwuBY5HfuVbFJsJ4F0KB205_UEO8XNJ9ArSU
 </details>
 </details>
 
-
 ### Offset
 
 Provides information on the size and offset of a given txId
@@ -403,6 +407,7 @@ Response
 ```
 {"block_height":1236198,"block_indep_hash":"BiNSjNDLURchLF34-J0pEPcyPkWwAGslY_ziQn235s2RoyLlveVso_iMPkZvgU4w","number_of_confirmations":14}
 ```
+
 </details>
 </details>
 

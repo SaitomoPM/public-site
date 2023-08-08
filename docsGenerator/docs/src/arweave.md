@@ -1,7 +1,5 @@
 ---
 permalink: "/arweave/"
-prev: false
-next: false
 ---
 
 # Arweave

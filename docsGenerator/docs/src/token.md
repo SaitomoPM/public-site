@@ -1,7 +1,5 @@
 ---
 permalink: "/token/"
-prev: false
-next: false
 ---
 
 # The IO Token

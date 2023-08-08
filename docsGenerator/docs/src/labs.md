@@ -1,7 +1,5 @@
 ---
 permalink: "/labs/"
-prev: false
-next: false
 ---
 
 # AR.IO Labs

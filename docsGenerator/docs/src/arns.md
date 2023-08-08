@@ -1,7 +1,6 @@
 ---
 permalink: /arns/
 next: false
-prev: false
 ---
 
 # ARNS

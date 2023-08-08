@@ -1,3 +1,7 @@
+---
+permalink: "/introduction/"
+---
+
 # Introduction
 
 ## TL;DR

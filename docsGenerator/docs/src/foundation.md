@@ -1,7 +1,6 @@
 ---
 permalink: "/foundation"
 prev: false
-next: false
 ---
 
 # AR.IO Foundation
