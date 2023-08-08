@@ -70,7 +70,7 @@ The permaweb is the third and final layer of the permanence pie. The permaweb st
 
 AR.IO is a global network, protocol, and currency built on top of Arweave that enables the permaweb.
 
-## References and further Reading
+## References and Further Reading
 
 The following resources were used as reference material for this section and can provide the interested reader with additional information:
 

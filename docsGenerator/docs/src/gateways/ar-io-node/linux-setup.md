@@ -1,6 +1,6 @@
 ---
 prev: false
-next: "./operation"
+next: false
 ---
 
 # Linux Installation Instructions

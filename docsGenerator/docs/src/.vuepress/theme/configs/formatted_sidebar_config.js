@@ -45,8 +45,8 @@ module.exports = [
         ],
       },
       {
-        title: "Operation",
-        path: "/gateways/ar-io-node/operation",
+        title: "AR.IO HTTP API",
+        path: "/gateways/ar-io-node/api",
       },
     ],
   },

@@ -3,7 +3,7 @@ permalink: /arns/
 next: false
 ---
 
-# ARNS
+# ArNS
 
 ## Overview
 
@@ -19,7 +19,7 @@ Each AR.IO gateway acts as both a SmartWeave cache and an ArNS Name resolver. Th
 
 Users can easily reference these friendly names in their browsers, and other applications and infrastructure can build rich solutions on top of these ArNS primitives.
 
-## The ARNS Registry
+## The ArNS Registry
 
 The ArNS Registry is a list of all the registered names and their associated ANT smart contract addresses. Registering a name requires spending IO tokens for the type of duration purchase. The system shall allow users to either lease a name on a yearly basis or purchase that name permanently.
 
