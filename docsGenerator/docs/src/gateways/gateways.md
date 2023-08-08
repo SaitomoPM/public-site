@@ -68,7 +68,6 @@ A design principle of AR.IO gateways is that their core components should be int
 
 The core services in the gateway are written in Typescript and Express, with flexible interfaces to the various subsystems and databases. This allows operators to customize their gateway to meet their specific requirements. Gateway services can be turned on or off depending on the operator's needs. For example, an operator might choose to have their gateway serve data, but not actively index Layer 2 bundled data.
 
-//TODO: add gateway diagram 7.3
 
 <img class="amazingdiagram" :src="$withBase('/images/diagram-7-3-modded.png')">
 
