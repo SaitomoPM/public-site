@@ -4,7 +4,7 @@ module.exports = [
     path: "/",
   },
   {
-    title: "Network overview",
+    title: "Network Overview",
     children: [
       {
         title: "Introduction",
