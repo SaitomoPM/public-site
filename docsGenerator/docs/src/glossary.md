@@ -5,7 +5,7 @@ next: false
 
 # Glossary
 
-Many novel terms and acronyms are used by the Arweave ecosystem as well as some new ones introduced in this paper. The list below is intended to serve as a non-exhaustive reference of those terms:
+Many novel terms and acronyms are used by the Arweave ecosystem as well as some new ones introduced by AR.IO. The list below is intended to serve as a non-exhaustive reference of those terms:
 
 - **Arweave Name System (ArNS)**: a decentralized and censorship-resistant naming system enabled by AR.IO gateways which connects friendly names to permaweb applications, pages, and data.
 
