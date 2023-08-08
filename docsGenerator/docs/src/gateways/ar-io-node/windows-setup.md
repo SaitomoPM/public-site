@@ -1,6 +1,6 @@
 ---
-prev: "./operation"
-next: false
+prev: false
+next: "./operation"
 ---
 
 # Windows Installation Instructions
