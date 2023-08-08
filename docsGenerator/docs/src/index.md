@@ -23,7 +23,7 @@ AR.IO Gateways are customizable, modular, and scalable. They are built for the A
 - serving
 - indexing transactions
 
-## Arweave Name System (ArNS): Simplifying Permaweb Navigation
+<h2>Arweave Name System (ArNS): Simplifying Permaweb Navigation</h2>
 
 One of the exciting features within the AR.IO ecosystem is the Arweave Name System (ArNS). ArNS is a censorship-resistant naming system stored on Arweave, enabling user-friendly domain names that link to permaweb dApps, web pages, data, and identities. It functions like a permissionless address book for the entire permaweb. Each AR.IO gateway serves as an ArNS Name resolver, ensuring fast and efficient access.
 
