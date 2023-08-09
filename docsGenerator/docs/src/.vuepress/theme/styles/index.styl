@@ -23,6 +23,7 @@ details:hover
   --BorderColor: $borderColor
   --InLineCodeBG: $bgColor
   --InLineCodeText: $textColor
+  --LinkColor: $textColor
   }
 
 .header-anchor
@@ -75,5 +76,12 @@ h2
 
 .subHeaderGroupTitle
       color var(--TextColor) !important
+
+p
+  a  
+    color:var(--LinkColor)
+    text-decoration: underline
+    &:hover
+      color: var(--AccentColor)
 
 
