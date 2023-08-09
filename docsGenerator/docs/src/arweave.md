@@ -1,0 +1,81 @@
+---
+permalink: "/arweave/"
+---
+
+# Arweave
+
+## The Permanence Pie
+
+The permanent data storage ecosystem can be thought of as a three-tiered arrangement of protocols, services, and applications – dubbed here as “The Permanence Pie”.
+
+<img class="amazingdiagram" :src="$withBase('/images/permanence-pie-1.png')">
+
+<div class="caption">Diagram 1: The Shell of Permanence Pie</div>
+
+The base layer of that pie is the Arweave protocol and network, which is the backbone of the permanent data storage ecosystem. It provides the infrastructure for data to be stored on the network in a decentralized manner and incentivizes nodes to keep the data stored for long periods of time.
+
+The second layer is made up of services that sit on top of the Arweave protocol and network. These services include gateways, data retrieval services, and smart contracts that help to provide a seamless and functional experience for users, creators, and developers.
+
+Finally, the top layer of the pie consists of applications that utilize the data stored on the Arweave network. This includes everything from simple applications that allow users to access and view their data to complex, decentralized applications that use the Arweave network as their backbone.
+
+Each layer of the Permanence Pie is crucial to the overall success and growth of the permanent data storage ecosystem. The Arweave protocol and network provide the foundation for data storage, the services layer helps to facilitate data retrieval and usage, and the application layer brings the benefits of the ecosystem to users and developers alike.
+
+## What Is Arweave
+
+Arweave is a decentralized Layer 1 data storage protocol optimized for long-term permanent storage through its unique proof of access mechanism and tokenomic endowment model.
+
+The information stored on Arweave is immutable and globally replicated by miner nodes. Instead of a traditional blockchain ledger which links blocks of transactions together in linear sequence, Arweave arranges blocks in a web known as the blockweave. These miner nodes secure the blockweave by operating the Succinct Proof of Random Access (SPoRA) algorithm. SPoRA requires miners to prove that they have access to recall randomly selected bits of weave data in order to produce and share a block. If successful, miners are rewarded in Arweave’s native AR token. These token rewards are derived from transaction fees as well as the network’s storage endowment. The endowment is a protocol-controlled pool of tokens designed to fund the projected cost of storage for 200+ years.
+
+<img class="amazingdiagram" :src="$withBase('/images/permanence-pie-2.png')">
+
+<div class="caption">Diagram 2: Arweave - The Base Storage Layer</div>
+
+Arweave is file type agnostic – any type of file ranging from simple text files to family photos to complex web applications and archival databases can be stored on the network. To upload data, users must pay an amount of AR proportional to the size of the files being uploaded. Arweave is unique when compared with other decentralized storage solutions in that users only pay once to upload their files, then that is it – the files will be stored in perpetuity without any additional upkeep or subscription fees paid by the user.
+
+The Arweave protocol is designed to handle 1,000 Layer 1 transactions per block with new blocks being mined roughly every two minutes. Since its launch in 2018, the network’s weave size (total data stored on the network) has grown to 119.8 TB with approximately 500 million Layer 1 (L1) and Layer 2 (L2) transactions submitted from over 150k unique wallets. The Arweave protocol endowment has received 45.6k AR to cover the projected storage costs with a cost of storage 0.188AR/GiB. \*
+
+\* data as of February 14, 2023
+
+## Gateways
+
+Gateways act as the front door to the permaweb. They are infrastructure utilities that sit above the base storage layer and allow users to access and query the information stored on Arweave. Gateways are specialized nodes responsible for data retrieval, caching, and serving as well as indexing transactions into a database that can be easily queried at scale. These functions are not performed by the Arweave mining nodes which are optimized for securing the Layer 1 blockweave and replicating information throughout the network through a mechanism known as Wildfire.
+
+<img class="amazingdiagram" :src="$withBase('/images/permanence-pie-3.png')">
+
+<div class="caption">Diagram 3: Gateways - The Access Component</div>
+
+By taking on these responsibilities, gateways allow low cost and maintenance free hosting of static and dynamic content for users, creators, and developers. But there are costs associated with operating a gateway and Arweave does not offer any tokenomic incentives to offset these expenses. As the permaweb grows, these costs can become very significant.
+
+Arweave.net, the primary community gateway, has scaled to meet the needs of the entire Arweave ecosystem and stored the entire weave. Over the last 6 months of 2022, this gateway indexed and cached approximately 1 million Layer 1 and Layer 2 transactions per day, served 405 million requests for data and node information per day, and responded to 8.3 million GQL queries per day. \*
+
+\* data as of February 14, 2023
+
+## SmartWeave
+
+SmartWeave is the smart contract protocol built for Arweave. This standard utilizes ‘lazy evaluation’ which performs computation on the client side as opposed to other smart contract protocols that compute at the node level. This strategy eliminates associated computation fees as well as unburdens developers from file size limitations and programming language requirements.
+
+<img class="amazingdiagram" :src="$withBase('/images/permanence-pie-4.png')">
+
+<div class="caption">Diagram 4: SmartWeave - The Smart Contract Protocol</div>
+
+With SmartWeave, developers can create SmartWeave Tokens (SWT) and incorporate incentive structures into their applications and infrastructure. The AR.IO Network leverages the Warp SDK implementation of this technology for development of its network protocol and IO token.
+
+## The Permaweb
+
+The permaweb is the third and final layer of the permanence pie. The permaweb stands for the permanent web, a collection of all the webpages, apps, and files stored on top of the Arweave network and enlivened with the functionality of the AR.IO Network. For users and builders, the permaweb offers low-cost, zero maintenance, permanent hosting of their web apps, files, and web pages.
+
+<img class="amazingdiagram" :src="$withBase('/images/permanence-pie-5.png')">
+
+<div class="caption">Diagram 5: The Permanence Pie</div>
+
+AR.IO is a global network, protocol, and currency built on top of Arweave that enables the permaweb.
+
+## References and Further Reading
+
+The following resources were used as reference material for this section and can provide the interested reader with additional information:
+
+- [The ArWiki](https://arwiki.wiki/)
+
+- [Arweave GitHub repository](https://github.com/ArweaveTeam)
+
+- [Warp Academy](https://academy.warp.cc/)

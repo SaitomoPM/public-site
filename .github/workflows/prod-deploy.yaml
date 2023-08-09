@@ -10,6 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Build Docs Portal
+        run: |
+          cd docsGenerator/docs
+          yarn install --frozen-lockfile
+          yarn build
+          cd ../..
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
