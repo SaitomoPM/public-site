@@ -2238,7 +2238,7 @@ button {}
 		position: relative;
 		margin-top: 25px !important;
 		margin: 0;
-		font-size: clamp(34px, 5vw, 64px) !important;
+		font-size: clamp(34px, 5vw, 72px) !important;
 		font-weight: bold;
 		font-weight: 600;
 		color: #FFF;
@@ -2285,7 +2285,7 @@ button {}
 		color: #FFF;
 		white-space: nowrap;
 		line-height: 1;
-		opacity: .1;
+		opacity: .03;
 		z-index: 1;
 		pointer-events: none;
 	}
