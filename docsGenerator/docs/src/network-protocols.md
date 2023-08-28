@@ -24,6 +24,7 @@ Being part of the network grants AR.IO Gateways an array of advantages, such as:
 
 - Improved network reliability and performance through an incentive protocol, which uses a system of rewards and evaluations to encourage high-quality service from Gateways.
 
+
 ## Gateway Address Registry (GAR)
 
 Any Gateway operator that whishes to join the AR.IO Network must register their node in the AR.IO SmartWeave Contract's "Gateway Address Registry", known as the GAR. Registration involves staking a minimum amount of IO tokens and providing additional metadata describing the Gateway service offered.
@@ -62,7 +63,6 @@ This metadata includes details such as:
     </table>
 </div>
 
-Additional 
 
 After joining the network, the operator's Gateway can be easily discovered by permaweb apps, its health can be observed, and it can participate in the AR.IO data sharing protocol.
 
@@ -79,6 +79,7 @@ Staking tokens serves a dual purpose in the AR.IO Network:
 - It qualifies participants for reward distribution.
 
 In the AR.IO Network, "staking" designates the act of locking a specified amount of IO tokens into a protocol-controlled vault. These tokens act as a form of collateral and public commitment, encouraging network participants to act in the network's best interests. Once tokens are deposited in the vault, they remain locked until either the participant triggers the "unstake" function or the vault's predetermined lock period expires.
+
 
 It is important to note that unlike other protocols, the IO token is non-inflationary. Therefore, the staking mechanism in the AR.IO Network is not designed to function as a yield-generation tool. By staking their tokens, participants become eligible for potential rewards, fostering an atmosphere of mutual trust within the network. Specifically, Gateway operators stake tokens to facilitate their Gateway integration and establish public trust. Once connected, they become eligible for rewards driven by the protocol and gain access to the network's shared resources.
 
@@ -210,3 +211,4 @@ It is important to note that unlike other protocols, the IO token is non-inflati
         </tr>
     </table>
 </div>
+
