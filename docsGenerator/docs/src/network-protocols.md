@@ -24,7 +24,6 @@ Being part of the network grants AR.IO Gateways an array of advantages, such as:
 
 - Improved network reliability and performance through an incentive protocol, which uses a system of rewards and evaluations to encourage high-quality service from Gateways.
 
-
 ## Gateway Address Registry (GAR)
 
 Any Gateway operator that whishes to join the AR.IO Network must register their node in the AR.IO SmartWeave Contract's "Gateway Address Registry", known as the GAR. Registration involves staking a minimum amount of IO tokens and providing additional metadata describing the Gateway service offered.
@@ -82,3 +81,132 @@ Staking tokens serves a dual purpose in the AR.IO Network:
 In the AR.IO Network, "staking" designates the act of locking a specified amount of IO tokens into a protocol-controlled vault. These tokens act as a form of collateral and public commitment, encouraging network participants to act in the network's best interests. Once tokens are deposited in the vault, they remain locked until either the participant triggers the "unstake" function or the vault's predetermined lock period expires.
 
 It is important to note that unlike other protocols, the IO token is non-inflationary. Therefore, the staking mechanism in the AR.IO Network is not designed to function as a yield-generation tool. By staking their tokens, participants become eligible for potential rewards, fostering an atmosphere of mutual trust within the network. Specifically, Gateway operators stake tokens to facilitate their Gateway integration and establish public trust. Once connected, they become eligible for rewards driven by the protocol and gain access to the network's shared resources.
+
+## Schema
+
+### Gateway Schema
+
+<div style="text-align: center">
+    <table class="inline-table" id="gateway-table">
+        <tr >
+            <th colspan="3" style="font-weight: bold; text-decoration: underline">Gateway</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <th>operatorStake</th>
+            <td>number</td>
+            <td>The total stake of the Gateway's operator.</td>
+        </tr>
+        <tr>
+            <th>start</th>
+            <td>number</td>
+            <td>Block number in which the Gateway joined the network.</td>
+        </tr>
+        <tr>
+            <th>end</th>
+            <td>number</td>
+            <td>Block number in which the Gateway can leave the network, setting to 0 means no end date.</td>
+        </tr>
+        <tr>
+            <th>status</th>
+            <td>string</td>
+            <td>Participation status of the Gateway, "joined" - participating in the network, "hidden" - not leaving, but not participating, "leaving" - in the process of withdrawing from the network.</td>
+        </tr>
+        <tr>
+            <th>vaults</th>
+            <td>array of objects</td>
+            <td>The locked tokens staked by the Gateway operator, <a href="#tokenvault">view schema</a>.</td>
+        </tr>
+        <tr>
+            <th>settings</th>
+            <td>object</td>
+            <td>Additional configuration settings for the Gateway, <a href="#gatewaysettings">view schema</a>.</td>
+        </tr>
+    </table>
+</div>
+
+### TokenVault
+
+<div style="text-align: center">
+    <table class="inline-table" id="token-vault-table">
+        <tr >
+            <th colspan="3" style="font-weight: bold; text-decoration: underline">Token Vault</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <th>balance</th>
+            <td>number</td>
+            <td>Positive integer, the number of IO tokens locked.</td>
+        </tr>
+        <tr>
+            <th>start</th>
+            <td>number</td>
+            <td>Block number in which locking starts.</td>
+        </tr>
+        <tr>
+            <th>end</th>
+            <td>number</td>
+            <td>Block number in which locking ends. Setting to 0 means no end date.</td>
+        </tr>
+    </table>
+</div>
+
+### GatewaySettings
+
+<div style="text-align: center">
+    <table class="inline-table" id="gateway-settings-table">
+        <tr >
+            <th colspan="4" style="font-weight: bold; text-decoration: underline">Gateway Settings</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>required</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <th>label</th>
+            <td>string</td>
+            <td>yes</td>
+            <td>The friendly name used to label the Gateway.</td>
+        </tr>
+        <tr>
+            <th>fqdn</th>
+            <td>string</td>
+            <td>yes</td>
+            <td>The fully qualified domain name at which the Gateway can be reached. e.g. arweave.net</td>
+        </tr>
+        <tr>
+            <th>port</th>
+            <td>number</td>
+            <td>yes</td>
+            <td>The port used by the Gateway. e.g. 443</td>
+        </tr>
+        <tr>
+            <th>protocol</th>
+            <td>string</td>
+            <td>yes</td>
+            <td>Web protocol used by this Gateway <code>"https"</code>, or <code>"http"</code></td>
+        </tr>
+        <tr>
+            <th>properties</th>
+            <td>string</td>
+            <td>no</td>
+            <td>An Arweave transaction ID containing additional properties of the Gateway.</td>
+        </tr>
+        <tr>
+            <th>note</th>
+            <td>string</td>
+            <td>no</td>
+            <td>An Arweave transaction ID containing additional notes the Gateway operator can set to include things like announcements, maintenance, or other operational updates.</td>
+        </tr>
+    </table>
+</div>
