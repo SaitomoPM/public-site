@@ -23,6 +23,10 @@ module.exports = [
         path: "/gateways/gateways",
       },
       {
+        title: "Network Protocols",
+        path: "/network-protocols"
+      },
+      {
         title: "Arweave name System (ArNS)",
         path: "/arns.md",
       },
