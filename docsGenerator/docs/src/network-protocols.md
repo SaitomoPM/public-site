@@ -63,6 +63,8 @@ This metadata includes details such as:
     </table>
 </div>
 
+Additional 
+
 After joining the network, the operator's Gateway can be easily discovered by permaweb apps, its health can be observed, and it can participate in the AR.IO data sharing protocol.
 
 The Gateway operator can modify their Gateway's GAR configuration as needed, which includes adding more tokens to their stake or removing them. Operators can completely remove their stake and leave the AR.IO Network following a minimum network exit wait time. This exit time ensures that Gateways cannot quickly escape from an anticipated penalty.
