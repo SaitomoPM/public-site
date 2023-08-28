@@ -145,11 +145,12 @@ export default {
       const bgColor2 = this.isLight ? "#F1EFF0" : "#0a0b09";
       const searchColor = this.isLight ? "#ddd" : "#2e2e2e";
       const textColor = this.isLight ? "#111" : "white";
-      const accentColor = this.isLight ? "#fe0230" : "#fe0230";
+      const accentColor = this.isLight ? "#7B5A44" : "#DDAE8B";
       const LineColor = this.isLight ? "#ddd" : "#555";
       const BorderColor = this.isLight ? "#d1d1d1" : "#555";
       const CodeColor = this.isLight ? accentColor : accentColor;
       const CodeBG = this.isLight ? "#eaeaea" : "#222";
+      const LinkColor = this.isLight ? "#ddae8b" : "#7b5a44";
       document.documentElement.style.setProperty("--BgColor1", bgColor);
       document.documentElement.style.setProperty("--BgColor2", bgColor2);
       document.documentElement.style.setProperty("--SearchColor", searchColor);
@@ -159,6 +160,7 @@ export default {
       document.documentElement.style.setProperty("--BorderColor", BorderColor);
       document.documentElement.style.setProperty("--InLineCodeText", CodeColor);
       document.documentElement.style.setProperty("--InLineCodeBG", CodeBG);
+      document.documentElement.style.setProperty("--LinkColor", LinkColor);
     },
 
     toggleSidebar(to) {

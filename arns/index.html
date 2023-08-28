@@ -95,6 +95,34 @@
 -->
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
+
+	<div class="flex absolute items-center text-center justify-between gap-4 px-4 py-3 text-white" style="z-index: 100; width:100%; color: #121212 !important; background: linear-gradient(45deg, #fafafa, #fff, #fafafa, #fff); background-size: 400% 400%; animation: gradient 15s ease infinite;">
+	  <p class="text-sm text-center font-medium">
+
+	    <strong> Note that ArNS is currently being tested, names registered during this phase will expire when testing is complete.</strong>
+	  </p>
+		<span onclick="this.parentElement.style.display='none'; document.getElementById('announcement-spacer').style.display='none';"
+		style="cursor: pointer; padding-left: 10px; font-weight: bold;">
+	  <button
+	    aria-label="Close"
+	    class="shrink-0 bg-black/10 p-1 transition hover:bg-black/20"
+	  >
+	    <svg
+	      xmlns="http://www.w3.org/2000/svg"
+	      class="h-5 w-5"
+	      viewBox="0 0 20 20"
+	      fill="currentColor"
+	    >
+	      <path
+	        fill-rule="evenodd"
+	        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+	        clip-rule="evenodd"
+	      />
+	    </svg>
+	  </button>
+		</span>
+	</div>
+
 	<!-- <section class="" style="position:fixed; z-index: 100000;  bottom:10px; right: 10px; ">
 		<div class="text-center anim-skewinup">
 			<div class="tt-header-col max-width-600">
@@ -145,8 +173,8 @@
 	========================
 	* Use class "tt-header-fixed" to set header to fixed position.
 -->
-<header id="tt-header" class="bg-none" style="">
-	<!-- <div id="announcement-spacer" style="height: 56px;"></div> -->
+<header id="tt-header" class="bg-none" style="" >
+	<div id="announcement-spacer" style="height: 56px;"></div>
 	<nav class="mx-auto flex  items-center justify-between p-6 mobile-announcement-bar lg:px-8" aria-label="Global">
 		<div class="flex lg:flex-1">
 			<a href="../" class="-m-1.5 p-1.5">
@@ -215,7 +243,7 @@ document.getElementById('button-4').style.display='none';
 									ArNS (Beta)
 									<span class="absolute inset-0"></span>
 								</a>
-								<p class="mt-1 text-gray-600">Get a permanent domain.</p>
+								<p class="mt-1 text-gray-600">Simplifying permaweb navigation.</p>
 							</div>
 						</div>
 
@@ -241,7 +269,7 @@ document.getElementById('button-4').style.display='none';
 </svg>
 							</div>
 							<div class="flex-auto">
-								<a href="https://viewblock.io/" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
+								<a href="https://viewblock.io/arweave" target="_blank" class="block font-semibold text-gray-900 hover:text-black">
 									Viewblock
 									<span class="absolute inset-0"></span>
 								</a>
@@ -322,7 +350,7 @@ document.getElementById('button-4').style.display='none';
 									ar.io GitHub
 									<span class="absolute inset-0"></span>
 								</a>
-								<p class="mt-1 text-gray-600">Node.js application for terminal-based ArDrive workflows.</p>
+								<p class="mt-1 text-gray-600">All source code for ar.io.</p>
 							</div>
 						</div>
 
@@ -337,22 +365,22 @@ document.getElementById('button-4').style.display='none';
 									Arweave Cookbook
 									<span class="absolute inset-0"></span>
 								</a>
-								<p class="mt-1 text-gray-600">Node.js application for terminal-based ArDrive workflows.</p>
+								<p class="mt-1 text-gray-600">A curated collection of developer guides and more, to build on the Permaweb.</p>
 							</div>
 						</div>
 
 						<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
-							<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
-								<svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+								<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 	<path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
 </svg>
 							</div>
 							<div class="flex-auto">
-								<div class="block font-semibold text-gray-400 ">
+								<a href="../docs/gateways/#overview" class="block font-semibold text-gray-900 hover:text-black">
 									Gateways Operator Manual
 									<span class="absolute inset-0"></span>
-								</div>
-								<p class="mt-1 text-gray-400 font-semibold">Coming Soon</p>
+								</a>
+								<p class="mt-1 text-gray-600">All things related to gateway operations.</p>
 							</div>
 						</div>
 
@@ -520,17 +548,17 @@ document.getElementById('button-4').style.display='none';
 					</div>
 
 					<div class="group relative flex gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-gray-50">
-						<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-white">
-							<svg class="h-6 w-6 text-gray-600 group-hover:text-gray-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-md bg-gray-50 group-hover:bg-gray-900">
+							<svg class="h-6 w-6 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 	<path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
 </svg>
 						</div>
 						<div class="flex-auto">
-							<div class="block font-semibold text-gray-400 ">
+							<a href="../docs" class="block font-semibold text-gray-900 hover:text-black">
 								Docs
 								<span class="absolute inset-0"></span>
-							</div>
-							<p class="mt-1 text-gray-400 font-semibold">Coming Soon.</p>
+							</a>
+							<p class="mt-1 text-gray-600">Network overview, guides, and protocols.</p>
 						</div>
 					</div>
 
@@ -576,7 +604,7 @@ document.getElementById('button-4').style.display='none';
 			<a href="https://bobinstein.github.io/docs/" target="_blank" class="text-sm font-semibold leading-6 text-gray-300 hover:text-white">START <span aria-hidden="true">&rarr;</span></a>
 		</div> -->
 		<div class="hidden lg:flex lg:flex-1 lg:justify-end">
-			<a href="../start"  class=" font-semibold leading-6 text-gray-300 hover:text-white" style="font-size: 16px;">START <span aria-hidden="true">&rarr;</span></a>
+			<a href="../docs"  class=" font-semibold leading-6 text-gray-300 hover:text-white" style="font-size: 16px;">DOCS <span aria-hidden="true">&rarr;</span></a>
 		</div>
 	</nav>
 	<!-- Mobile menu, show/hide based on menu open state. -->
@@ -648,7 +676,7 @@ document.getElementById('button-4').style.display='none';
 								<a href="https://bobinstein.github.io/docs/" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">DOCS <span aria-hidden="true">&rarr;</span></a>
 						</div> -->
 						<div class="py-6">
-								<a href="../start" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">START <span aria-hidden="true">&rarr;</span></a>
+								<a href="../docs" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-100 hover:bg-black hover:text-white">DOCS <span aria-hidden="true">&rarr;</span></a>
 						</div>
 					</div>
 				</div>
@@ -725,6 +753,8 @@ document.getElementById('button-4').style.display='none';
 					<div class="max-width-1900 margin-bottom-60 anim-fadeinup">
 						<h5 style="font-size: 24px;">The Arweave Name System is a simple way to name and find things stored on the permaweb. It's a smart contract based system that helps you find your data, apps, or websites on Arweave easily.</h5>
 					</div>
+
+
 
 				</div> <!-- /.tt-col -->
 
@@ -960,6 +990,8 @@ Manage Assets - Forthcoming ArNS Web App
 			<p class="text-gray">ArNS makes permaweb addresses look more professional in Google search results by allowing them to be found through multiple websites and subdomains. ar://dontletyourdreamsbedreams</p>
 			</div>
 
+		 	<h4 style="font-weight: 700; font-size: 1.3em; margin: 0 0 15px;">Want to test ArNS? Bring an Arweave wallet and <a href="https://discord.com/invite/Qwn2XBt9JK" target="_blank"> <u>join our Discord!</u></a></h4>
+
 	</div> <!-- /.tt-col -->
 
 	<div class="tt-col-xl-1">
@@ -1050,7 +1082,7 @@ Manage Assets - Forthcoming ArNS Web App
 							</li> -->
 
 							<li>
-								<a href="https://viewblock.io/" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Viewblock  <i class="fa-solid fa-location-arrow"></i></a>
+								<a href="https://viewblock.io/arweave" target="_blank" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Viewblock  <i class="fa-solid fa-location-arrow"></i></a>
 							</li>
 
 							<li>
@@ -1070,7 +1102,7 @@ Manage Assets - Forthcoming ArNS Web App
 							</li>
 
 							<li>
-								<div class="text-sm leading-6 text-gray-300" style="font-weight:500;">Gateways Operating Manual <span class="text-gray-500">(Coming Soon)</span></div>
+								<a href="../docs/gateways/#overview" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Gateways Operating Manual</a>
 							</li>
 							<!-- <li>
 								<a href="../story" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs</a>
@@ -1136,7 +1168,7 @@ Manage Assets - Forthcoming ArNS Web App
 							</li>
 
 							<li>
-								<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">Docs <span class="text-gray-500">(Coming Soon)</span></div>
+								<a href="../docs" class="text-sm leading-6 text-gray-300 hover:text-white" style="font-weight:500;">Docs</a>
 							</li>
 
 							<li>
@@ -1145,7 +1177,7 @@ Manage Assets - Forthcoming ArNS Web App
 
 
 							<li>
-								<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">White Paper <span class="text-gray-500">(Coming Soon)</span></div>
+								<div href="#" class="text-sm leading-6 text-gray-300 " style="font-weight:500;">White Paper <span class="text-gray-500">(Soon)</span></div>
 							</li>
 
 
@@ -1160,10 +1192,10 @@ Manage Assets - Forthcoming ArNS Web App
 		<div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
 			<div>
 				<h3 class="text-sm font-bold leading-6 text-gray-300">Subscribe to our newsletter</h3>
-				<p class="mt-2 mb-4 text-sm leading-6 text-gray-400">The latest news, articles, and resources, sent to your inbox weekly.</p>
+				<p class="mt-2 mb-4 text-sm leading-6 text-gray-400">The latest news, articles, and resources, sent to your inbox.</p>
 			</div>
 			<button data-tf-slider="bfozRHd0" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=Newsletter" data-tf-auto-close="1000" data-tf-transitive-search-params data-tf-medium="snippet" onMouseOver="this.style.background='#fff', this.style.color='#121212'"
-	 onMouseOut="this.style.background='#121212', this.style.color='#fff'"  style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
+   onMouseOut="this.style.background='#121212', this.style.color='#fff'"  style="all:unset;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fafafa;font-size:20px;border: 1px solid #fafafa;border-radius:0px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:25px;text-align:center;margin:0;text-decoration:none;">Subscribe
 			</button>
 			<script src="//embed.typeform.com/next/embed.js"></script>
 		</div>
@@ -1173,13 +1205,13 @@ Manage Assets - Forthcoming ArNS Web App
 				<a href="https://github.com/ar-io" class="magnetic-item" target="_blank"
 				rel="noopener"><i class="fab fa-github" style="color: #fafafa;"></i></a>
 
-				<a href="https://discord.gg/NTcTc3DQ"
+				<a href="https://discord.gg/HGG52EtTc2"
 				class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-discord" style="color: #fafafa;"></i></a>
 
-				<a href="https://twitter.com/ar_io_team" class="magnetic-item" target="_blank"
+				<a href="https://twitter.com/ar_io_network" class="magnetic-item" target="_blank"
 				rel="noopener"><i class="fab fa-twitter" style="color: #fafafa;"></i></a>
 
-				<a href="https://www.linkedin.com/company/68614891" class="magnetic-item" target="_blank"
+				<a href="https://www.linkedin.com/showcase/ar-io/" class="magnetic-item" target="_blank"
 				rel="noopener"><i class="fab fa-linkedin" style="color: #fafafa;"></i></a>
 
 			</div>

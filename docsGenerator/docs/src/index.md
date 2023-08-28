@@ -2,14 +2,29 @@
 homepage: true
 ---
 
-# What is ar.io
+# Welcome
 
-ar.io is a global network, protocol, and currency that enables the permaweb. It is the decentralized and incentivized gateway node network of the Arweave ecosystem. Comprised of operators, developers, and end users, this network leverages a utility token to proliferate access to the permaweb: the files, applications, web pages and data permanently stored on the Arweave decentralized storage network. 
+Welcome to AR.IO!
 
- 
+The AR.IO ecosystem is dedicated to cultivating products and protocols for sustaining access to digital permanence, making the permaweb available to everyone. Powered by the IO Token, this global network of Gateways connects users to permanently stored data, files, applications, and web pages on the Arweave decentralized storage network.
 
-The various nodes on the ar.io Network, known as gateways, are the interface between users and the permaweb. Each gateway acts like a “Permaweb Service Provider” and supports multiple, value-added, services like reading, writing, querying, and indexing of Arweave data. 
+The AR.IO Network consists of:
 
- 
+- Decentralized, independently operated, gateway nodes
+- The IO Token
+- The ArNS Domain Name System
+- Token incentive structures
+- A community of digital permanence pioneers
 
-The ar.io token, referred to as IO or ɸ, is a SmartWeave token used for protocol incentives, gateway accountability, and payments for services like the Arweave Name System (ArNS). It will enable gateways on the ar.io Network to operate under a low-trust model with the users of their service. 
+AR.IO Gateways are customizable, modular, and scalable. They are built for the Arweave permanent data storage network and optimized for:
+
+- data retrieval
+- caching
+- serving
+- indexing transactions
+
+<h2>Arweave Name System (ArNS): Simplifying Permaweb Navigation</h2>
+
+One of the exciting features within the AR.IO ecosystem is the Arweave Name System (ArNS). ArNS is a censorship-resistant naming system stored on Arweave, enabling user-friendly domain names that link to permaweb dApps, web pages, data, and identities. It functions like a permissionless address book for the entire permaweb. Each AR.IO gateway serves as an ArNS Name resolver, ensuring fast and efficient access.
+
+Join us now and experience the full potential of the permaweb with AR.IO!

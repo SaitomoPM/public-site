@@ -21,10 +21,10 @@ jobs:
 
       - name: Build Docs Portal
         run: |
-        cd docsGenerator/docs
-        yarn install --frozen-lockfile
-        yarn build
-        cd ../..
+          cd docsGenerator/docs
+          yarn install --frozen-lockfile
+          yarn build
+          cd ../..
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
