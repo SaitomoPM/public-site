@@ -32,8 +32,11 @@
       </template>
       <template #bottom>
         <slot name="page-bottom" />
+        <Footer />
       </template>
+      
     </Page>
+    
   </div>
 </template>
 
@@ -44,6 +47,7 @@ import Page from "@theme/components/Page.vue";
 import Sidebar from "@theme/components/Sidebar.vue";
 import { resolveSidebarItems } from "../util";
 import SearchModal from "../components/SearchModal.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Layout",
@@ -54,6 +58,7 @@ export default {
     Sidebar,
     Navbar,
     SearchModal,
+    Footer,
   },
 
   watch: {
