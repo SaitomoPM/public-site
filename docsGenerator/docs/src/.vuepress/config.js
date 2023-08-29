@@ -39,7 +39,7 @@ module.exports = {
         "data-domain": "ar.io/docs",
       },
     ],
-    ["link", { rel: "stylesheet", href: "/assets/css/theme.css" }],
+    ["link", { rel: "stylesheet", href: "/../assets/css/theme.css" }],
     [
       "link",
       {
