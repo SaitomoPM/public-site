@@ -155,7 +155,7 @@ export default {
       const BorderColor = this.isLight ? "#d1d1d1" : "#555";
       const CodeColor = this.isLight ? accentColor : accentColor;
       const CodeBG = this.isLight ? "#eaeaea" : "#222";
-      const LinkColor = this.isLight ? "##7b5a44" : "#DDAE8B";
+      const LinkColor = this.isLight ? "#DDAE8B" : "#DDAE8B";
       document.documentElement.style.setProperty("--BgColor1", bgColor);
       document.documentElement.style.setProperty("--BgColor2", bgColor2);
       document.documentElement.style.setProperty("--SearchColor", searchColor);
