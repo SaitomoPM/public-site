@@ -11,7 +11,10 @@
       @open-search-modal="openSearchModal"
     />
 
-    <SearchModal v-if="this.isSearchModalOpen" @close-modal="closeSearchModal" />
+    <SearchModal
+      v-if="this.isSearchModalOpen"
+      @close-modal="closeSearchModal"
+    />
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
@@ -32,11 +35,9 @@
       </template>
       <template #bottom>
         <slot name="page-bottom" />
-        <Footer />
+        <Footer v-if="shouldShowFooter" />
       </template>
-      
     </Page>
-    
   </div>
 </template>
 
@@ -75,6 +76,11 @@ export default {
   },
 
   computed: {
+    shouldShowFooter() {
+      const { themeConfig } = this.$site;
+      return themeConfig.footer !== false;
+    },
+
     isSearchModalOpen() {
       return this.$store.state.isSearchModalOpen;
     },
@@ -138,12 +144,12 @@ export default {
 
   methods: {
     openSearchModal() {
-    this.$store.commit('openSearchModal');
-  },
-  closeSearchModal() {
-    console.log("close modal")
-    this.$store.commit('closeSearchModal');
-  },
+      this.$store.commit("openSearchModal");
+    },
+    closeSearchModal() {
+      console.log("close modal");
+      this.$store.commit("closeSearchModal");
+    },
 
     updateTheme() {
       const bgColor = this.isLight ? "#fafafa" : "#0a0b09";
