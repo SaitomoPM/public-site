@@ -29,7 +29,7 @@ Being part of the network grants AR.IO Gateways an array of advantages, such as:
 
 Any Gateway operator that whishes to join the AR.IO Network must register their node in the AR.IO SmartWeave Contract's "Gateway Address Registry", known as the GAR. Registration involves staking a minimum amount of IO tokens and providing additional metadata describing the Gateway service offered.
 
-This metadata includes details such as:
+<!-- This metadata includes details such as:
 
 <div style="text-align: center">
     <table class="inline-table">
@@ -42,7 +42,7 @@ This metadata includes details such as:
         </tr>
         <tr>
             <th>Wallet Address</th>
-            <td>The Operator's Arweave wallet address, the primary identifier of the Gateway. A single wallet can only be registered to one Gateway at a time.</td>
+            <td class="align-left">The Operator's Arweave wallet address, the primary identifier of the Gateway. A single wallet can only be registered to one Gateway at a time.</td>
         </tr>
         <tr>
             <th>IO Token Stake</th>
@@ -61,14 +61,14 @@ This metadata includes details such as:
             <td>Indicates how this Gateway's protocol rewards are distributed to delegates vs kept by the operator.</td>
         </tr>
     </table>
-</div>
+</div> -->
 
 
 After joining the network, the operator's Gateway can be easily discovered by permaweb apps, its health can be observed, and it can participate in the AR.IO data sharing protocol.
 
 The Gateway operator can modify their Gateway's GAR configuration as needed, which includes adding more tokens to their stake or removing them. Operators can completely remove their stake and leave the AR.IO Network following a minimum network exit wait time. This exit time ensures that Gateways cannot quickly escape from an anticipated penalty.
 
-The GAR advertises the specific attributes of each Gateway including its stake, delegates, and settings. This enables permaweb apps and users to discover which Gateways are currently available and meet their needs. Apps that read the GAR can sort and filter it using the Gateway metadata, for example, ranking Gateways with the highest stake at the top of the list. This would allow users to prefer the lower-trust, higher staked Gateways before settling on a higher-trust, lower staked Gateway.
+The GAR advertises the specific attributes of each Gateway including its stake and settings. This enables permaweb apps and users to discover which Gateways are currently available and meet their needs. Apps that read the GAR can sort and filter it using the Gateway metadata, for example, ranking Gateways with the highest stake at the top of the list. This would allow users to prefer the lower-trust, higher staked Gateways before settling on a higher-trust, lower staked Gateway.
 
 ## Staking
 
@@ -100,32 +100,32 @@ It is important to note that unlike other protocols, the IO token is non-inflati
         <tr>
             <th>operatorStake</th>
             <td>number</td>
-            <td>The total stake of the Gateway's operator.</td>
+            <td class="align-left">The total stake of the Gateway's operator.</td>
         </tr>
         <tr>
             <th>start</th>
             <td>number</td>
-            <td>Block number in which the Gateway joined the network.</td>
+            <td class="align-left">Block number in which the Gateway joined the network.</td>
         </tr>
         <tr>
             <th>end</th>
             <td>number</td>
-            <td>Block number in which the Gateway can leave the network, setting to 0 means no end date.</td>
+            <td class="align-left">Block number in which the Gateway can leave the network, setting to 0 means no end date.</td>
         </tr>
         <tr>
             <th>status</th>
             <td>string</td>
-            <td>Participation status of the Gateway, "joined" - participating in the network, "hidden" - not leaving, but not participating, "leaving" - in the process of withdrawing from the network.</td>
+            <td class="align-left">Participation status of the Gateway, "joined" - participating in the network, "hidden" - not leaving, but not participating, "leaving" - in the process of withdrawing from the network.</td>
         </tr>
         <tr>
             <th>vaults</th>
             <td>array of objects</td>
-            <td>The locked tokens staked by the Gateway operator, <a href="#tokenvault">view schema</a>.</td>
+            <td class="align-left">The locked tokens staked by the Gateway operator, <a href="#tokenvault">view schema</a>.</td>
         </tr>
         <tr>
             <th>settings</th>
             <td>object</td>
-            <td>Additional configuration settings for the Gateway, <a href="#gatewaysettings">view schema</a>.</td>
+            <td class="align-left">Additional configuration settings for the Gateway, <a href="#gatewaysettings">view schema</a>.</td>
         </tr>
     </table>
 </div>
@@ -145,17 +145,17 @@ It is important to note that unlike other protocols, the IO token is non-inflati
         <tr>
             <th>balance</th>
             <td>number</td>
-            <td>Positive integer, the number of IO tokens locked.</td>
+            <td class="align-left">Positive integer, the number of IO tokens locked.</td>
         </tr>
         <tr>
             <th>start</th>
             <td>number</td>
-            <td>Block number in which locking starts.</td>
+            <td class="align-left">Block number in which locking starts.</td>
         </tr>
         <tr>
             <th>end</th>
             <td>number</td>
-            <td>Block number in which locking ends. Setting to 0 means no end date.</td>
+            <td class="align-left">Block number in which locking ends. Setting to 0 means no end date.</td>
         </tr>
     </table>
 </div>
@@ -177,37 +177,37 @@ It is important to note that unlike other protocols, the IO token is non-inflati
             <th>label</th>
             <td>string</td>
             <td>yes</td>
-            <td>The friendly name used to label the Gateway.</td>
+            <td class="align-left">The friendly name used to label the Gateway.</td>
         </tr>
         <tr>
             <th>fqdn</th>
             <td>string</td>
             <td>yes</td>
-            <td>The fully qualified domain name at which the Gateway can be reached. e.g. arweave.net</td>
+            <td class="align-left">The fully qualified domain name at which the Gateway can be reached. e.g. arweave.net</td>
         </tr>
         <tr>
             <th>port</th>
             <td>number</td>
             <td>yes</td>
-            <td>The port used by the Gateway. e.g. 443</td>
+            <td class="align-left">The port used by the Gateway. e.g. 443</td>
         </tr>
         <tr>
             <th>protocol</th>
             <td>string</td>
             <td>yes</td>
-            <td>Web protocol used by this Gateway <code>"https"</code>, or <code>"http"</code></td>
+            <td class="align-left">Web protocol used by this Gateway <code>"https"</code>, or <code>"http"</code></td>
         </tr>
         <tr>
             <th>properties</th>
             <td>string</td>
             <td>no</td>
-            <td>An Arweave transaction ID containing additional properties of the Gateway.</td>
+            <td class="align-left">An Arweave transaction ID containing additional properties of the Gateway.</td>
         </tr>
         <tr>
             <th>note</th>
             <td>string</td>
             <td>no</td>
-            <td>An Arweave transaction ID containing additional notes the Gateway operator can set to include things like announcements, maintenance, or other operational updates.</td>
+            <td class="align-left">An Arweave transaction ID containing additional notes the Gateway operator can set to include things like announcements, maintenance, or other operational updates.</td>
         </tr>
     </table>
 </div>
