@@ -120,17 +120,17 @@ It is important to note that unlike other protocols, the IO token is non-inflati
         <tr>
             <th>vaults</th>
             <td>array of objects</td>
-            <td class="align-left">The locked tokens staked by the Gateway operator, <a href="#tokenvault">view schema</a>.</td>
+            <td class="align-left">The locked tokens staked by the Gateway operator, <a href="#token-vault">view schema</a>.</td>
         </tr>
         <tr>
             <th>settings</th>
             <td>object</td>
-            <td class="align-left">Additional configuration settings for the Gateway, <a href="#gatewaysettings">view schema</a>.</td>
+            <td class="align-left">Additional configuration settings for the Gateway, <a href="#gateway-settings">view schema</a>.</td>
         </tr>
     </table>
 </div>
 
-### TokenVault
+### Token Vault
 
 <div style="text-align: center">
     <table class="inline-table" id="token-vault-table">
@@ -160,7 +160,7 @@ It is important to note that unlike other protocols, the IO token is non-inflati
     </table>
 </div>
 
-### GatewaySettings
+### Gateway Settings
 
 <div style="text-align: center">
     <table class="inline-table" id="gateway-settings-table">
@@ -170,7 +170,7 @@ It is important to note that unlike other protocols, the IO token is non-inflati
         <tr>
             <th>Name</th>
             <th>Type</th>
-            <th>required</th>
+            <th>Required</th>
             <th>Description</th>
         </tr>
         <tr>
