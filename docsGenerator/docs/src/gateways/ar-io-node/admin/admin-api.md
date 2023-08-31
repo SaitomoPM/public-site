@@ -57,6 +57,8 @@ The `ar-io/admin/debug` endpoint provides a comprehensive view of the current st
 
 The `ar-io/admin/queue-tx` endpoint allows you to prioritize processing of a specific transaction, based on that transaction's ID. The `id` key must be set in the body of your request, and a POST request should be used.
 
+This endpoint will also enable you to prioritize opening and indexing bundles by providing the L1 TX ID for the bundle, but only if your Gateway is operating with the `ANS104_UNBUNDLE_FILTER` and `ANS104_INDEX_FILTER` keys set. 
+
 Your Gateway will either respond with an error, or `{ message: 'TX queued' }`
 
 ## Block Data
