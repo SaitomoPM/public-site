@@ -23,6 +23,10 @@ module.exports = [
         path: "/gateways/gateways",
       },
       {
+        title: "Network Protocols",
+        path: "/network-protocols"
+      },
+      {
         title: "Arweave name System (ArNS)",
         path: "/arns.md",
       },
@@ -35,6 +39,10 @@ module.exports = [
         title: "Getting Started",
         children: [
           {
+            title: "Overview",
+            path: "/gateways/ar-io-node/overview"
+          },
+          {
             title: "Setting up on Windows",
             path: "/gateways/ar-io-node/windows-setup",
           },
@@ -42,12 +50,21 @@ module.exports = [
             title: "Setting up on Linux",
             path: "/gateways/ar-io-node/linux-setup",
           },
+          
         ],
+      },
+      {
+        title: "Advanced Configurations",
+        path: "/gateways/ar-io-node/advanced-config"
       },
       {
         title: "AR.IO HTTP API",
         path: "/gateways/ar-io-node/api",
       },
+      {
+        title: "AR.IO Admin API",
+        path: "/gateways/ar-io-node/admin/admin-api"
+      }
     ],
   },
   {

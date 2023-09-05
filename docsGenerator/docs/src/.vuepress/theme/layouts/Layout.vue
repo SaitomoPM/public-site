@@ -11,7 +11,10 @@
       @open-search-modal="openSearchModal"
     />
 
-    <SearchModal v-if="this.isSearchModalOpen" @close-modal="closeSearchModal" />
+    <SearchModal
+      v-if="this.isSearchModalOpen"
+      @close-modal="closeSearchModal"
+    />
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
@@ -32,6 +35,7 @@
       </template>
       <template #bottom>
         <slot name="page-bottom" />
+        <Footer v-if="shouldShowFooter" />
       </template>
     </Page>
   </div>
@@ -44,6 +48,7 @@ import Page from "@theme/components/Page.vue";
 import Sidebar from "@theme/components/Sidebar.vue";
 import { resolveSidebarItems } from "../util";
 import SearchModal from "../components/SearchModal.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Layout",
@@ -54,6 +59,7 @@ export default {
     Sidebar,
     Navbar,
     SearchModal,
+    Footer,
   },
 
   watch: {
@@ -70,6 +76,11 @@ export default {
   },
 
   computed: {
+    shouldShowFooter() {
+      const { themeConfig } = this.$site;
+      return themeConfig.footer !== false;
+    },
+
     isSearchModalOpen() {
       return this.$store.state.isSearchModalOpen;
     },
@@ -133,12 +144,12 @@ export default {
 
   methods: {
     openSearchModal() {
-    this.$store.commit('openSearchModal');
-  },
-  closeSearchModal() {
-    console.log("close modal")
-    this.$store.commit('closeSearchModal');
-  },
+      this.$store.commit("openSearchModal");
+    },
+    closeSearchModal() {
+      console.log("close modal");
+      this.$store.commit("closeSearchModal");
+    },
 
     updateTheme() {
       const bgColor = this.isLight ? "#fafafa" : "#0a0b09";
@@ -150,7 +161,7 @@ export default {
       const BorderColor = this.isLight ? "#d1d1d1" : "#555";
       const CodeColor = this.isLight ? accentColor : accentColor;
       const CodeBG = this.isLight ? "#eaeaea" : "#222";
-      const LinkColor = this.isLight ? "#ddae8b" : "#7b5a44";
+      const LinkColor = this.isLight ? "#DDAE8B" : "#7B5A44";
       document.documentElement.style.setProperty("--BgColor1", bgColor);
       document.documentElement.style.setProperty("--BgColor2", bgColor2);
       document.documentElement.style.setProperty("--SearchColor", searchColor);
