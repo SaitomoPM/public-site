@@ -83,6 +83,204 @@
 
 </style>
 
+<style media="screen">
+body{
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  background: #131313;
+}
+
+.container{
+  position: relative;
+}
+
+.container .card{
+	justify-content: center;
+	align-items: center;
+	display: inline-block;
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #121212;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-25deg,
+	    #f7dfd2,
+	    #f7d9c7,
+	    #f8ccd9,
+	    #f6bdfa);
+  clip-path: circle(125px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before{
+  clip-path: circle(150px at 80% -20%);
+}
+
+.container .card:after{
+  content: 'AR.IO';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255,255,25,0.05)
+}
+
+.container .card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container .card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+
+}
+
+.container .card .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+.container .card .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: .5s;
+  z-index: 10;
+}
+
+.container .card:hover .contentBx{
+  height: 310px;
+}
+
+.container .card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.container .card .contentBx .size, .container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container .card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+.container .card .contentBx .size h3, .container .card .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container .card .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover{
+  background: #9bdc28;
+}
+
+.container .card .contentBx .color span{
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.container .card .contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.container .card .contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.container .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.container .card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.5s;
+
+}
+</style>
+
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
 
@@ -765,10 +963,49 @@ Participants in the program will be empowered to operate a gateway in whatever w
 
 <br>
 
-Card Timeline Goes Here
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <!-- <img src="../assets/img/tokens.png"> -->
+    </div>
+    <div class="contentBx">
+      <h2>STEP 1</h2>
+			<div class="size">
+		 <h3 style="font-weight: 600; padding: 15px;">Head over to the ar.io docs and learn how to set up your gateway.</h3>
 
+	 </div>
 <br>
-<br>
+      <a href="#">See Docs</a>
+    </div>
+  </div>
+	<div class="card">
+    <div class="imgBx">
+      <!-- <img src="../assets/img/tokens.png"> -->
+    </div>
+    <div class="contentBx">
+      <h2>STEP 2</h2>
+			<div class="size">
+			<h3 style="font-weight: 600; padding: 15px;">Create an Arweave wallet.</h3>
+			 </div>
+			 <br>
+      <a href="#">Create Wallet</a>
+    </div>
+  </div>
+	<div class="card">
+    <div class="imgBx">
+      <!-- <img src="../assets/img/tokens.png"> -->
+    </div>
+    <div class="contentBx">
+      <h2>STEP 3</h2>
+			<div class="size">
+			<h3 style="font-weight: 600; padding: 15px;">Run script <code>'network join'</code> to join your gateway to the network.</h3>
+					 </div>
+					 <br>
+      <a href="#">Join Network</a>
+    </div>
+  </div>
+</div>
+
 <br>
 
 						<!-- <h3><span style="background-color: #fafafa; margin-top: 25px !important; color: #121212;"> FAQs</span></h3> -->
@@ -817,7 +1054,7 @@ Card Timeline Goes Here
 											<div class="tt-accordion-heading">
 												<div class="tt-ac-head ">
 
-													<div class="tt-accordion-subtext">Why are We Testing It?
+													<div class="tt-accordion-subtext">Why are We testing it?
 </div>
 												</div>
 
@@ -914,6 +1151,45 @@ Card Timeline Goes Here
 												<p>The testnet program is seeking users who are dedicated to growing and building on the ar.io and Arweave ecosystems.  As such, it is permissionless, meaning that anyone interested in operating a gateway is eligible to participate provided that their gateway meets the initial criteria to join the network.
 
 </p>
+											</div>
+										</div>
+
+										<div class="tt-accordion-item anim-fadeinup">
+											<div class="tt-accordion-heading">
+												<div class="tt-ac-head ">
+
+													<div class="tt-accordion-subtext">What are the technical requirements?
+</div>
+												</div>
+
+												<div class="tt-accordion-caret-wrap">
+													<div class="tt-accordion-caret-inner magnetic-item">
+														<div class="tt-accordion-caret"></div>
+													</div>
+												</div>
+											</div>
+											<div class="tt-accordion-content ">
+												<p>Testing the GAR is crucial for several reasons.
+													<ol>
+														<li style="padding-top:15px;">
+														<strong>Ensure reliability</strong>: To ensure that the registry is stable and can handle various types of queries and transactions.
+														</li>
+														<li style="padding-top:15px;">
+														<strong>Validate data integrity</strong>: To validate that the information provided by gateway operators is accurate, up-to-date, and immutable unless changed by authorized parties.
+														</li>
+														<li style="padding-top:15px;">
+														<strong>Assess user experience</strong>: To assess how effectively applications and users can sort, filter, and query the list to find gateways that best suit their needs.
+														</li>
+														<li style="padding-top:15px;">
+														<strong>Review security</strong>: To identify and fix any vulnerabilities that could compromise the safety of the staked assets or the privacy of the users.
+														</li>
+														<li style="padding-top:15px;">
+														<strong>Gauge scalability</strong>: To gauge the system's capability to accommodate an increasing number of gateway operators and end users while maintaining performance.
+														</li>
+													</ol>
+													<br>
+													By rigorously testing the GAR, we aim to optimize its functionality, reliability, and security, ensuring it meets the needs and expectations of both gateway operators and end users in the AR.IO Network.
+												</p>
 											</div>
 										</div>
 
