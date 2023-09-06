@@ -6,9 +6,49 @@ next: false
 # Linux Installation Instructions
 
 ## Overview
-The following instructions will guide you through the process of installing the AR.IO node on a Linux machine, specifically Ubuntu 20.04.5 desktop on a home computer. Actual steps may differ slightly on different versions or distributions. This guide will cover how to set up your node, point a domain name to your home network, and create an nginx server for routing traffic to your node. No prior coding experience is required.
+The following instructions will guide you through the process of installing the AR.IO node on a Linux machine, specifically Ubuntu 22.04.3 desktop on a home computer. Actual steps may differ slightly on different versions or distributions. This guide will cover how to set up your node, point a domain name to your home network, and create an nginx server for routing traffic to your node. No prior coding experience is required.
 
-## Install Required Packages
+Once your Gateway is set up, be sure to join the [Gateway Address Registry (GAR) testnet](/../testnet).
+
+## System Requirements
+
+Please note, The AR.IO Node software is still in development and testing, all system requirements are subject to change.
+
+External storage devices should be formatted as ext4.
+
+### Minimum requirements
+
+The hardware specifications listed below represent the minimum system requirements at which the AR.IO Node has been tested. While your Node may still operate on systems with lesser specifications, please note that AR.IO cannot guarantee performance or functionality under those conditions. Use below-minimum hardware at your own risk.
+
+- 4 core CPU
+- 4 GB Ram
+- 500 GB storage (SSD recommended)
+- Stable 50 Mbps internet connection
+
+
+### Recommended
+
+- 12 core CPU
+- 32 GB Ram
+- 2 TB SSD storage 
+- Stable 1 Gbps internet connection
+
+
+## Install Packages
+
+If you would like to quickly install all required and suggested packages, you can run the following 2 commands in your terminal, and skip to [installing the Node](#install-the-node).
+
+
+```
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y curl openssh-server docker-compose git certbot nginx sqlite3 build-essential && sudo systemctl enable ssh && curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt-get update -y && sudo apt-get install -y yarn && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash && source ~/.bashrc && sudo ufw allow 22 80 443 && sudo ufw enable
+```
+
+```
+nvm install 16.15.1 && nvm use 16.15.1
+```
+
+### Required packages
+
 
 1. Update your software:
     ```
@@ -16,14 +56,11 @@ The following instructions will guide you through the process of installing the 
     sudo apt upgrade
     ```
 
-2. Install ssh (optional, for remote access to your Linux machine):
-    ```
-    sudo apt install openssh-server
-    sudo systemctl enable ssh
-    ```
 
-3. Open necessary ports in your firewall:
+2. Enable your firewall and open necessary ports:
     ```
+    sudo ufw enable
+
     # Optional: If using SSH, allow port 22 
     sudo ufw allow 22
 
@@ -32,50 +69,83 @@ The following instructions will guide you through the process of installing the 
     sudo ufw allow 443
     ```
 
-4. Install Yarn:
+
+3. Install nginx:
     ```
-    sudo snap install yarn --classic
+    sudo apt install nginx -y
     ```
 
-5. Install NVM (Node Version Manager):
+
+4. Install git:
     ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-    source ~/.bashrc
+    sudo apt install git -y
     ```
 
-6. Install Node.js:
-    ```
-    nvm install 16.15.1
-    ```
 
-7. Install nginx:
+5. Install Docker:
     ```
-    sudo apt install nginx
-    ```
-
-8. Install git:
-    ```
-    sudo apt install git
-    ```
-
-9. Install GitHub CLI:
-    ```
-    sudo snap install gh
-    ```
-
-10. Install Docker:
-    ```
-    sudo apt install docker-compose
+    sudo apt install docker-compose -y
     ```
     - Test Docker installation:
         ```
         sudo docker run hello-world
         ```
 
-11. Install Certbot:
+
+6. Install Certbot:
     ```
-    sudo apt install certbot
+    sudo apt install certbot -y
     ```
+
+
+### Suggested packages
+
+These packages are not required to run a node in its basic form. However, they will become necessary for more advanced usage or customization.
+
+
+7. Install ssh (optional, for remote access to your Linux machine):
+    ```
+    sudo apt install openssh-server -y
+    sudo systemctl enable ssh
+    ```
+
+
+8. Install Yarn:
+    ```
+    curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+    sudo apt-get update -y
+
+    sudo apt-get install yarn -y
+    ```
+
+
+9. Install NVM (Node Version Manager):
+    ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    source ~/.bashrc
+    ```
+
+
+10. Install Node.js:
+    ```
+    nvm install 16.15.1
+    ```
+
+
+11. Install build tools
+    ```
+    sudo apt install build-essential
+    ```
+
+12. Install SQLite:
+    ```
+    sudo apt install sqlite3 -y
+    ```
+
+
 
 ## Install the Node
 
@@ -102,6 +172,8 @@ The following instructions will guide you through the process of installing the 
     - The GRAPHQL values set the proxy for GQL queries to arweave.net, You may use any available gateway that supports GQL queries. If omitted, your node can support GQL queries on locally indexed transactions, but only L1 transactions are indexed by default.
     - `START_HEIGHT` is an optional line. It sets the block number where your node will start downloading and indexing transactions headers. Omitting this line will begin indexing at block 0.
     - `ARNS_ROOT_HOST` sets the starting point for resolving ARNS names, which are accessed as a subdomain of a gateway. It should be set to the url you are pointing to your node, excluding any protocol prefix. For example, use `node-ar.io` and not `https://node-ar.io`. If you are using a subdomain to access your node and do not set this value, the node will not understand incoming requests.
+
+    Advanced configuration options can be found at [ar.io/docs](https://ar.io/docs/gateways/ar-io-node/advanced-config.html)
 
 - Build the Docker container:
     ```

@@ -8,6 +8,8 @@ next: false
 ## Overview
 This guide provides step-by-step instructions for setting up the AR.IO node on a Windows computer. It covers installing necessary software, cloning the repository, creating an environment file, starting the Docker container, setting up networking, and installing and configuring NGINX Docker. No prior coding experience is required.
 
+Once your Gateway is set up, be sure to join the [Gateway Address Registry (GAR) testnet](/../testnet).
+
 ## Prerequisites
 Before starting the installation process, ensure you have the following:
 
@@ -77,6 +79,8 @@ Before starting the installation process, ensure you have the following:
         - `START_HEIGHT` is an optional line. It sets the block number where your node will start downloading and indexing transactions headers. Omitting this line will begin indexing at block 0.
         - `ARNS_ROOT_HOST` sets the starting point for resolving ARNS names, which are accessed as a subdomain of a gateway. It should be set to the url you are pointing to your node, excluding any protocol prefix. For example, use `node-ar.io` and not `https://node-ar.io`. If you are using a subdomain to access your node and do not set this value, the node will not understand incoming requests.
     - Save the file with the name ".env" and make sure to select "All Files" as the file type. This helps to ensure the file saves as ".env" and not ".env.txt"
+
+        Advanced configuration options can be found at [ar.io/docs](https://ar.io/docs/gateways/ar-io-node/advanced-config.html)
 
     **Note**: The `.env` file should be saved inside the same directory where you cloned the repository (e.g., `ar-io-node`).
 
