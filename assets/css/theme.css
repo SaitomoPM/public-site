@@ -101,6 +101,17 @@ body {
   height: 100%;
 }
 
+
+.mobile-spacer {
+  padding-top: 0px !important;
+}
+
+@media (max-width: 600px) {
+  .mobile-spacer {
+    padding-top: 40px !important;
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
