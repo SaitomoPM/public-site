@@ -8,7 +8,6 @@ next: false
 ## Overview
 The following instructions will guide you through the process of installing the AR.IO node on a Linux machine, specifically Ubuntu 22.04.3 desktop on a home computer. Actual steps may differ slightly on different versions or distributions. This guide will cover how to set up your node, point a domain name to your home network, and create an nginx server for routing traffic to your node. No prior coding experience is required.
 
-Once your Gateway is set up, be sure to join the [Gateway Address Registry (GAR) testnet](/../testnet).
 
 ## System Requirements
 

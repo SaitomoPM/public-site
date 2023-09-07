@@ -8,8 +8,6 @@ next: false
 ## Overview
 This guide provides step-by-step instructions for setting up the AR.IO node on a Windows computer. It covers installing necessary software, cloning the repository, creating an environment file, starting the Docker container, setting up networking, and installing and configuring NGINX Docker. No prior coding experience is required.
 
-Once your Gateway is set up, be sure to join the [Gateway Address Registry (GAR) testnet](/../testnet).
-
 ## Prerequisites
 Before starting the installation process, ensure you have the following:
 

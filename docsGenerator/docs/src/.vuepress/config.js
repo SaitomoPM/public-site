@@ -13,8 +13,6 @@ module.exports = {
 
   dest: "../../docs",
 
-  // set to false to disable the footer across the entire docs portal.
-  footer: false,
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
@@ -82,8 +80,8 @@ module.exports = {
     logo: `${base}/images/logo-party.gif`,
     // nav: nav_config,
     sidebar: {
-      // "/": default_sidebar_config,
-      "/": formatted_sidebar_config,
+      "/": default_sidebar_config,
+      // "/": formatted_sidebar_config,
     },
   },
 
