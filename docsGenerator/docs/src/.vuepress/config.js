@@ -1,6 +1,6 @@
 const { description } = require("../../package");
 const default_sidebar_config = require("./theme/configs/default_sidebar_config");
-const formatted_sidebar_config = require("./theme/configs/formatted_sidebar_config")
+const formatted_sidebar_config = require("./theme/configs/formatted_sidebar_config");
 
 const base = process.env.BASE_URL || "/docs/";
 
@@ -12,6 +12,7 @@ module.exports = {
   base: base,
 
   dest: "../../docs",
+
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
@@ -39,7 +40,7 @@ module.exports = {
         "data-domain": "ar.io/docs",
       },
     ],
-    ["link", { rel: "stylesheet", href: "/assets/css/theme.css" }],
+    // ["link", { rel: "stylesheet", href: "/../assets/css/theme.css" }],
     [
       "link",
       {
@@ -62,8 +63,11 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    // set to false to disable the footer across the entire docs portal.
+    footer: true,
+
     fontFamily: {
-      base: ['Dancing Script', 'cursive']
+      base: ["Dancing Script", "cursive"],
     },
     searchPlaceholder: "Search",
     repo: "",
@@ -76,8 +80,8 @@ module.exports = {
     logo: `${base}/images/logo-party.gif`,
     // nav: nav_config,
     sidebar: {
-      // "/": default_sidebar_config,
-      "/": formatted_sidebar_config,
+      "/": default_sidebar_config,
+      // "/": formatted_sidebar_config,
     },
   },
 
