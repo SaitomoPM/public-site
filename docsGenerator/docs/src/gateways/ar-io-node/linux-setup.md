@@ -1,6 +1,7 @@
 ---
 prev: false
 next: false
+tags: [domain, url, setup, start, help, how to, ubuntu, testnet]
 ---
 
 # Linux Installation Instructions
@@ -161,16 +162,20 @@ These packages are not required to run a node in its basic form. However, they w
     ```
     nano .env
     ```
-    Paste the following content into the new file, replacing \<your-domain> with the domain address you are using to access the node, save, and exit:
+    Paste the following content into the new file, replacing \<your-domain> with the domain address you are using to access the node, and \<your-public-wallet-address> with the public address of your Arweave wallet, save, and exit:
     ```
+
     GRAPHQL_HOST=arweave.net
     GRAPHQL_PORT=443
     START_HEIGHT=1000000
     ARNS_ROOT_HOST=<your-domain>
+    AR_IO_WALLET=<your-public-wallet-address>
     ```
+
     - The GRAPHQL values set the proxy for GQL queries to arweave.net, You may use any available gateway that supports GQL queries. If omitted, your node can support GQL queries on locally indexed transactions, but only L1 transactions are indexed by default.
     - `START_HEIGHT` is an optional line. It sets the block number where your node will start downloading and indexing transactions headers. Omitting this line will begin indexing at block 0.
     - `ARNS_ROOT_HOST` sets the starting point for resolving ARNS names, which are accessed as a subdomain of a gateway. It should be set to the url you are pointing to your node, excluding any protocol prefix. For example, use `node-ar.io` and not `https://node-ar.io`. If you are using a subdomain to access your node and do not set this value, the node will not understand incoming requests.
+    - `AR_IO_WALLET` is optional, and sets the wallet you want associated with your Gateway. An associated wallet is required to join the AR.IO network.
 
     Advanced configuration options can be found at [ar.io/docs](https://ar.io/docs/gateways/ar-io-node/advanced-config.html)
 
@@ -228,7 +233,7 @@ The following guide assumes you are running your node on a local home computer.
     ```
     sudo certbot certonly --manual --preferred-challenges dns --email <your-email-address> -d <your-domain>.com -d '*.<your-domain>.com'
     ```
-    Follow the instructions to create the required TXT records for your domain in your chosen registrar. Use a [DNS checker](https://dnschecker.org/) to verify the propagation of each record.
+    Follow the instructions to create the required TXT records for your domain in your chosen registrar. Use a [DNS checker](https://dnschecker.org/) to verify the propagation of each record. This can take some time.
 
     **IMPORTANT**: Wild card subdomain (*.\<your-domain>.com) cannot auto renew without obtaining an API key from your domain registrar. Not all registrars offer this. Certbot certificates expire every 90 days. Be sure to consult with your chosen registrar to see if they offer an API for this purpose, or run the above command again to renew your certificates. You will receive an email warning at the address you provided to remind you when it is time to renew.
 
