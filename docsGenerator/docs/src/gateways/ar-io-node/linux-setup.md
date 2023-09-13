@@ -1,6 +1,6 @@
 ---
 prev: false
-next: false
+next: "./testnet"
 tags: [domain, url, setup, start, help, how to, ubuntu, testnet]
 ---
 

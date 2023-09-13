@@ -1,6 +1,6 @@
 ---
 prev: false
-next: false
+next: "./testnet"
 ---
 
 # Windows Installation Instructions

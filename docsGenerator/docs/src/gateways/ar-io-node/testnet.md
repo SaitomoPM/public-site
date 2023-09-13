@@ -1,5 +1,7 @@
 ---
+prev: false
 permalink: "/gateways/testnet/"
+tags: [testnet, join, application, jwk, qty, fqdn, label, note, properties]
 ---
 
 # Join the AR.IO Testnet
