@@ -64,7 +64,7 @@ There are also several variables you may edit, but are not required:
 
 - **port**: The port used to access your Gateway, defaults to 443 (https).
 - **protocol**: Set this to "http" if your Gateway is not configured to allow https connections.
-- **properties**: This variable allows you to reference the TxId of any additional Gateway settings you've previously uploaded to Arweave. While we'll provide more detailed instructions and schema soon, it's safe to leave this unchanged for the time being.
+- **properties**: This variable allows you to reference the TxId of any additional Gateway settings you've previously uploaded to Arweave. While we'll provide more detailed instructions and schema for doing so soon, it's safe to leave this unchanged for the time being.
 - **note**: A note containing additional information you would like known about your Gateway.
 
 These settings can be updated after joining the Testnet.
