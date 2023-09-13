@@ -19,7 +19,7 @@ permalink: "/gateways/testnet/"
 
 Joining the AR.IO Testnet requires staking Test IO Tokens. A minimum of 10,000. This means you must have Test IO Tokens before you are able to join. Currently, Test IO Tokens are distributed through an application system in the [AR.IO Discord](https://discord.gg/7zUPfN4D6g).
 
-In the `testnet-applications` channel of the Discord, simply type `/apply` and select `Application to join the ar.io testnet!` to begin the process. The AR.IO team will review applications and verify that you have a fully functional AR.IO gateway, properly configured, that can be accessed by the internet.
+In the Discord, simply type `/apply` and select `Application to join the ar.io testnet!` to begin the process. The AR.IO team will review applications and verify that you have a fully functional AR.IO gateway, properly configured, that can be accessed by the internet.
 
 Applicants who are approved will be sent 10,000 Test IO Tokens to facilitate joining the network. Applications will be processed at the discretion and availability of the AR.IO team. Be patient and do not ping or DM team members while waiting on your application to be processed.
 
@@ -64,7 +64,7 @@ There are also several variables you may edit, but are not required:
 
 - **port**: The port used to access your Gateway, defaults to 443 (https).
 - **protocol**: Set this to "http" if your Gateway is not configured to allow https connections.
-- **properties**: This variable can be set to the TxId of additional Gateway setting you have previously uploaded to Arweave. Additional instructions on this will come in the future, but you can leave this as it is for now.
+- **properties**: This variable allows you to reference the TxId of any additional Gateway settings you've previously uploaded to Arweave. While we'll provide more detailed instructions and schema soon, it's safe to leave this unchanged for the time being.
 - **note**: A note containing additional information you would like known about your Gateway.
 
 These settings can be updated after joining the Testnet.
@@ -77,4 +77,4 @@ Once you have Test IO Tokens and all of your settings configured properly, it's 
 yarn ts-node tools/join-network.ts
 ```
 
-This will create an Arweave transaction interacting with the Testnet Smartweave contract, so it will require AR tokens to pay for gas. AR.IO recommends having at least 0.01 AR to ensure a successful transaction.
+This will create an Arweave transaction interacting with the Testnet Smartweave contract, so it will require AR tokens to pay for gas. AR.IO recommends having at least 0.05 AR to ensure a successful transaction.
