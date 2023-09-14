@@ -80,3 +80,35 @@ yarn ts-node tools/join-network.ts
 ```
 
 This will create an Arweave transaction interacting with the Testnet Smartweave contract, so it will require AR tokens to pay for gas. AR.IO recommends having at least 0.05 AR to ensure a successful transaction.
+
+
+
+## Update Your Gateway Settings
+
+Once you have successfully joined the Testnet, you can still update your Gateway settings. This is done by running the `update-gateway-settings.ts` script, in the same location as `join-network.ts`.
+
+Updating your settings, just like joining the Testnet, involves interacting with the Smartweave contract for the Testnet. This means you must have AR in your wallet to pay for transaction gas.
+
+In the `update-gateway-settings.ts` file, the same settings from `join-network.ts` are present, but many are commented out (the line they are on begins with "//", this tells the script not to look at those lines).
+
+Find the line for the settings you want to change, uncomment them (remove the "//") and set their values to what you want to update.
+
+Once The values for all of your updates are set, move further down in the file to the section that looks like this:
+
+```
+  const writeInteraction = await pst.writeInteraction(
+    {
+      function: 'updateGatewaySettings',
+      label,
+      fqdn,
+      // port,
+      // protocol,
+      // properties,
+      // note
+    },
+```
+
+Make sure that any settings you want to update are not commented in this section, and any settings you don't want to change are commented.
+
+Once this is done, run the script with `yarn ts-node tools/update-gateway-settings.ts`
+
