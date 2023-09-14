@@ -1,6 +1,6 @@
 ---
 prev: false
-next: false
+next: "./testnet"
 ---
 
 # Windows Installation Instructions
@@ -76,7 +76,7 @@ Before starting the installation process, ensure you have the following:
      ```
      GRAPHQL_HOST=arweave.net
      GRAPHQL_PORT=443
-     START_HEIGHT=1000000
+     START_HEIGHT=0
      ARNS_ROOT_HOST=<your-domain>
      AR_IO_WALLET=<your-public-wallet-address>
      ```

@@ -43,16 +43,16 @@ module.exports = [
             path: "/gateways/ar-io-node/overview"
           },
           {
-            title: "Join the Network",
-            path: "/gateways/ar-io-node/testnet"
-          },
-          {
             title: "Setting up on Windows",
             path: "/gateways/ar-io-node/windows-setup",
           },
           {
             title: "Setting up on Linux",
             path: "/gateways/ar-io-node/linux-setup",
+          },
+          {
+            title: "Join the Network",
+            path: "/gateways/ar-io-node/testnet"
           },
           
         ],
