@@ -5,7 +5,7 @@ permalink: "/gateways/upgrade/"
 
 # Upgrading your Gateway
 
-To ensure the optimal performance and security of your AR.IO Gateway, it's essential to regularly upgrade to the latest version. Importantly, indexed data is stored outside of Docker. Therefore, upgrading your Gateway or pruning Docker will not delete your progress or data. Here's how you can perform the upgrade:
+To ensure the optimal performance and security of your AR.IO Gateway, it's essential to regularly upgrade to the latest version. Notably, indexed data resides separate from Docker. As a result, neither upgrading the Gateway nor pruning Docker will erase your data or progress. Here's how you can perform the upgrade:
 
 ## Prerequisites
 
