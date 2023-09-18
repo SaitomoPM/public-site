@@ -54,6 +54,10 @@ module.exports = [
             title: "Join the Network",
             path: "/gateways/ar-io-node/testnet"
           },
+          {
+            title: "Upgrading",
+            path: "/gateways/ar-io-node/upgrading"
+          }
           
         ],
       },
