@@ -39,12 +39,16 @@ To ensure the optimal performance and security of your AR.IO Gateway, it's essen
     <summary>Windows</summary>
 
     ```
-    docker-compose down
+
+    docker-compose down -v
+
     ```
 
     </details>
 
-3. **Prune Docker**
+
+3. **Prune Docker** (Optional)
+
 
     It's a good practice to clean up unused Docker resources. Again, use the command based on your OS:
 
@@ -52,7 +56,9 @@ To ensure the optimal performance and security of your AR.IO Gateway, it's essen
     <summary>Linux</summary>
 
     ```
-    sudo docker system prune -f
+
+    sudo docker system prune
+
     ```
 
     </details>
@@ -61,7 +67,9 @@ To ensure the optimal performance and security of your AR.IO Gateway, it's essen
     <summary>Windows</summary>
 
     ```
-    docker system prune -f
+
+    docker system prune
+
     ```
 
     </details>
