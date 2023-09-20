@@ -30,7 +30,7 @@ To ensure the optimal performance and security of your AR.IO Gateway, it's essen
     <summary>Linux</summary>
 
     ```
-    sudo docker-compose down
+    sudo docker-compose down -v
     ```
 
     </details>
