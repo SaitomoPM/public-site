@@ -1,3 +1,61 @@
+name: Resolve Conflicts for PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  resolve-conflicts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR author has write access
+        id: check-permission
+        run: |
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          COLLABORATORS=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/collaborators?affiliation=direct -s \
+            | jq -r '.[].login')
+          
+          if [[ $COLLABORATORS =~ $AUTHOR ]]; then
+            echo "PR author has write access."
+            echo "::set-output name=has_write_access::true"
+          else
+            echo "PR author does not have write access."
+            echo "::set-output name=has_write_access::false"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Exit if PR author does not have write access
+        if: steps.check-permission.outputs.has_write_access == 'false'
+        run: |
+          echo "Exiting because PR author does not have write access."
+          exit 0
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Fetch main branch
+        run: |
+          git fetch origin main:main
+
+      - name: Attempt merge and resolve conflicts in docs
+        run: |
+          git merge main || true
+          if git status | grep 'both modified' | grep 'docs/'; then
+            git checkout --theirs docs/*
+            git add docs/*
+            git commit -m "Resolved merge conflicts in docs by preferring incoming changes"
+            git push origin ${{ github.head_ref }}
+          fi
+
+
 name: Production Deploy
 
 on:
