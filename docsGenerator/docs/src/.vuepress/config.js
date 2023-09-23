@@ -1,6 +1,5 @@
 const { description } = require("../../package");
 const default_sidebar_config = require("./theme/configs/default_sidebar_config");
-const formatted_sidebar_config = require("./theme/configs/formatted_sidebar_config");
 
 const base = process.env.BASE_URL || "/docs/";
 
@@ -81,7 +80,6 @@ module.exports = {
     // nav: nav_config,
     sidebar: {
       "/": default_sidebar_config,
-      // "/": formatted_sidebar_config,
     },
   },
 
