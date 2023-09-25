@@ -4,6 +4,10 @@ module.exports = [
     path: "/",
   },
   {
+    title: "Contribute",
+    path: "/contribute"
+  },
+  {
     title: "Network Overview",
     children: [
       {

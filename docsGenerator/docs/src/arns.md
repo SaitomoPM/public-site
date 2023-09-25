@@ -39,7 +39,7 @@ Secondary markets could be created by ecosystem partners that facilitate the tra
 
 ANT owners and controllers can configure multiple subdomains for their registered ArNS name known as “under_names” or more easily written “undernames”. These undernames are assigned individually at the time of registration or can be added on to any registered name at any time.
 
-Under*names use an underscore “*” in place of a more typically used dot “.“ to separate the subdomain from the main ArNS domain.
+Undernames use an underscore “_” in place of a more typically used dot “.“ to separate the subdomain from the main ArNS domain.
 
 This means users can trust dapp_ardrive just like you would trust ardrive since the owner of ardrive is the only one who can configure dapp_ardrive.
 
