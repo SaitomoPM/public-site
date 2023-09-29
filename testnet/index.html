@@ -81,6 +81,12 @@
 	}
 }
 
+.disabled {
+			 pointer-events: none;
+			 opacity: 0.3;
+		 }
+
+
 </style>
 
 <style media="screen">
@@ -795,7 +801,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
       <div class="text-center">
 
 
-        <h1 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-6xl">Missed the first boat.</h1>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-6xl">Testnet applications are paused.</h1>
         <p class="mt-6 text-md leading-8 text-gray-100">Due to a high volume of participants, applications for the AR.IO Testnet are temporariliy paused. Please follow along in the Discord to know when the next round of applications are open. Shouldn't be too long!</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
 					<a href="https://discord.gg/HGG52EtTc2" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -811,6 +817,11 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
   </div>
 </div> -->
 
+<h6 class="text-3xl font-bold tracking-tight text-gray-200 sm:text-6xl">Testnet applications are paused.</h6>
+<p class="mt-6 text-md leading-8 text-gray-100">Due to a high volume of participants, applications for the AR.IO Testnet are temporariliy paused. Please follow along in the Discord to know when the next round of applications are open. Shouldn't be too long!</p>
+<br>
+<br>
+
 			<ol class="relative border-l border-gray-200 dark:border-gray-700 ml-2">
 				<li class="mb-10 ml-8">
 					<span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900" style="background: linear-gradient(
@@ -821,7 +832,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 						-25deg, #f7dfd2, #f7d9c7, #f8ccd9, #f6bdfa);">Step 1</span></h3>
 						<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Head over to ar.io docs and learn how to get started with your gateway. <br> <strong>Note that you will also need a DNS domain to assign to your gateway.</strong></p>
 
-						<a href="../docs/gateways/ar-io-node/overview.html" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Read Docs</a>
+						<a href="../docs/gateways/ar-io-node/overview.html" target="_blank" class="disabled inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Read Docs</a>
 					</li>
 					<li class="mb-10 ml-8">
 						<span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900" style="background: linear-gradient(
@@ -832,7 +843,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 							-45deg, #f7dfd2, #f7d9c7, #f8ccd9, #f6bdfa);">Step 2</span></h3>
 
 							<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Bring an existing wallet or create a new one using third-party services like ArConnect, arweave.app, or the ArDrive CLI. <br> <strong>Note that you will need a small amount of $AR in the wallet for transaction fees.</strong></p>
-							<a href="../wallet" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Create Wallet</a>
+							<a href="../wallet" target="_blank" class="disabled inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Create Wallet</a>
 						</li>
 						<li class="mb-10 ml-8">
 							<span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900" style="background: linear-gradient(
@@ -845,7 +856,7 @@ Use class "max-width-*" to set caption max width if needed. For example "max-wid
 								<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Come to the #testnet Channel in the AR.IO Discord to complete your application for TEST tokens so that you can stake them to join the network.
 To start an application, simply type: <code style="color: orange;"> /apply</code> and select <code style="color: orange;"> Application to join the ar.io testnet!</code>
 <br><strong>Note that your gateway must be live and verifiable before this step.</strong></p>
-								<a href="https://discord.gg/HGG52EtTc2" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+								<a href="https://discord.gg/HGG52EtTc2" target="_blank" class="disabled inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
 									<path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
 								</svg>Get Tokens</a>
 							</li>
@@ -858,7 +869,7 @@ To start an application, simply type: <code style="color: orange;"> /apply</code
 									-85deg, #f7dfd2, #f7d9c7, #f8ccd9, #f6bdfa);">Step 4</span></h3>
 
 									<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Run <code style="color: orange;">join-network</code> script to join your gateway to the network / GAR.</p>
-									<a href="https://github.com/ar-io/testnet-contract#ario-testnet-network" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+									<a href="https://github.com/ar-io/testnet-contract#ario-testnet-network" target="_blank" class="disabled inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
 										<path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
 									</svg>Join Network</a>
 								</li>
@@ -871,7 +882,7 @@ To start an application, simply type: <code style="color: orange;"> /apply</code
 										-105deg, #f7dfd2, #f7d9c7, #f8ccd9, #f6bdfa);">Step 5</span></h3>
 
 										<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Congrats, you've joined the network! Subscribe to the newsletter and stay tuned in Discord for the latest network developments and forthcoming incentive opportunities.</p>
-										<a href="../newsletter" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Subscribe</a>
+										<a href="../newsletter" target="_blank" class="disabled inline-flex items-center px-4 py-2 text-sm font-medium text-gray-100  border border-gray-200 rounded-sm hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Subscribe</a>
 									</li>
 								</ol>
 
