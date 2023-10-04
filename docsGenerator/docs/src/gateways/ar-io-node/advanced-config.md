@@ -6,7 +6,7 @@
 
 The Getting Started guides for [windows](./windows-setup.md) and [linux](./linux-setup.md) contain all the information needed to start your ar.io Gateway node successfully with basic configurations. There are also ever expanding advanced configuration options that allow you to run your node in a way that is customized to your specific use case. 
 
-Most of the below options can be added to your `.env` file in order to customize its operation. Any changes made to your `.env`  require you to stop the docker containers running your node, and restarting them with the `--build` tag in order for the changes to take effect.
+Most of the below options can be added to your `.env` file in order to customize its operation. Any changes made to your `.env`  require you to stop the docker containers running your node, and restarting them with the `--build` flag in order for the changes to take effect. See [ENV](./env.md) for a complete list of environmental variables you can set.
 
 ## Data Storage Location
 

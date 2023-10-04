@@ -70,6 +70,10 @@ module.exports = [
         path: "/gateways/ar-io-node/advanced-config"
       },
       {
+        title: "Environmental Variables",
+        path: "/gateways/ar-io-node/env"
+      },
+      {
         title: "AR.IO HTTP API",
         path: "/gateways/ar-io-node/api",
       },
