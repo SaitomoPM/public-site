@@ -34,6 +34,10 @@ module.exports = [
         title: "Arweave name System (ArNS)",
         path: "/arns.md",
       },
+      {
+        title: "Observation and Incentive Protocol",
+        path: "/gateways/ar-io-node/arnsoip/observer"
+      },
     ],
   },
   {
