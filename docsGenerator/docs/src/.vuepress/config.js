@@ -36,7 +36,7 @@ module.exports = {
       {
         src: "https://plausible.io/js/script.js",
         defer: true,
-        "data-domain": "ar.io/docs",
+        "data-domain": "ar.io",
       },
     ],
     // ["link", { rel: "stylesheet", href: "/../assets/css/theme.css" }],
