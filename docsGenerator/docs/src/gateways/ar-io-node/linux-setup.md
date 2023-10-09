@@ -154,7 +154,7 @@ These packages are not required to run a node in its basic form. However, they w
 
 - Clone the ar-io-node repository and navigate into it:
     ```
-    gh repo clone ar-io/ar-io-node
+    git clone -b main ar-io/ar-io-node
     cd ar-io-node
     ```
 

@@ -38,7 +38,7 @@ Navigate the the location you want to clone the repo and open a terminal (or com
 run the command:
 
 ```
-git clone https://github.com/yourusernamehere/public-site
+git clone -b main https://github.com/yourusernamehere/public-site
 ```
 
 Be sure to replace "yourusernamehere" with your Github username

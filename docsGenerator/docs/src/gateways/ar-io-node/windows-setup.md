@@ -18,12 +18,7 @@ Before starting the installation process, ensure you have the following:
 
 ## Install Required Packages
 
-1. Install GitHub CLI (gh):
-
-   - Download the latest release of gh CLI from [here](https://github.com/cli/cli/releases/tag/v2.31.0).
-   - Run the `gh-cli-latest.windows-amd64.msi` installer and follow the prompts.
-
-2. Install Docker:
+1. Install Docker:
 
    - Download Docker Desktop for Windows from [here](https://www.docker.com/products/docker-desktop/).
    - Run the installer and follow the prompts.
@@ -42,7 +37,7 @@ Before starting the installation process, ensure you have the following:
        ```
    - Restart Docker Desktop.
 
-3. Install Git:
+2. Install Git:
    - Download Git for Windows from [here](https://git-scm.com/download/win).
    - Run the installer and use the default settings.
 
@@ -61,7 +56,7 @@ Before starting the installation process, ensure you have the following:
        - **NOTE**: Your database of Arweave Transaction Headers will be created in the project directory, not Docker. So, if you are using an external hard drive to turn an old machine into a node, install the node directly to that external drive.
    - Run the following command:
      ```
-     gh repo clone ar-io/ar-io-node
+     git clone -b main ar-io/ar-io-node
      ```
 
 ## Create the Environment File
@@ -181,7 +176,7 @@ To expose your node to the internet and use a custom domain, follow these steps:
        ```
    - Run the following command:
      ```
-     gh repo clone bobinstein/dockerized-nginx
+     git clone -b main bobinstein/dockerized-nginx
      ```
 
    **Note**: This NGINX container was designed to easily automate many of the more technical aspects of setting up NGNIX and obtaining an ssl certificate so your node can be accessed with https. However, wildcard domain certifications cannot be universally automated due to significant security concerns. Be sure to follow the instructions in this project for obtaining wildcard domain certificates in order for your node to function properly.
