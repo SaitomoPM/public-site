@@ -26,8 +26,11 @@
         <slot name="sidebar-bottom" />
       </template>
     </Sidebar>
-
+      <slot></slot>
+      
     <Home v-if="$page.frontmatter.home" />
+
+    
 
     <Page v-else :sidebar-items="sidebarItems" :isLight="isLight">
       <template #top>

@@ -83,6 +83,14 @@ module.exports = {
     },
   },
 
+  // configureWebpack: {
+  //   resolve: {
+  //     alias: {
+  //       '@alias': '/404.md'
+  //     }
+  //   }
+  // },
+
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */

@@ -25,6 +25,19 @@ The ArNS Registry is a list of all the registered names and their associated ANT
 
 Once added, name records cannot be removed from the registry. A leased name’s associated ANT smart contract address cannot be changed until the lease has expired and a new one is purchased. Care must be taken by the owners of permanent name purchases to ensure that their ANT supports an evolve ability should it be desired to add or modify functionality in the future as these name purchases are permanently tied to the associated ANT. Owners of permanently purchased names must understand the consequences of private key loss, which results in not being able to update any data pointers for this name.
 
+## Name Validation Rules
+
+All names registered shall meet the following criteria:
+
+1. Valid names include only numbers `0-9`, characters `a-z, A-Z`, and dashes `-`.
+2. Dashes cannot be leading or trailing characters. (Cannot be the very start or very end of the name)
+3. Dashes cannot be used in single character domains.
+4. 1 character minimum, 51 character maximum.
+5. Names between 1 to 4 characters can be purchased or leased via [auction](#bid-initiated-dutch-auctions-bida).
+6. Names between 5 to 11 characters can be purchased via auction.
+7. Names between 5 to 11 characters can be leased immediately without [auction](#bid-initiated-dutch-auctions-bida).
+8. Names between 12 to 51 characters can be leased or purchased immediately without auction.
+
 ## Arweave Name Token (ANT)
 
 To establish ownership of a record in the ArNS Registry, each record contains both a friendly name and a reference to an Arweave Name Token, ANT. Name Tokens are unique SmartWeave tokens that gives their owners the ability to update the Arweave Transaction IDs that their associated friendly names point to.
@@ -45,6 +58,8 @@ This means users can trust dapp_ardrive just like you would trust ardrive since 
 
 Some other features that undernames allow include:
 
+- The total amount of characters for a name string consisting of undernames and underscore separators is 63 characters.
+
 - Other users could never register a name that resembles an undername on ardrive since “\_” is not allowed to be registered in the ArNS registry.
 
 - Another user can register dapp-ardrive but this is a separate ArNS domain altogether. In traditional DNS, it’s like the difference in trusting dapp-ardrive.io (suspicious!) over the legitimate dapp.ardrive.io
@@ -54,3 +69,13 @@ Some other features that undernames allow include:
 - Undernames can go multiple levels deep, like version_dapp_ardrive but most not be longer than the total MAX_NAME_LENGTH of an ArNS name.
 
 Undernames give more versatility and utility to owning an ArNS name.
+
+## Bid Initiated Dutch Auctions (BIDA)
+
+Certain names must go to public auction based on their character length and purchase type. These auctions shall follow a Dutch Auction model whereby the first user interested in a name must initiate the process by placing the first bid.
+
+Dutch auctions work as follows: the first bid must be greater than or equal to the assigned floor price for the name. Once the first bid is placed, the timer for the auction begins. The auction begins at a price much higher than the floor price. As time passes, the purchase prices progressively decreases until someone purchases it, or it hits the initial bid price, and the initial bidder receives the name.
+
+This does not mean that the initial bidder must wait until the auction concludes. At any time, the initial bidder can place a second bid to purchase the name for the assigned purchase price, or a second bidder can discover this auction and do the same. The benefit of this system, versus an English Auction system, is that there will only ever be 2 bids, the bid to initiate the auction, and the final bid to purchase. This makes for a more compact and scalable SmartWeave Contract state.
+
+Auction end dates are denoted by Arweave block height and established at the start of the auction. For example, the duration for a premium auction could be 14 days or 10,100 blocks.
